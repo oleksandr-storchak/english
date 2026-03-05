@@ -29,8 +29,25 @@
         <div class="search-box">
           <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256"><path fill="currentColor" d="M229.66 218.34l-50.07-50.06a88.11 88.11 0 1 0-11.31 11.31l50.06 50.07a8 8 0 0 0 11.32-11.32ZM40 112a72 72 0 1 1 72 72a72.08 72.08 0 0 1-72-72Z"/></svg>
           <input type="text" id="search" class="search" placeholder="Пошук" autocomplete="off">
+          <button id="search-clear" class="search-clear" type="button" aria-label="Clear">&times;</button>
         </div>
+        <button id="settings-btn" class="settings-btn" type="button" aria-label="Settings">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256"><path fill="currentColor" d="M128 80a48 48 0 1 0 48 48a48.05 48.05 0 0 0-48-48Zm0 80a32 32 0 1 1 32-32a32 32 0 0 1-32 32Zm109.94-52.79a8 8 0 0 0-3.89-5.4l-29.83-17-.12-33.62a8 8 0 0 0-2.83-6.08a111.91 111.91 0 0 0-36.72-20.67a8 8 0 0 0-6.46.59L128 42.89L97.88 25a8 8 0 0 0-6.47-.6a112.1 112.1 0 0 0-36.68 20.75a8 8 0 0 0-2.83 6.07l-.15 33.65l-29.83 17a8 8 0 0 0-3.89 5.4a106.47 106.47 0 0 0 0 41.56a8 8 0 0 0 3.89 5.4l29.83 17l.12 33.63a8 8 0 0 0 2.83 6.08a111.91 111.91 0 0 0 36.72 20.67a8 8 0 0 0 6.46-.59L128 213.11l30.13 17.9a8 8 0 0 0 6.47.6a112.1 112.1 0 0 0 36.68-20.75a8 8 0 0 0 2.83-6.07l.15-33.65l29.83-17a8 8 0 0 0 3.89-5.4a106.47 106.47 0 0 0-.04-41.56Zm-14.88 36.1l-28.57 16.25a8 8 0 0 0-3.08 3.14a8 8 0 0 0-.91 4.38l.15 32.2a95.69 95.69 0 0 1-25.71 14.49L136 196.59a8 8 0 0 0-4-1.11a8 8 0 0 0-4 1.07l-28.89 17.17a96.16 96.16 0 0 1-25.71-14.49l-.14-32.2a8 8 0 0 0-4-7.52L40.94 143.27a90.56 90.56 0 0 1 0-30.54l28.57-16.25a8 8 0 0 0 4-7.52l-.15-32.2a95.69 95.69 0 0 1 25.71-14.49L128 59.41a8 8 0 0 0 8-.05l28.89-17.17a96.16 96.16 0 0 1 25.71 14.49l.14 32.2a8 8 0 0 0 4 7.52l28.33 16.24a90.56 90.56 0 0 1-.01 30.67Z"/></svg>
+        </button>
       </div>
+
+      <dialog id="settings-dialog" class="settings-dialog">
+        <form method="dialog">
+          <div class="settings-header">
+            <h2>Налаштування</h2>
+            <button class="settings-close" type="submit" aria-label="Close">&times;</button>
+          </div>
+          <label class="settings-label" for="voice-select">Оберіть голос</label>
+          <select id="voice-select" class="voice-select">
+            <option value="">Оберіть голос</option>
+          </select>
+        </form>
+      </dialog>
       <div class="divider"><hr><span>Сім'я — Family</span><hr></div>
       <ul class="words">
         <li><span class="uk">мама</span> <span class="en">mom</span></li>

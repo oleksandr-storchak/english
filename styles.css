@@ -72,9 +72,9 @@ section h2 {
 }
 
 .search-wrap {
+  display: flex;
   position: sticky;
   top: 0;
-  /* top: 5rem; */
   z-index: 99;
   background: #121212;
   padding: clamp(0.5rem, 1.5vw, 1rem) 0;
@@ -82,8 +82,7 @@ section h2 {
 
 .search-box {
   position: relative;
-  width: 100%;
-  max-width: 32rem;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -96,6 +95,25 @@ section h2 {
   pointer-events: none;
   width: clamp(1.25rem, 2.5vw, 1.5rem);
   height: clamp(1.25rem, 2.5vw, 1.5rem);
+}
+
+.search-clear {
+  display: none;
+  position: absolute;
+  right: clamp(0.75rem, 2vw, 1.25rem);
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #666;
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+}
+
+.search-clear.visible {
+  display: block;
 }
 
 .search {
@@ -114,6 +132,82 @@ section h2 {
 }
 
 .search:focus {
+  border-color: #ffd700;
+}
+
+.settings-btn {
+  background: none;
+  border: none;
+  color: #9a8c40;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+.settings-btn svg {
+  width: clamp(1.25rem, 2.5vw, 1.5rem);
+  height: clamp(1.25rem, 2.5vw, 1.5rem);
+}
+
+.settings-dialog {
+  background: #1e1e1e;
+  color: #e0e0e0;
+  border: 1px solid #2a2a2a;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  width: 90%;
+  margin: auto;
+  transform: translateY(-50%);
+}
+
+.settings-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.settings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.settings-header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.settings-close {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0 0.25rem;
+  line-height: 1;
+  outline: none;
+}
+
+.settings-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #999;
+  font-size: 0.875rem;
+}
+
+.voice-select {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  color: #e0e0e0;
+  background: #121212;
+  border: 1px solid #2a2a2a;
+  border-radius: 0.5rem;
+  outline: none;
+  appearance: auto;
+  transition: border-color 0.2s;
+}
+
+.voice-select:focus {
   border-color: #ffd700;
 }
 
