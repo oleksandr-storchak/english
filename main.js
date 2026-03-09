@@ -2,20 +2,18 @@ if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('./sw.js');
 }
 
-const search = document.getElementById('search');
-const items = document.querySelectorAll('.words li');
-const wordLists = document.querySelectorAll('.words');
-const searchClear = document.getElementById('search-clear');
-const ukPattern = /[\u0400-\u04FF]/;
+var items = document.querySelectorAll('.words li');
+var wordLists = document.querySelectorAll('.words');
+var ukPattern = /[\u0400-\u04FF]/;
 
-searchClear.addEventListener('click', function () {
-  search.value = '';
-  search.dispatchEvent(new Event('input'));
-  search.focus();
+window['search-clear'].addEventListener('click', function () {
+  window.search.value = '';
+  window.search.dispatchEvent(new Event('input'));
+  window.search.focus();
 });
 
-search.addEventListener('input', function () {
-  searchClear.classList.toggle('visible', this.value.length > 0);
+window.search.addEventListener('input', function () {
+  window['search-clear'].classList.toggle('visible', this.value.length > 0);
   const query = this.value.trim();
   const lowerQuery = query.toLowerCase();
 
@@ -43,15 +41,12 @@ search.addEventListener('input', function () {
 });
 
 var bestVoice = null;
-var voiceSelect = document.getElementById('voice-select');
-var settingsDialog = document.getElementById('settings-dialog');
-
-document.getElementById('settings-btn').addEventListener('click', function () {
-  settingsDialog.showModal();
+window['settings-btn'].addEventListener('click', function () {
+  window['settings-dialog'].showModal();
 });
 
-settingsDialog.addEventListener('click', function (e) {
-  if (e.target === settingsDialog) settingsDialog.close();
+window['settings-dialog'].addEventListener('click', function (e) {
+  if (e.target === window['settings-dialog']) window['settings-dialog'].close();
 });
 
 function populateVoices() {
@@ -59,7 +54,7 @@ function populateVoices() {
   var enVoices = voices.filter(function (v) { return v.lang.startsWith('en'); });
 
   var savedVoiceName = localStorage.getItem('selectedVoice');
-  voiceSelect.innerHTML = '';
+  window['voice-select'].innerHTML = '';
 
   enVoices.forEach(function (v) {
     var option = document.createElement('option');
@@ -70,7 +65,7 @@ function populateVoices() {
     } else {
       if (v.name.includes('Google US English')) option.selected = true;
     }
-    voiceSelect.appendChild(option);
+    window['voice-select'].appendChild(option);
   });
 
   applySelectedVoice(enVoices);
@@ -80,7 +75,7 @@ function applySelectedVoice(enVoices) {
   if (!enVoices) {
     enVoices = speechSynthesis.getVoices().filter(function (v) { return v.lang.startsWith('en'); });
   }
-  var selectedName = voiceSelect.value;
+  var selectedName = window['voice-select'].value;
   bestVoice = enVoices.find(function (v) { return v.name === selectedName; }) ||
     enVoices.find(function (v) { return v.name.includes('Google US English'); }) ||
     enVoices.find(function (v) { return v.lang === 'en-US' && v.localService; }) ||
@@ -88,8 +83,8 @@ function applySelectedVoice(enVoices) {
     enVoices[0] || null;
 }
 
-voiceSelect.addEventListener('change', function () {
-  localStorage.setItem('selectedVoice', voiceSelect.value);
+window['voice-select'].addEventListener('change', function () {
+  localStorage.setItem('selectedVoice', window['voice-select'].value);
   applySelectedVoice();
 });
 
@@ -107,7 +102,39 @@ items.forEach(function (li) {
   }
 });
 
-document.querySelector('main').addEventListener('click', function (e) {
+main.scrollTo({ left: words.offsetLeft, behavior: 'smooth' });
+
+main.addEventListener('scroll', function () {
+  var atCategories = main.scrollLeft < main.scrollWidth / 5;
+  window['back-btn'].dataset.expanded = atCategories ? 'true' : 'false';
+});
+
+window['back-btn'].addEventListener('click', function () {
+  if (window['back-btn'].dataset.expanded === 'true') {
+    main.scrollTo({ left: words.offsetLeft, behavior: 'smooth' });
+    words.focus({ preventScroll: true });
+    window['back-btn'].dataset.expanded = 'false';
+  } else {
+    main.scrollTo({ left: 0, behavior: 'smooth' });
+    window['back-btn'].dataset.expanded = 'true';
+  }
+});
+
+categories.addEventListener('click', function (e) {
+  var link = e.target.closest('a[href^="#"]');
+  if (!link) return;
+  e.preventDefault();
+  link.blur();
+  var target = document.getElementById(link.getAttribute('href').slice(1));
+  if (!target) return;
+  window['back-btn'].dataset.expanded = 'false';
+  main.scrollTo({ left: words.offsetLeft, behavior: 'smooth' });
+  words.focus({ preventScroll: true });
+  target.scrollIntoView({ block: 'start', behavior: 'smooth' });
+});
+
+
+main.addEventListener('click', function (e) {
   const li = e.target.closest('li');
   if (!li) return;
 
