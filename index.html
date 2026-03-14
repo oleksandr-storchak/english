@@ -34,7 +34,7 @@
       <input type="text" id="search" class="search" placeholder="Пошук" autocomplete="off">
       <button id="search-clear" class="search-clear" type="button" aria-label="Clear">&times;</button>
     </div>
-    <button id="settings-btn" class="settings-btn" type="button" aria-label="Settings">
+    <button id="settings-btn" class="settings-btn" type="button" aria-label="Settings" title="Налаштування">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256">
         <path fill="currentColor"
           d="M128 80a48 48 0 1 0 48 48a48.05 48.05 0 0 0-48-48Zm0 80a32 32 0 1 1 32-32a32 32 0 0 1-32 32Zm109.94-52.79a8 8 0 0 0-3.89-5.4l-29.83-17-.12-33.62a8 8 0 0 0-2.83-6.08a111.91 111.91 0 0 0-36.72-20.67a8 8 0 0 0-6.46.59L128 42.89L97.88 25a8 8 0 0 0-6.47-.6a112.1 112.1 0 0 0-36.68 20.75a8 8 0 0 0-2.83 6.07l-.15 33.65l-29.83 17a8 8 0 0 0-3.89 5.4a106.47 106.47 0 0 0 0 41.56a8 8 0 0 0 3.89 5.4l29.83 17l.12 33.63a8 8 0 0 0 2.83 6.08a111.91 111.91 0 0 0 36.72 20.67a8 8 0 0 0 6.46-.59L128 213.11l30.13 17.9a8 8 0 0 0 6.47.6a112.1 112.1 0 0 0 36.68-20.75a8 8 0 0 0 2.83-6.07l.15-33.65l29.83-17a8 8 0 0 0 3.89-5.4a106.47 106.47 0 0 0-.04-41.56Zm-14.88 36.1l-28.57 16.25a8 8 0 0 0-3.08 3.14a8 8 0 0 0-.91 4.38l.15 32.2a95.69 95.69 0 0 1-25.71 14.49L136 196.59a8 8 0 0 0-4-1.11a8 8 0 0 0-4 1.07l-28.89 17.17a96.16 96.16 0 0 1-25.71-14.49l-.14-32.2a8 8 0 0 0-4-7.52L40.94 143.27a90.56 90.56 0 0 1 0-30.54l28.57-16.25a8 8 0 0 0 4-7.52l-.15-32.2a95.69 95.69 0 0 1 25.71-14.49L128 59.41a8 8 0 0 0 8-.05l28.89-17.17a96.16 96.16 0 0 1 25.71 14.49l.14 32.2a8 8 0 0 0 4 7.52l28.33 16.24a90.56 90.56 0 0 1-.01 30.67Z" />
@@ -56,455 +56,73 @@
   </header>
   <main id="main">
     <section id="categories" class="category-nav">
-      <a href="#family">Сім'я</a>
-      <a href="#people">Люди</a>
-      <a href="#face">Обличчя</a>
-      <a href="#body">Тіло</a>
-      <a href="#clothes">Одяг</a>
-      <a href="#pets">Тварини</a>
-      <a href="#farm-animals">Ферма</a>
-      <a href="#wild-animals">Дикі</a>
-      <a href="#birds">Птахи</a>
-      <a href="#insects">Комахи</a>
-      <a href="#sea-animals">Морські</a>
-      <a href="#fruits">Фрукти</a>
-      <a href="#vegetables">Овочі</a>
-      <a href="#drinks">Напої</a>
-      <a href="#food">Їжа</a>
-      <a href="#sweets">Солодощі</a>
-      <a href="#home">Дім</a>
-      <a href="#furniture">Меблі</a>
-      <a href="#kitchenware">Кухня</a>
+      <input id="category-search" type="text" placeholder="Пошук категорії…" autocomplete="off">
+      <div id="no-results" class="no-results" style="display: none;">Не знайдено</div>
       <a href="#bathroom">Ванна</a>
-      <a href="#school">Школа</a>
-      <a href="#toys">Іграшки</a>
-      <a href="#transport">Транспорт</a>
-      <a href="#nature">Природа</a>
-      <a href="#weather">Погода</a>
-      <a href="#seasons">Пори року</a>
-      <a href="#time-of-day">Час доби</a>
-      <a href="#days">Дні тижня</a>
-      <a href="#months">Місяці</a>
-      <a href="#time">Час</a>
-      <a href="#numbers">Числа</a>
-      <a href="#colors">Кольори</a>
-      <a href="#shapes">Форми</a>
-      <a href="#description">Опис</a>
-      <a href="#emotions">Емоції</a>
-      <a href="#state">Стан</a>
-      <a href="#greetings">Привітання</a>
-      <a href="#pronouns">Займенники</a>
-      <a href="#function-words">Службові</a>
-      <a href="#helping-verbs">Допоміжні</a>
       <a href="#actions">Дії</a>
-      <a href="#professions">Професії</a>
-      <a href="#sports">Спорт</a>
-      <a href="#music">Музика</a>
-      <a href="#city">Місто</a>
-      <a href="#world">Світ</a>
-      <a href="#position">Позиція</a>
-      <a href="#questions">Питання</a>
-      <a href="#materials">Матеріали</a>
-      <a href="#tools">Інструменти</a>
-      <a href="#fairy-tales">Казки</a>
-      <a href="#space">Космос</a>
-      <a href="#everyday-objects">Предмети</a>
-      <a href="#holidays">Свята</a>
+      <a href="#home">Дім</a>
+      <a href="#days">Дні тижня</a>
+      <a href="#helping-verbs">Допоміжні</a>
+      <a href="#emotions">Емоції</a>
+      <a href="#pronouns">Займенники</a>
       <a href="#health">Здоров'я</a>
+      <a href="#toys">Іграшки</a>
+      <a href="#tools">Інструменти</a>
+      <a href="#food">Їжа</a>
+      <a href="#fairy-tales">Казки</a>
+      <a href="#colors">Кольори</a>
+      <a href="#insects">Комахи</a>
+      <a href="#space">Космос</a>
+      <a href="#kitchenware">Кухня</a>
+      <a href="#people">Люди</a>
+      <a href="#materials">Матеріали</a>
+      <a href="#furniture">Меблі</a>
+      <a href="#city">Місто</a>
+      <a href="#months">Місяці</a>
+      <a href="#sea-animals">Морські</a>
+      <a href="#music">Музика</a>
+      <a href="#drinks">Напої</a>
+      <a href="#face">Обличчя</a>
+      <a href="#vegetables">Овочі</a>
+      <a href="#clothes">Одяг</a>
+      <a href="#description">Опис</a>
+      <a href="#questions">Питання</a>
+      <a href="#weather">Погода</a>
+      <a href="#position">Позиція</a>
+      <a href="#seasons">Пори року</a>
+      <a href="#everyday-objects">Предмети</a>
+      <a href="#greetings">Привітання</a>
+      <a href="#nature">Природа</a>
+      <a href="#professions">Професії</a>
+      <a href="#birds">Птахи</a>
       <a href="#plants">Рослини</a>
+      <a href="#world">Світ</a>
+      <a href="#holidays">Свята</a>
+      <a href="#family">Сім'я</a>
+      <a href="#function-words">Службові</a>
+      <a href="#sweets">Солодощі</a>
+      <a href="#sports">Спорт</a>
+      <a href="#state">Стан</a>
+      <a href="#pets">Тварини</a>
+      <a href="#wild-animals">Тварини (дикі)</a>
+      <a href="#body">Тіло</a>
+      <a href="#transport">Транспорт</a>
+      <a href="#farm-animals">Ферма</a>
+      <a href="#shapes">Форми</a>
+      <a href="#fruits">Фрукти</a>
+      <a href="#time">Час</a>
+      <a href="#time-of-day">Час доби</a>
+      <a href="#numbers">Числа</a>
+      <a href="#school">Школа</a>
     </section>
     <button id="back-btn" class="back-to-categories" aria-label="Back to categories">
       <span>Категорії</span>
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256">
-        <path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"
-          />
+        <path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z">
       </svg>
     </button>
     <section id="words" tabindex="-1">
-      <div class="divider" id="family">
-        <hr><span>Сім'я — Family</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">мама</span> <span class="en">mom</span></li>
-        <li><span class="uk">тато</span> <span class="en">dad</span></li>
-        <li><span class="uk">брат</span> <span class="en">brother</span></li>
-        <li><span class="uk">сестра</span> <span class="en">sister</span></li>
-        <li><span class="uk">бабуся</span> <span class="en">grandma</span></li>
-        <li><span class="uk">дідусь</span> <span class="en">grandpa</span></li>
-        <li><span class="uk">дитина</span> <span class="en">baby</span></li>
-        <li><span class="uk">син</span> <span class="en">son</span></li>
-        <li><span class="uk">дочка</span> <span class="en">daughter</span></li>
-        <li><span class="uk">родина</span> <span class="en">family</span></li>
-        <li><span class="uk">тітка</span> <span class="en">aunt</span></li>
-        <li><span class="uk">дядько</span> <span class="en">uncle</span></li>
-      </ul>
-
-      <div class="divider" id="people">
-        <hr><span>Люди — People</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">друг</span> <span class="en">friend</span></li>
-        <li><span class="uk">дівчинка</span> <span class="en">girl</span></li>
-        <li><span class="uk">хлопчик</span> <span class="en">boy</span></li>
-        <li><span class="uk">жінка</span> <span class="en">woman</span></li>
-        <li><span class="uk">чоловік</span> <span class="en">man</span></li>
-        <li><span class="uk">людина</span> <span class="en">person</span></li>
-        <li><span class="uk">сусід</span> <span class="en">neighbor</span></li>
-        <li><span class="uk">подруга</span> <span class="en">girlfriend</span></li>
-        <li><span class="uk">немовля</span> <span class="en">infant</span></li>
-        <li><span class="uk">хлопець</span> <span class="en">guy</span></li>
-        <li><span class="uk">діти</span> <span class="en">children</span></li>
-        <li><span class="uk">партнер</span> <span class="en">partner</span></li>
-        <li><span class="uk">ім'я</span> <span class="en">name</span></li>
-      </ul>
-
-      <div class="divider" id="face">
-        <hr><span>Обличчя — Face</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">око</span> <span class="en">eye</span></li>
-        <li><span class="uk">ніс</span> <span class="en">nose</span></li>
-        <li><span class="uk">рот</span> <span class="en">mouth</span></li>
-        <li><span class="uk">вухо</span> <span class="en">ear</span></li>
-        <li><span class="uk">зуб</span> <span class="en">tooth</span></li>
-        <li><span class="uk">язик</span> <span class="en">tongue</span></li>
-        <li><span class="uk">губа</span> <span class="en">lip</span></li>
-        <li><span class="uk">брова</span> <span class="en">eyebrow</span></li>
-        <li><span class="uk">щока</span> <span class="en">cheek</span></li>
-        <li><span class="uk">лоб</span> <span class="en">forehead</span></li>
-        <li><span class="uk">підборіддя</span> <span class="en">chin</span></li>
-        <li><span class="uk">вія</span> <span class="en">eyelash</span></li>
-      </ul>
-
-      <div class="divider" id="body">
-        <hr><span>Тіло — Body</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">рука</span> <span class="en">hand</span></li>
-        <li><span class="uk">нога</span> <span class="en">leg</span></li>
-        <li><span class="uk">голова</span> <span class="en">head</span></li>
-        <li><span class="uk">серце</span> <span class="en">heart</span></li>
-        <li><span class="uk">палець</span> <span class="en">finger</span></li>
-        <li><span class="uk">коліно</span> <span class="en">knee</span></li>
-        <li><span class="uk">спина</span> <span class="en">back</span></li>
-        <li><span class="uk">живіт</span> <span class="en">belly</span></li>
-        <li><span class="uk">шия</span> <span class="en">neck</span></li>
-        <li><span class="uk">плече</span> <span class="en">shoulder</span></li>
-        <li><span class="uk">лікоть</span> <span class="en">elbow</span></li>
-        <li><span class="uk">стопа</span> <span class="en">foot</span></li>
-        <li><span class="uk">волосся</span> <span class="en">hair</span></li>
-        <li><span class="uk">шкіра</span> <span class="en">skin</span></li>
-        <li><span class="uk">кістка</span> <span class="en">bone</span></li>
-        <li><span class="uk">кров</span> <span class="en">blood</span></li>
-        <li><span class="uk">хвіст</span> <span class="en">tail</span></li>
-      </ul>
-
-      <div class="divider" id="clothes">
-        <hr><span>Одяг — Clothes</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">шапка</span> <span class="en">hat</span></li>
-        <li><span class="uk">куртка</span> <span class="en">jacket</span></li>
-        <li><span class="uk">штани</span> <span class="en">pants</span></li>
-        <li><span class="uk">сукня</span> <span class="en">dress</span></li>
-        <li><span class="uk">черевики</span> <span class="en">boots</span></li>
-        <li><span class="uk">шкарпетки</span> <span class="en">socks</span></li>
-        <li><span class="uk">рукавиці</span> <span class="en">gloves</span></li>
-        <li><span class="uk">шарф</span> <span class="en">scarf</span></li>
-        <li><span class="uk">футболка</span> <span class="en">t-shirt</span></li>
-        <li><span class="uk">спідниця</span> <span class="en">skirt</span></li>
-        <li><span class="uk">светр</span> <span class="en">sweater</span></li>
-        <li><span class="uk">пальто</span> <span class="en">coat</span></li>
-        <li><span class="uk">краватка</span> <span class="en">tie</span></li>
-        <li><span class="uk">ремінь</span> <span class="en">belt</span></li>
-        <li><span class="uk">кишеня</span> <span class="en">pocket</span></li>
-        <li><span class="uk">взуття</span> <span class="en">shoes</span></li>
-      </ul>
-
-      <div class="divider" id="pets">
-        <hr><span>Домашні тварини — Pets</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">кіт</span> <span class="en">cat</span></li>
-        <li><span class="uk">пес</span> <span class="en">dog</span></li>
-        <li><span class="uk">хом'як</span> <span class="en">hamster</span></li>
-        <li><span class="uk">папуга</span> <span class="en">parrot</span></li>
-        <li><span class="uk">кролик</span> <span class="en">rabbit</span></li>
-        <li><span class="uk">рибка</span> <span class="en">goldfish</span></li>
-        <li><span class="uk">черепаха</span> <span class="en">turtle</span></li>
-        <li><span class="uk">канарка</span> <span class="en">canary</span></li>
-        <li><span class="uk">домашня тварина</span> <span class="en">pet</span></li>
-      </ul>
-
-      <div class="divider" id="farm-animals">
-        <hr><span>Тварини ферми — Farm Animals</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">корова</span> <span class="en">cow</span></li>
-        <li><span class="uk">кінь</span> <span class="en">horse</span></li>
-        <li><span class="uk">курка</span> <span class="en">chicken</span></li>
-        <li><span class="uk">свиня</span> <span class="en">pig</span></li>
-        <li><span class="uk">вівця</span> <span class="en">sheep</span></li>
-        <li><span class="uk">коза</span> <span class="en">goat</span></li>
-        <li><span class="uk">качка</span> <span class="en">duck</span></li>
-        <li><span class="uk">гуска</span> <span class="en">goose</span></li>
-        <li><span class="uk">індик</span> <span class="en">turkey</span></li>
-        <li><span class="uk">осел</span> <span class="en">donkey</span></li>
-        <li><span class="uk">півень</span> <span class="en">rooster</span></li>
-        <li><span class="uk">кролик</span> <span class="en">rabbit</span></li>
-      </ul>
-
-      <div class="divider" id="wild-animals">
-        <hr><span>Дикі тварини — Wild Animals</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">ведмідь</span> <span class="en">bear</span></li>
-        <li><span class="uk">заєць</span> <span class="en">hare</span></li>
-        <li><span class="uk">лисиця</span> <span class="en">fox</span></li>
-        <li><span class="uk">вовк</span> <span class="en">wolf</span></li>
-        <li><span class="uk">олень</span> <span class="en">deer</span></li>
-        <li><span class="uk">білка</span> <span class="en">squirrel</span></li>
-        <li><span class="uk">їжак</span> <span class="en">hedgehog</span></li>
-        <li><span class="uk">лев</span> <span class="en">lion</span></li>
-        <li><span class="uk">тигр</span> <span class="en">tiger</span></li>
-        <li><span class="uk">слон</span> <span class="en">elephant</span></li>
-        <li><span class="uk">жирафа</span> <span class="en">giraffe</span></li>
-        <li><span class="uk">мавпа</span> <span class="en">monkey</span></li>
-        <li><span class="uk">зебра</span> <span class="en">zebra</span></li>
-        <li><span class="uk">крокодил</span> <span class="en">crocodile</span></li>
-        <li><span class="uk">бегемот</span> <span class="en">hippo</span></li>
-        <li><span class="uk">носоріг</span> <span class="en">rhino</span></li>
-        <li><span class="uk">панда</span> <span class="en">panda</span></li>
-        <li><span class="uk">кенгуру</span> <span class="en">kangaroo</span></li>
-        <li><span class="uk">тварина</span> <span class="en">animal</span></li>
-        <li><span class="uk">ігуана</span> <span class="en">iguana</span></li>
-      </ul>
-
-      <div class="divider" id="birds">
-        <hr><span>Птахи — Birds</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">птах</span> <span class="en">bird</span></li>
-        <li><span class="uk">горобець</span> <span class="en">sparrow</span></li>
-        <li><span class="uk">ворона</span> <span class="en">crow</span></li>
-        <li><span class="uk">голуб</span> <span class="en">pigeon</span></li>
-        <li><span class="uk">орел</span> <span class="en">eagle</span></li>
-        <li><span class="uk">сова</span> <span class="en">owl</span></li>
-        <li><span class="uk">лелека</span> <span class="en">stork</span></li>
-        <li><span class="uk">ластівка</span> <span class="en">swallow</span></li>
-        <li><span class="uk">синиця</span> <span class="en">tit</span></li>
-        <li><span class="uk">дятел</span> <span class="en">woodpecker</span></li>
-        <li><span class="uk">пінгвін</span> <span class="en">penguin</span></li>
-        <li><span class="uk">фламінго</span> <span class="en">flamingo</span></li>
-      </ul>
-
-      <div class="divider" id="insects">
-        <hr><span>Комахи — Insects</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">метелик</span> <span class="en">butterfly</span></li>
-        <li><span class="uk">бджола</span> <span class="en">bee</span></li>
-        <li><span class="uk">мураха</span> <span class="en">ant</span></li>
-        <li><span class="uk">жук</span> <span class="en">beetle</span></li>
-        <li><span class="uk">комар</span> <span class="en">mosquito</span></li>
-        <li><span class="uk">павук</span> <span class="en">spider</span></li>
-        <li><span class="uk">муха</span> <span class="en">fly</span></li>
-        <li><span class="uk">сонечко</span> <span class="en">ladybug</span></li>
-        <li><span class="uk">коник</span> <span class="en">grasshopper</span></li>
-        <li><span class="uk">равлик</span> <span class="en">snail</span></li>
-      </ul>
-
-      <div class="divider" id="sea-animals">
-        <hr><span>Морські тварини — Sea Animals</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">риба</span> <span class="en">fish</span></li>
-        <li><span class="uk">кит</span> <span class="en">whale</span></li>
-        <li><span class="uk">дельфін</span> <span class="en">dolphin</span></li>
-        <li><span class="uk">акула</span> <span class="en">shark</span></li>
-        <li><span class="uk">восьминіг</span> <span class="en">octopus</span></li>
-        <li><span class="uk">краб</span> <span class="en">crab</span></li>
-        <li><span class="uk">медуза</span> <span class="en">jellyfish</span></li>
-        <li><span class="uk">морський коник</span> <span class="en">seahorse</span></li>
-        <li><span class="uk">тюлень</span> <span class="en">seal</span></li>
-        <li><span class="uk">креветка</span> <span class="en">shrimp</span></li>
-      </ul>
-
-      <div class="divider" id="fruits">
-        <hr><span>Фрукти — Fruits</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">яблуко</span> <span class="en">apple</span></li>
-        <li><span class="uk">банан</span> <span class="en">banana</span></li>
-        <li><span class="uk">апельсин</span> <span class="en">orange</span></li>
-        <li><span class="uk">полуниця</span> <span class="en">strawberry</span></li>
-        <li><span class="uk">виноград</span> <span class="en">grape</span></li>
-        <li><span class="uk">кавун</span> <span class="en">watermelon</span></li>
-        <li><span class="uk">лимон</span> <span class="en">lemon</span></li>
-        <li><span class="uk">груша</span> <span class="en">pear</span></li>
-        <li><span class="uk">вишня</span> <span class="en">cherry</span></li>
-        <li><span class="uk">персик</span> <span class="en">peach</span></li>
-        <li><span class="uk">ківі</span> <span class="en">kiwi</span></li>
-        <li><span class="uk">ананас</span> <span class="en">pineapple</span></li>
-        <li><span class="uk">слива</span> <span class="en">plum</span></li>
-        <li><span class="uk">малина</span> <span class="en">raspberry</span></li>
-      </ul>
-
-      <div class="divider" id="vegetables">
-        <hr><span>Овочі — Vegetables</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">морква</span> <span class="en">carrot</span></li>
-        <li><span class="uk">картопля</span> <span class="en">potato</span></li>
-        <li><span class="uk">помідор</span> <span class="en">tomato</span></li>
-        <li><span class="uk">огірок</span> <span class="en">cucumber</span></li>
-        <li><span class="uk">капуста</span> <span class="en">cabbage</span></li>
-        <li><span class="uk">цибуля</span> <span class="en">onion</span></li>
-        <li><span class="uk">часник</span> <span class="en">garlic</span></li>
-        <li><span class="uk">перець</span> <span class="en">pepper</span></li>
-        <li><span class="uk">буряк</span> <span class="en">beet</span></li>
-        <li><span class="uk">горох</span> <span class="en">peas</span></li>
-        <li><span class="uk">кукурудза</span> <span class="en">corn</span></li>
-        <li><span class="uk">гарбуз</span> <span class="en">pumpkin</span></li>
-        <li><span class="uk">квасоля</span> <span class="en">beans</span></li>
-        <li><span class="uk">редиска</span> <span class="en">radish</span></li>
-      </ul>
-
-      <div class="divider" id="drinks">
-        <hr><span>Напої — Drinks</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">вода</span> <span class="en">water</span></li>
-        <li><span class="uk">молоко</span> <span class="en">milk</span></li>
-        <li><span class="uk">сік</span> <span class="en">juice</span></li>
-        <li><span class="uk">чай</span> <span class="en">tea</span></li>
-        <li><span class="uk">какао</span> <span class="en">cocoa</span></li>
-        <li><span class="uk">компот</span> <span class="en">compote</span></li>
-        <li><span class="uk">лимонад</span> <span class="en">lemonade</span></li>
-        <li><span class="uk">кефір</span> <span class="en">kefir</span></li>
-        <li><span class="uk">йогурт</span> <span class="en">yogurt</span></li>
-        <li><span class="uk">смузі</span> <span class="en">smoothie</span></li>
-      </ul>
-
-      <div class="divider" id="food">
-        <hr><span>Їжа та страви — Food & Meals</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">хліб</span> <span class="en">bread</span></li>
-        <li><span class="uk">каша</span> <span class="en">porridge</span></li>
-        <li><span class="uk">суп</span> <span class="en">soup</span></li>
-        <li><span class="uk">їжа</span> <span class="en">food</span></li>
-        <li><span class="uk">сніданок</span> <span class="en">breakfast</span></li>
-        <li><span class="uk">обід</span> <span class="en">lunch</span></li>
-        <li><span class="uk">вечеря</span> <span class="en">dinner</span></li>
-        <li><span class="uk">рис</span> <span class="en">rice</span></li>
-        <li><span class="uk">макарони</span> <span class="en">pasta</span></li>
-        <li><span class="uk">м'ясо</span> <span class="en">meat</span></li>
-        <li><span class="uk">сир</span> <span class="en">cheese</span></li>
-        <li><span class="uk">масло</span> <span class="en">butter</span></li>
-        <li><span class="uk">яйце</span> <span class="en">egg</span></li>
-        <li><span class="uk">борщ</span> <span class="en">borscht</span></li>
-        <li><span class="uk">вареник</span> <span class="en">dumpling</span></li>
-        <li><span class="uk">сіль</span> <span class="en">salt</span></li>
-        <li><span class="uk">піца</span> <span class="en">pizza</span></li>
-        <li><span class="uk">бутерброд</span> <span class="en">sandwich</span></li>
-        <li><span class="uk">млинець</span> <span class="en">pancake</span></li>
-        <li><span class="uk">сметана</span> <span class="en">sour cream</span></li>
-        <li><span class="uk">желе</span> <span class="en">jelly</span></li>
-        <li><span class="uk">горіхи</span> <span class="en">nuts</span></li>
-        <li><span class="uk">ковбаса</span> <span class="en">sausage</span></li>
-      </ul>
-
-      <div class="divider" id="sweets">
-        <hr><span>Солодощі — Sweets</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">торт</span> <span class="en">cake</span></li>
-        <li><span class="uk">цукерка</span> <span class="en">candy</span></li>
-        <li><span class="uk">печиво</span> <span class="en">cookie</span></li>
-        <li><span class="uk">шоколад</span> <span class="en">chocolate</span></li>
-        <li><span class="uk">морозиво</span> <span class="en">ice cream</span></li>
-        <li><span class="uk">мед</span> <span class="en">honey</span></li>
-        <li><span class="uk">цукор</span> <span class="en">sugar</span></li>
-        <li><span class="uk">варення</span> <span class="en">jam</span></li>
-        <li><span class="uk">пиріг</span> <span class="en">pie</span></li>
-        <li><span class="uk">тістечко</span> <span class="en">pastry</span></li>
-      </ul>
-
-      <div class="divider" id="home">
-        <hr><span>Дім та кімнати — Home & Rooms</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">дім</span> <span class="en">house</span></li>
-        <li><span class="uk">кімната</span> <span class="en">room</span></li>
-        <li><span class="uk">кухня</span> <span class="en">kitchen</span></li>
-        <li><span class="uk">спальня</span> <span class="en">bedroom</span></li>
-        <li><span class="uk">ванна</span> <span class="en">bathroom</span></li>
-        <li><span class="uk">вітальня</span> <span class="en">living room</span></li>
-        <li><span class="uk">коридор</span> <span class="en">hallway</span></li>
-        <li><span class="uk">балкон</span> <span class="en">balcony</span></li>
-        <li><span class="uk">дах</span> <span class="en">roof</span></li>
-        <li><span class="uk">підлога</span> <span class="en">floor</span></li>
-        <li><span class="uk">стіна</span> <span class="en">wall</span></li>
-        <li><span class="uk">стеля</span> <span class="en">ceiling</span></li>
-        <li><span class="uk">сходи</span> <span class="en">stairs</span></li>
-        <li><span class="uk">гараж</span> <span class="en">garage</span></li>
-      </ul>
-
-      <div class="divider" id="furniture">
-        <hr><span>Меблі — Furniture</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">стіл</span> <span class="en">table</span></li>
-        <li><span class="uk">стілець</span> <span class="en">chair</span></li>
-        <li><span class="uk">ліжко</span> <span class="en">bed</span></li>
-        <li><span class="uk">шафа</span> <span class="en">wardrobe</span></li>
-        <li><span class="uk">диван</span> <span class="en">sofa</span></li>
-        <li><span class="uk">полиця</span> <span class="en">shelf</span></li>
-        <li><span class="uk">дзеркало</span> <span class="en">mirror</span></li>
-        <li><span class="uk">лампа</span> <span class="en">lamp</span></li>
-        <li><span class="uk">килим</span> <span class="en">carpet</span></li>
-        <li><span class="uk">годинник</span> <span class="en">clock</span></li>
-        <li><span class="uk">телевізор</span> <span class="en">TV</span></li>
-        <li><span class="uk">холодильник</span> <span class="en">fridge</span></li>
-        <li><span class="uk">подушка</span> <span class="en">pillow</span></li>
-        <li><span class="uk">ковдра</span> <span class="en">blanket</span></li>
-      </ul>
-
-      <div class="divider" id="kitchenware">
-        <hr><span>Кухонне приладдя — Kitchenware</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">тарілка</span> <span class="en">plate</span></li>
-        <li><span class="uk">чашка</span> <span class="en">cup</span></li>
-        <li><span class="uk">ложка</span> <span class="en">spoon</span></li>
-        <li><span class="uk">виделка</span> <span class="en">fork</span></li>
-        <li><span class="uk">ніж</span> <span class="en">knife</span></li>
-        <li><span class="uk">каструля</span> <span class="en">pot</span></li>
-        <li><span class="uk">сковорода</span> <span class="en">pan</span></li>
-        <li><span class="uk">склянка</span> <span class="en">glass</span></li>
-        <li><span class="uk">чайник</span> <span class="en">kettle</span></li>
-        <li><span class="uk">миска</span> <span class="en">bowl</span></li>
-      </ul>
+      <div id="words-no-results" class="no-results" style="display: none;">Не знайдено</div>
 
       <div class="divider" id="bathroom">
         <hr><span>Ванна кімната — Bathroom</span>
@@ -519,420 +137,6 @@
         <li><span class="uk">гребінець</span> <span class="en">comb</span></li>
         <li><span class="uk">душ</span> <span class="en">shower</span></li>
         <li><span class="uk">кран</span> <span class="en">tap</span></li>
-      </ul>
-
-      <div class="divider" id="school">
-        <hr><span>Школа — School</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">школа</span> <span class="en">school</span></li>
-        <li><span class="uk">книга</span> <span class="en">book</span></li>
-        <li><span class="uk">ручка</span> <span class="en">pen</span></li>
-        <li><span class="uk">олівець</span> <span class="en">pencil</span></li>
-        <li><span class="uk">зошит</span> <span class="en">notebook</span></li>
-        <li><span class="uk">рюкзак</span> <span class="en">backpack</span></li>
-        <li><span class="uk">клас</span> <span class="en">classroom</span></li>
-        <li><span class="uk">дошка</span> <span class="en">board</span></li>
-        <li><span class="uk">крейда</span> <span class="en">chalk</span></li>
-        <li><span class="uk">лінійка</span> <span class="en">ruler</span></li>
-        <li><span class="uk">гумка</span> <span class="en">eraser</span></li>
-        <li><span class="uk">підручник</span> <span class="en">textbook</span></li>
-        <li><span class="uk">урок</span> <span class="en">lesson</span></li>
-        <li><span class="uk">вчитель</span> <span class="en">teacher</span></li>
-        <li><span class="uk">учень</span> <span class="en">student</span></li>
-        <li><span class="uk">перерва</span> <span class="en">break</span></li>
-        <li><span class="uk">літера</span> <span class="en">letter</span></li>
-        <li><span class="uk">слово</span> <span class="en">word</span></li>
-        <li><span class="uk">картинка</span> <span class="en">picture</span></li>
-      </ul>
-
-      <div class="divider" id="toys">
-        <hr><span>Іграшки та ігри — Toys & Games</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">м'яч</span> <span class="en">ball</span></li>
-        <li><span class="uk">лялька</span> <span class="en">doll</span></li>
-        <li><span class="uk">ведмедик</span> <span class="en">teddy bear</span></li>
-        <li><span class="uk">кубики</span> <span class="en">blocks</span></li>
-        <li><span class="uk">пазл</span> <span class="en">puzzle</span></li>
-        <li><span class="uk">робот</span> <span class="en">robot</span></li>
-        <li><span class="uk">гра</span> <span class="en">game</span></li>
-        <li><span class="uk">повітряна куля</span> <span class="en">balloon</span></li>
-        <li><span class="uk">скакалка</span> <span class="en">jump rope</span></li>
-        <li><span class="uk">настільна гра</span> <span class="en">board game</span></li>
-        <li><span class="uk">конструктор</span> <span class="en">constructor</span></li>
-        <li><span class="uk">іграшка</span> <span class="en">toy</span></li>
-        <li><span class="uk">повітряний змій</span> <span class="en">kite</span></li>
-      </ul>
-
-      <div class="divider" id="transport">
-        <hr><span>Транспорт — Transport</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">машина</span> <span class="en">car</span></li>
-        <li><span class="uk">автобус</span> <span class="en">bus</span></li>
-        <li><span class="uk">літак</span> <span class="en">plane</span></li>
-        <li><span class="uk">потяг</span> <span class="en">train</span></li>
-        <li><span class="uk">велосипед</span> <span class="en">bike</span></li>
-        <li><span class="uk">корабель</span> <span class="en">ship</span></li>
-        <li><span class="uk">метро</span> <span class="en">metro</span></li>
-        <li><span class="uk">таксі</span> <span class="en">taxi</span></li>
-        <li><span class="uk">мотоцикл</span> <span class="en">motorcycle</span></li>
-        <li><span class="uk">вертоліт</span> <span class="en">helicopter</span></li>
-        <li><span class="uk">трамвай</span> <span class="en">tram</span></li>
-        <li><span class="uk">човен</span> <span class="en">boat</span></li>
-        <li><span class="uk">ракета</span> <span class="en">rocket</span></li>
-        <li><span class="uk">вантажівка</span> <span class="en">truck</span></li>
-        <li><span class="uk">самокат</span> <span class="en">scooter</span></li>
-        <li><span class="uk">карета</span> <span class="en">carriage</span></li>
-      </ul>
-
-      <div class="divider" id="nature">
-        <hr><span>Природа — Nature</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">сонце</span> <span class="en">sun</span></li>
-        <li><span class="uk">місяць</span> <span class="en">moon</span></li>
-        <li><span class="uk">зірка</span> <span class="en">star</span></li>
-        <li><span class="uk">небо</span> <span class="en">sky</span></li>
-        <li><span class="uk">дерево</span> <span class="en">tree</span></li>
-        <li><span class="uk">квітка</span> <span class="en">flower</span></li>
-        <li><span class="uk">трава</span> <span class="en">grass</span></li>
-        <li><span class="uk">ліс</span> <span class="en">forest</span></li>
-        <li><span class="uk">гора</span> <span class="en">mountain</span></li>
-        <li><span class="uk">річка</span> <span class="en">river</span></li>
-        <li><span class="uk">море</span> <span class="en">sea</span></li>
-        <li><span class="uk">озеро</span> <span class="en">lake</span></li>
-        <li><span class="uk">поле</span> <span class="en">field</span></li>
-        <li><span class="uk">сад</span> <span class="en">garden</span></li>
-        <li><span class="uk">острів</span> <span class="en">island</span></li>
-        <li><span class="uk">земля</span> <span class="en">earth</span></li>
-        <li><span class="uk">камінь</span> <span class="en">stone</span></li>
-        <li><span class="uk">пісок</span> <span class="en">sand</span></li>
-        <li><span class="uk">болото</span> <span class="en">swamp</span></li>
-        <li><span class="uk">печера</span> <span class="en">cave</span></li>
-        <li><span class="uk">повітря</span> <span class="en">air</span></li>
-        <li><span class="uk">ґрунт</span> <span class="en">soil</span></li>
-      </ul>
-
-      <div class="divider" id="weather">
-        <hr><span>Погода — Weather</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">хмара</span> <span class="en">cloud</span></li>
-        <li><span class="uk">дощ</span> <span class="en">rain</span></li>
-        <li><span class="uk">сніг</span> <span class="en">snow</span></li>
-        <li><span class="uk">вітер</span> <span class="en">wind</span></li>
-        <li><span class="uk">грім</span> <span class="en">thunder</span></li>
-        <li><span class="uk">блискавка</span> <span class="en">lightning</span></li>
-        <li><span class="uk">веселка</span> <span class="en">rainbow</span></li>
-        <li><span class="uk">туман</span> <span class="en">fog</span></li>
-        <li><span class="uk">мороз</span> <span class="en">frost</span></li>
-        <li><span class="uk">спека</span> <span class="en">heat</span></li>
-        <li><span class="uk">град</span> <span class="en">hail</span></li>
-        <li><span class="uk">калюжа</span> <span class="en">puddle</span></li>
-        <li><span class="uk">погода</span> <span class="en">weather</span></li>
-        <li><span class="uk">тіні</span> <span class="en">shadows</span></li>
-      </ul>
-
-      <div class="divider" id="seasons">
-        <hr><span>Пори року — Seasons</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">зима</span> <span class="en">winter</span></li>
-        <li><span class="uk">весна</span> <span class="en">spring</span></li>
-        <li><span class="uk">літо</span> <span class="en">summer</span></li>
-        <li><span class="uk">осінь</span> <span class="en">autumn</span></li>
-      </ul>
-
-      <div class="divider" id="time-of-day">
-        <hr><span>Час доби — Time of Day</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">ранок</span> <span class="en">morning</span></li>
-        <li><span class="uk">день</span> <span class="en">afternoon</span></li>
-        <li><span class="uk">вечір</span> <span class="en">evening</span></li>
-        <li><span class="uk">ніч</span> <span class="en">night</span></li>
-        <li><span class="uk">світанок</span> <span class="en">dawn</span></li>
-        <li><span class="uk">захід</span> <span class="en">sunset</span></li>
-      </ul>
-
-      <div class="divider" id="days">
-        <hr><span>Дні тижня — Days of Week</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">понеділок</span> <span class="en">Monday</span></li>
-        <li><span class="uk">вівторок</span> <span class="en">Tuesday</span></li>
-        <li><span class="uk">середа</span> <span class="en">Wednesday</span></li>
-        <li><span class="uk">четвер</span> <span class="en">Thursday</span></li>
-        <li><span class="uk">п'ятниця</span> <span class="en">Friday</span></li>
-        <li><span class="uk">субота</span> <span class="en">Saturday</span></li>
-        <li><span class="uk">неділя</span> <span class="en">Sunday</span></li>
-      </ul>
-
-      <div class="divider" id="months">
-        <hr><span>Місяці — Months</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">січень</span> <span class="en">January</span></li>
-        <li><span class="uk">лютий</span> <span class="en">February</span></li>
-        <li><span class="uk">березень</span> <span class="en">March</span></li>
-        <li><span class="uk">квітень</span> <span class="en">April</span></li>
-        <li><span class="uk">травень</span> <span class="en">May</span></li>
-        <li><span class="uk">червень</span> <span class="en">June</span></li>
-        <li><span class="uk">липень</span> <span class="en">July</span></li>
-        <li><span class="uk">серпень</span> <span class="en">August</span></li>
-        <li><span class="uk">вересень</span> <span class="en">September</span></li>
-        <li><span class="uk">жовтень</span> <span class="en">October</span></li>
-        <li><span class="uk">листопад</span> <span class="en">November</span></li>
-        <li><span class="uk">грудень</span> <span class="en">December</span></li>
-      </ul>
-
-      <div class="divider" id="time">
-        <hr><span>Час — Time</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">час</span> <span class="en">time</span></li>
-        <li><span class="uk">година</span> <span class="en">hour</span></li>
-        <li><span class="uk">хвилина</span> <span class="en">minute</span></li>
-        <li><span class="uk">секунда</span> <span class="en">second</span></li>
-        <li><span class="uk">тиждень</span> <span class="en">week</span></li>
-        <li><span class="uk">місяць</span> <span class="en">month</span></li>
-        <li><span class="uk">рік</span> <span class="en">year</span></li>
-        <li><span class="uk">сьогодні</span> <span class="en">today</span></li>
-        <li><span class="uk">вчора</span> <span class="en">yesterday</span></li>
-        <li><span class="uk">завтра</span> <span class="en">tomorrow</span></li>
-        <li><span class="uk">день</span> <span class="en">day</span></li>
-      </ul>
-
-      <div class="divider" id="numbers">
-        <hr><span>Числа — Numbers</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">нуль</span> <span class="en">zero</span></li>
-        <li><span class="uk">один</span> <span class="en">one</span></li>
-        <li><span class="uk">два</span> <span class="en">two</span></li>
-        <li><span class="uk">три</span> <span class="en">three</span></li>
-        <li><span class="uk">чотири</span> <span class="en">four</span></li>
-        <li><span class="uk">п'ять</span> <span class="en">five</span></li>
-        <li><span class="uk">шість</span> <span class="en">six</span></li>
-        <li><span class="uk">сім</span> <span class="en">seven</span></li>
-        <li><span class="uk">вісім</span> <span class="en">eight</span></li>
-        <li><span class="uk">дев'ять</span> <span class="en">nine</span></li>
-        <li><span class="uk">десять</span> <span class="en">ten</span></li>
-        <li><span class="uk">одинадцять</span> <span class="en">eleven</span></li>
-        <li><span class="uk">дванадцять</span> <span class="en">twelve</span></li>
-        <li><span class="uk">двадцять</span> <span class="en">twenty</span></li>
-        <li><span class="uk">тридцять</span> <span class="en">thirty</span></li>
-        <li><span class="uk">сорок</span> <span class="en">forty</span></li>
-        <li><span class="uk">п'ятдесят</span> <span class="en">fifty</span></li>
-        <li><span class="uk">сто</span> <span class="en">hundred</span></li>
-        <li><span class="uk">тисяча</span> <span class="en">thousand</span></li>
-        <li><span class="uk">мільйон</span> <span class="en">million</span></li>
-        <li><span class="uk">число; номер</span> <span class="en">number</span></li>
-      </ul>
-
-      <div class="divider" id="colors">
-        <hr><span>Кольори — Colors</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">червоний</span> <span class="en">red</span></li>
-        <li><span class="uk">синій</span> <span class="en">blue</span></li>
-        <li><span class="uk">зелений</span> <span class="en">green</span></li>
-        <li><span class="uk">жовтий</span> <span class="en">yellow</span></li>
-        <li><span class="uk">білий</span> <span class="en">white</span></li>
-        <li><span class="uk">чорний</span> <span class="en">black</span></li>
-        <li><span class="uk">рожевий</span> <span class="en">pink</span></li>
-        <li><span class="uk">помаранчевий</span> <span class="en">orange</span></li>
-        <li><span class="uk">фіолетовий</span> <span class="en">purple</span></li>
-        <li><span class="uk">сірий</span> <span class="en">gray</span></li>
-        <li><span class="uk">коричневий</span> <span class="en">brown</span></li>
-        <li><span class="uk">золотий</span> <span class="en">gold</span></li>
-        <li><span class="uk">срібний</span> <span class="en">silver</span></li>
-        <li><span class="uk">блакитний</span> <span class="en">light blue</span></li>
-        <li><span class="uk">колір</span> <span class="en">color</span></li>
-      </ul>
-
-      <div class="divider" id="shapes">
-        <hr><span>Форми — Shapes</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">коло</span> <span class="en">circle</span></li>
-        <li><span class="uk">квадрат</span> <span class="en">square</span></li>
-        <li><span class="uk">трикутник</span> <span class="en">triangle</span></li>
-        <li><span class="uk">прямокутник</span> <span class="en">rectangle</span></li>
-        <li><span class="uk">овал</span> <span class="en">oval</span></li>
-        <li><span class="uk">ромб</span> <span class="en">diamond</span></li>
-        <li><span class="uk">куб</span> <span class="en">cube</span></li>
-        <li><span class="uk">куля</span> <span class="en">sphere</span></li>
-      </ul>
-
-      <div class="divider" id="description">
-        <hr><span>Опис — Description</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">великий</span> <span class="en">big</span></li>
-        <li><span class="uk">малий</span> <span class="en">small</span></li>
-        <li><span class="uk">добрий</span> <span class="en">good</span></li>
-        <li><span class="uk">поганий</span> <span class="en">bad</span></li>
-        <li><span class="uk">гарний</span> <span class="en">beautiful</span></li>
-        <li><span class="uk">новий</span> <span class="en">new</span></li>
-        <li><span class="uk">старий</span> <span class="en">old</span></li>
-        <li><span class="uk">швидкий</span> <span class="en">fast</span></li>
-        <li><span class="uk">повільний</span> <span class="en">slow</span></li>
-        <li><span class="uk">гарячий</span> <span class="en">hot</span></li>
-        <li><span class="uk">холодний</span> <span class="en">cold</span></li>
-        <li><span class="uk">довгий</span> <span class="en">long</span></li>
-        <li><span class="uk">короткий</span> <span class="en">short</span></li>
-        <li><span class="uk">тихий</span> <span class="en">quiet</span></li>
-        <li><span class="uk">гучний</span> <span class="en">loud</span></li>
-        <li><span class="uk">м'який</span> <span class="en">soft</span></li>
-        <li><span class="uk">твердий</span> <span class="en">hard</span></li>
-        <li><span class="uk">мокрий</span> <span class="en">wet</span></li>
-        <li><span class="uk">сухий</span> <span class="en">dry</span></li>
-        <li><span class="uk">чистий</span> <span class="en">clean</span></li>
-        <li><span class="uk">брудний</span> <span class="en">dirty</span></li>
-        <li><span class="uk">легкий</span> <span class="en">light</span></li>
-        <li><span class="uk">важкий</span> <span class="en">heavy</span></li>
-        <li><span class="uk">товстий</span> <span class="en">thick</span></li>
-        <li><span class="uk">тонкий</span> <span class="en">thin</span></li>
-        <li><span class="uk">широкий</span> <span class="en">wide</span></li>
-        <li><span class="uk">вузький</span> <span class="en">narrow</span></li>
-        <li><span class="uk">сильний</span> <span class="en">strong</span></li>
-        <li><span class="uk">слабкий</span> <span class="en">weak</span></li>
-        <li><span class="uk">розумний</span> <span class="en">smart</span></li>
-        <li><span class="uk">дружній</span> <span class="en">friendly</span></li>
-        <li><span class="uk">особливий</span> <span class="en">special</span></li>
-        <li><span class="uk">солодкий</span> <span class="en">sweet</span></li>
-        <li><span class="uk">зроблено</span> <span class="en">done</span></li>
-      </ul>
-
-      <div class="divider" id="emotions">
-        <hr><span>Емоції — Emotions</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">радість</span> <span class="en">joy</span></li>
-        <li><span class="uk">сум</span> <span class="en">sadness</span></li>
-        <li><span class="uk">страх</span> <span class="en">fear</span></li>
-        <li><span class="uk">злість</span> <span class="en">anger</span></li>
-        <li><span class="uk">любов</span> <span class="en">love</span></li>
-        <li><span class="uk">сміх</span> <span class="en">laughter</span></li>
-        <li><span class="uk">плач</span> <span class="en">crying</span></li>
-        <li><span class="uk">здивування</span> <span class="en">surprise</span></li>
-        <li><span class="uk">гордість</span> <span class="en">pride</span></li>
-        <li><span class="uk">спокій</span> <span class="en">calm</span></li>
-        <li><span class="uk">надія</span> <span class="en">hope</span></li>
-        <li><span class="uk">щастя</span> <span class="en">happiness</span></li>
-        <li><span class="uk">сором</span> <span class="en">shame</span></li>
-        <li><span class="uk">ніжність</span> <span class="en">tenderness</span></li>
-      </ul>
-
-      <div class="divider" id="state">
-        <hr><span>Стан — State</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">хворий</span> <span class="en">sick</span></li>
-        <li><span class="uk">здоровий</span> <span class="en">healthy</span></li>
-        <li><span class="uk">голодний</span> <span class="en">hungry</span></li>
-        <li><span class="uk">ситий</span> <span class="en">full</span></li>
-        <li><span class="uk">втомлений</span> <span class="en">tired</span></li>
-        <li><span class="uk">бадьорий</span> <span class="en">energetic</span></li>
-        <li><span class="uk">веселий</span> <span class="en">cheerful</span></li>
-        <li><span class="uk">сумний</span> <span class="en">sad</span></li>
-        <li><span class="uk">сердитий</span> <span class="en">angry</span></li>
-        <li><span class="uk">щасливий</span> <span class="en">happy</span></li>
-        <li><span class="uk">зайнятий</span> <span class="en">busy</span></li>
-        <li><span class="uk">вільний</span> <span class="en">free</span></li>
-      </ul>
-
-      <div class="divider" id="greetings">
-        <hr><span>Привітання — Greetings</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">так</span> <span class="en">yes</span></li>
-        <li><span class="uk">ні</span> <span class="en">no</span></li>
-        <li><span class="uk">привіт</span> <span class="en">hello</span></li>
-        <li><span class="uk">бувай</span> <span class="en">bye</span></li>
-        <li><span class="uk">дякую</span> <span class="en">thank you</span></li>
-        <li><span class="uk">будь ласка</span> <span class="en">please</span></li>
-        <li><span class="uk">вибачте</span> <span class="en">sorry</span></li>
-        <li><span class="uk">добрий ранок</span> <span class="en">good morning</span></li>
-        <li><span class="uk">добрий вечір</span> <span class="en">good evening</span></li>
-        <li><span class="uk">на добраніч</span> <span class="en">good night</span></li>
-        <li><span class="uk">як справи</span> <span class="en">how are you</span></li>
-        <li><span class="uk">до побачення</span> <span class="en">goodbye</span></li>
-      </ul>
-
-      <div class="divider" id="pronouns">
-        <hr><span>Займенники — Pronouns</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">я</span> <span class="en">I</span></li>
-        <li><span class="uk">він</span> <span class="en">he</span></li>
-        <li><span class="uk">вона</span> <span class="en">she</span></li>
-        <li><span class="uk">воно</span> <span class="en">it</span></li>
-        <li><span class="uk">вони</span> <span class="en">they</span></li>
-        <li><span class="uk">ти/ви</span> <span class="en">you</span></li>
-        <li><span class="uk">мені/мене</span> <span class="en">me</span></li>
-        <li><span class="uk">мій/моя/моє</span> <span class="en">my</span></li>
-        <li><span class="uk">його</span> <span class="en">his</span></li>
-        <li><span class="uk">його/її (для неживого)</span> <span class="en">its</span></li>
-        <li><span class="uk">це/цей</span> <span class="en">this</span></li>
-      </ul>
-
-      <div class="divider" id="function-words">
-        <hr><span>Службові слова — Function Words</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">про</span> <span class="en">about</span></li>
-        <li><span class="uk">після</span> <span class="en">after</span></li>
-        <li><span class="uk">знову</span> <span class="en">again</span></li>
-        <li><span class="uk">і</span> <span class="en">and</span></li>
-        <li><span class="uk">для</span> <span class="en">for</span></li>
-        <li><span class="uk">в</span> <span class="en">in</span></li>
-        <li><span class="uk">не</span> <span class="en">not</span></li>
-        <li><span class="uk">зараз</span> <span class="en">now</span></li>
-        <li><span class="uk">на</span> <span class="en">on</span></li>
-        <li><span class="uk">або</span> <span class="en">or</span></li>
-        <li><span class="uk">потім</span> <span class="en">then</span></li>
-        <li><span class="uk">з</span> <span class="en">with</span></li>
-        <li><span class="uk">багато</span> <span class="en">many</span></li>
-        <li><span class="uk">скрізь</span> <span class="en">everywhere</span></li>
-        <li><span class="uk">разом</span> <span class="en">together</span></li>
-        <li><span class="uk">добре</span> <span class="en">well</span></li>
-        <li><span class="uk">різниця</span> <span class="en">difference</span></li>
-      </ul>
-
-      <div class="divider" id="helping-verbs">
-        <hr><span>Допоміжні дієслова — Helping Verbs</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">можу/може</span> <span class="en">can</span></li>
-        <li><span class="uk">має</span> <span class="en">has</span></li>
-        <li><span class="uk">мати</span> <span class="en">have</span></li>
-        <li><span class="uk">не є</span> <span class="en">isn't</span></li>
-        <li><span class="uk">це є</span> <span class="en">it's</span></li>
-        <li><span class="uk">давай/давайте</span> <span class="en">let's</span></li>
       </ul>
 
       <div class="divider" id="actions">
@@ -1010,66 +214,323 @@
         <li><span class="uk">дивитися</span> <span class="en">watch</span></li>
       </ul>
 
-      <div class="divider" id="professions">
-        <hr><span>Професії — Professions</span>
+      <div class="divider" id="home">
+        <hr><span>Дім та кімнати — Home & Rooms</span>
         <hr>
       </div>
       <ul class="words">
-        <li><span class="uk">лікар</span> <span class="en">doctor</span></li>
-        <li><span class="uk">пожежник</span> <span class="en">firefighter</span></li>
-        <li><span class="uk">поліцейський</span> <span class="en">police officer</span></li>
-        <li><span class="uk">кухар</span> <span class="en">cook</span></li>
-        <li><span class="uk">водій</span> <span class="en">driver</span></li>
-        <li><span class="uk">фермер</span> <span class="en">farmer</span></li>
-        <li><span class="uk">пілот</span> <span class="en">pilot</span></li>
-        <li><span class="uk">будівельник</span> <span class="en">builder</span></li>
-        <li><span class="uk">художник</span> <span class="en">artist</span></li>
-        <li><span class="uk">музикант</span> <span class="en">musician</span></li>
-        <li><span class="uk">продавець</span> <span class="en">seller</span></li>
-        <li><span class="uk">перукар</span> <span class="en">hairdresser</span></li>
-        <li><span class="uk">космонавт</span> <span class="en">astronaut</span></li>
-        <li><span class="uk">ветеринар</span> <span class="en">vet</span></li>
-        <li><span class="uk">пекар</span> <span class="en">baker</span></li>
-        <li><span class="uk">медсестра</span> <span class="en">nurse</span></li>
-        <li><span class="uk">танцівник</span> <span class="en">dancer</span></li>
-        <li><span class="uk">актор</span> <span class="en">actor</span></li>
-        <li><span class="uk">робота</span> <span class="en">job</span></li>
+        <li><span class="uk">дім</span> <span class="en">house</span></li>
+        <li><span class="uk">кімната</span> <span class="en">room</span></li>
+        <li><span class="uk">кухня</span> <span class="en">kitchen</span></li>
+        <li><span class="uk">спальня</span> <span class="en">bedroom</span></li>
+        <li><span class="uk">ванна</span> <span class="en">bathroom</span></li>
+        <li><span class="uk">вітальня</span> <span class="en">living room</span></li>
+        <li><span class="uk">коридор</span> <span class="en">hallway</span></li>
+        <li><span class="uk">балкон</span> <span class="en">balcony</span></li>
+        <li><span class="uk">дах</span> <span class="en">roof</span></li>
+        <li><span class="uk">підлога</span> <span class="en">floor</span></li>
+        <li><span class="uk">стіна</span> <span class="en">wall</span></li>
+        <li><span class="uk">стеля</span> <span class="en">ceiling</span></li>
+        <li><span class="uk">сходи</span> <span class="en">stairs</span></li>
+        <li><span class="uk">гараж</span> <span class="en">garage</span></li>
       </ul>
 
-      <div class="divider" id="sports">
-        <hr><span>Спорт — Sports</span>
+      <div class="divider" id="days">
+        <hr><span>Дні тижня — Days of Week</span>
         <hr>
       </div>
       <ul class="words">
-        <li><span class="uk">футбол</span> <span class="en">football</span></li>
-        <li><span class="uk">баскетбол</span> <span class="en">basketball</span></li>
-        <li><span class="uk">плавання</span> <span class="en">swimming</span></li>
-        <li><span class="uk">біг</span> <span class="en">running</span></li>
-        <li><span class="uk">гімнастика</span> <span class="en">gymnastics</span></li>
-        <li><span class="uk">теніс</span> <span class="en">tennis</span></li>
-        <li><span class="uk">хокей</span> <span class="en">hockey</span></li>
-        <li><span class="uk">волейбол</span> <span class="en">volleyball</span></li>
-        <li><span class="uk">танці</span> <span class="en">dancing</span></li>
-        <li><span class="uk">карате</span> <span class="en">karate</span></li>
-        <li><span class="uk">ковзани</span> <span class="en">skating</span></li>
-        <li><span class="uk">лижі</span> <span class="en">skiing</span></li>
+        <li><span class="uk">понеділок</span> <span class="en">Monday</span></li>
+        <li><span class="uk">вівторок</span> <span class="en">Tuesday</span></li>
+        <li><span class="uk">середа</span> <span class="en">Wednesday</span></li>
+        <li><span class="uk">четвер</span> <span class="en">Thursday</span></li>
+        <li><span class="uk">п'ятниця</span> <span class="en">Friday</span></li>
+        <li><span class="uk">субота</span> <span class="en">Saturday</span></li>
+        <li><span class="uk">неділя</span> <span class="en">Sunday</span></li>
       </ul>
 
-      <div class="divider" id="music">
-        <hr><span>Музика — Music</span>
+      <div class="divider" id="helping-verbs">
+        <hr><span>Допоміжні дієслова — Helping Verbs</span>
         <hr>
       </div>
       <ul class="words">
-        <li><span class="uk">музика</span> <span class="en">music</span></li>
-        <li><span class="uk">пісня</span> <span class="en">song</span></li>
-        <li><span class="uk">гітара</span> <span class="en">guitar</span></li>
-        <li><span class="uk">піаніно</span> <span class="en">piano</span></li>
-        <li><span class="uk">барабан</span> <span class="en">drum</span></li>
-        <li><span class="uk">скрипка</span> <span class="en">violin</span></li>
-        <li><span class="uk">флейта</span> <span class="en">flute</span></li>
-        <li><span class="uk">оркестр</span> <span class="en">orchestra</span></li>
-        <li><span class="uk">мелодія</span> <span class="en">melody</span></li>
-        <li><span class="uk">хор</span> <span class="en">choir</span></li>
+        <li><span class="uk">можу/може</span> <span class="en">can</span></li>
+        <li><span class="uk">має</span> <span class="en">has</span></li>
+        <li><span class="uk">мати</span> <span class="en">have</span></li>
+        <li><span class="uk">не є</span> <span class="en">isn't</span></li>
+        <li><span class="uk">це є</span> <span class="en">it's</span></li>
+        <li><span class="uk">давай/давайте</span> <span class="en">let's</span></li>
+      </ul>
+
+      <div class="divider" id="emotions">
+        <hr><span>Емоції — Emotions</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">радість</span> <span class="en">joy</span></li>
+        <li><span class="uk">сум</span> <span class="en">sadness</span></li>
+        <li><span class="uk">страх</span> <span class="en">fear</span></li>
+        <li><span class="uk">злість</span> <span class="en">anger</span></li>
+        <li><span class="uk">любов</span> <span class="en">love</span></li>
+        <li><span class="uk">сміх</span> <span class="en">laughter</span></li>
+        <li><span class="uk">плач</span> <span class="en">crying</span></li>
+        <li><span class="uk">здивування</span> <span class="en">surprise</span></li>
+        <li><span class="uk">гордість</span> <span class="en">pride</span></li>
+        <li><span class="uk">спокій</span> <span class="en">calm</span></li>
+        <li><span class="uk">надія</span> <span class="en">hope</span></li>
+        <li><span class="uk">щастя</span> <span class="en">happiness</span></li>
+        <li><span class="uk">сором</span> <span class="en">shame</span></li>
+        <li><span class="uk">ніжність</span> <span class="en">tenderness</span></li>
+      </ul>
+
+      <div class="divider" id="pronouns">
+        <hr><span>Займенники — Pronouns</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">він</span> <span class="en">he</span></li>
+        <li><span class="uk">вона</span> <span class="en">she</span></li>
+        <li><span class="uk">воно</span> <span class="en">it</span></li>
+        <li><span class="uk">вони</span> <span class="en">they</span></li>
+        <li><span class="uk">ти/ви</span> <span class="en">you</span></li>
+        <li><span class="uk">мені/мене</span> <span class="en">me</span></li>
+        <li><span class="uk">мій/моя/моє</span> <span class="en">my</span></li>
+        <li><span class="uk">його</span> <span class="en">his</span></li>
+        <li><span class="uk">це/цей</span> <span class="en">this</span></li>
+      </ul>
+
+      <div class="divider" id="health">
+        <hr><span>Здоров'я — Health</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">здоров'я</span> <span class="en">health</span></li>
+        <li><span class="uk">ліки</span> <span class="en">medicine</span></li>
+        <li><span class="uk">температура</span> <span class="en">temperature</span></li>
+        <li><span class="uk">кашель</span> <span class="en">cough</span></li>
+        <li><span class="uk">нежить</span> <span class="en">runny nose</span></li>
+        <li><span class="uk">біль</span> <span class="en">pain</span></li>
+        <li><span class="uk">пластир</span> <span class="en">bandaid</span></li>
+        <li><span class="uk">вітамін</span> <span class="en">vitamin</span></li>
+        <li><span class="uk">болить</span> <span class="en">hurts</span></li>
+        <li><span class="uk">вправа</span> <span class="en">exercise</span></li>
+      </ul>
+
+      <div class="divider" id="toys">
+        <hr><span>Іграшки та ігри — Toys & Games</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">м'яч</span> <span class="en">ball</span></li>
+        <li><span class="uk">лялька</span> <span class="en">doll</span></li>
+        <li><span class="uk">ведмедик</span> <span class="en">teddy bear</span></li>
+        <li><span class="uk">кубики</span> <span class="en">blocks</span></li>
+        <li><span class="uk">пазл</span> <span class="en">puzzle</span></li>
+        <li><span class="uk">робот</span> <span class="en">robot</span></li>
+        <li><span class="uk">гра</span> <span class="en">game</span></li>
+        <li><span class="uk">повітряна куля</span> <span class="en">balloon</span></li>
+        <li><span class="uk">скакалка</span> <span class="en">jump rope</span></li>
+        <li><span class="uk">настільна гра</span> <span class="en">board game</span></li>
+        <li><span class="uk">конструктор</span> <span class="en">constructor</span></li>
+        <li><span class="uk">іграшка</span> <span class="en">toy</span></li>
+        <li><span class="uk">повітряний змій</span> <span class="en">kite</span></li>
+      </ul>
+
+      <div class="divider" id="tools">
+        <hr><span>Інструменти — Tools</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">молоток</span> <span class="en">hammer</span></li>
+        <li><span class="uk">ножиці</span> <span class="en">scissors</span></li>
+        <li><span class="uk">клей</span> <span class="en">glue</span></li>
+        <li><span class="uk">голка</span> <span class="en">needle</span></li>
+        <li><span class="uk">нитка</span> <span class="en">thread</span></li>
+        <li><span class="uk">пензлик</span> <span class="en">brush</span></li>
+        <li><span class="uk">лопата</span> <span class="en">shovel</span></li>
+        <li><span class="uk">відро</span> <span class="en">bucket</span></li>
+        <li><span class="uk">фарба</span> <span class="en">paint</span></li>
+        <li><span class="uk">цвях</span> <span class="en">nail</span></li>
+      </ul>
+
+      <div class="divider" id="food">
+        <hr><span>Їжа та страви — Food & Meals</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">хліб</span> <span class="en">bread</span></li>
+        <li><span class="uk">каша</span> <span class="en">porridge</span></li>
+        <li><span class="uk">суп</span> <span class="en">soup</span></li>
+        <li><span class="uk">їжа</span> <span class="en">food</span></li>
+        <li><span class="uk">сніданок</span> <span class="en">breakfast</span></li>
+        <li><span class="uk">обід</span> <span class="en">lunch</span></li>
+        <li><span class="uk">вечеря</span> <span class="en">dinner</span></li>
+        <li><span class="uk">рис</span> <span class="en">rice</span></li>
+        <li><span class="uk">макарони</span> <span class="en">pasta</span></li>
+        <li><span class="uk">м'ясо</span> <span class="en">meat</span></li>
+        <li><span class="uk">сир</span> <span class="en">cheese</span></li>
+        <li><span class="uk">масло</span> <span class="en">butter</span></li>
+        <li><span class="uk">яйце</span> <span class="en">egg</span></li>
+        <li><span class="uk">борщ</span> <span class="en">borscht</span></li>
+        <li><span class="uk">вареник</span> <span class="en">dumpling</span></li>
+        <li><span class="uk">сіль</span> <span class="en">salt</span></li>
+        <li><span class="uk">піца</span> <span class="en">pizza</span></li>
+        <li><span class="uk">бутерброд</span> <span class="en">sandwich</span></li>
+        <li><span class="uk">млинець</span> <span class="en">pancake</span></li>
+        <li><span class="uk">сметана</span> <span class="en">sour cream</span></li>
+        <li><span class="uk">желе</span> <span class="en">jelly</span></li>
+        <li><span class="uk">горіхи</span> <span class="en">nuts</span></li>
+        <li><span class="uk">ковбаса</span> <span class="en">sausage</span></li>
+      </ul>
+
+      <div class="divider" id="fairy-tales">
+        <hr><span>Казки — Fairy Tales</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">принцеса</span> <span class="en">princess</span></li>
+        <li><span class="uk">принц</span> <span class="en">prince</span></li>
+        <li><span class="uk">король</span> <span class="en">king</span></li>
+        <li><span class="uk">королева</span> <span class="en">queen</span></li>
+        <li><span class="uk">дракон</span> <span class="en">dragon</span></li>
+        <li><span class="uk">лицар</span> <span class="en">knight</span></li>
+        <li><span class="uk">чарівник</span> <span class="en">wizard</span></li>
+        <li><span class="uk">замок</span> <span class="en">castle</span></li>
+        <li><span class="uk">фея</span> <span class="en">fairy</span></li>
+        <li><span class="uk">казка</span> <span class="en">fairy tale</span></li>
+        <li><span class="uk">скарб</span> <span class="en">treasure</span></li>
+        <li><span class="uk">меч</span> <span class="en">sword</span></li>
+        <li><span class="uk">монстр</span> <span class="en">monster</span></li>
+        <li><span class="uk">історія</span> <span class="en">story</span></li>
+      </ul>
+
+      <div class="divider" id="colors">
+        <hr><span>Кольори — Colors</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">червоний</span> <span class="en">red</span></li>
+        <li><span class="uk">синій</span> <span class="en">blue</span></li>
+        <li><span class="uk">зелений</span> <span class="en">green</span></li>
+        <li><span class="uk">жовтий</span> <span class="en">yellow</span></li>
+        <li><span class="uk">білий</span> <span class="en">white</span></li>
+        <li><span class="uk">чорний</span> <span class="en">black</span></li>
+        <li><span class="uk">рожевий</span> <span class="en">pink</span></li>
+        <li><span class="uk">помаранчевий</span> <span class="en">orange</span></li>
+        <li><span class="uk">фіолетовий</span> <span class="en">purple</span></li>
+        <li><span class="uk">сірий</span> <span class="en">gray</span></li>
+        <li><span class="uk">коричневий</span> <span class="en">brown</span></li>
+        <li><span class="uk">золотий</span> <span class="en">gold</span></li>
+        <li><span class="uk">срібний</span> <span class="en">silver</span></li>
+        <li><span class="uk">блакитний</span> <span class="en">light blue</span></li>
+        <li><span class="uk">колір</span> <span class="en">color</span></li>
+      </ul>
+
+      <div class="divider" id="insects">
+        <hr><span>Комахи — Insects</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">метелик</span> <span class="en">butterfly</span></li>
+        <li><span class="uk">бджола</span> <span class="en">bee</span></li>
+        <li><span class="uk">мураха</span> <span class="en">ant</span></li>
+        <li><span class="uk">жук</span> <span class="en">beetle</span></li>
+        <li><span class="uk">комар</span> <span class="en">mosquito</span></li>
+        <li><span class="uk">павук</span> <span class="en">spider</span></li>
+        <li><span class="uk">муха</span> <span class="en">fly</span></li>
+        <li><span class="uk">сонечко</span> <span class="en">ladybug</span></li>
+        <li><span class="uk">коник</span> <span class="en">grasshopper</span></li>
+        <li><span class="uk">равлик</span> <span class="en">snail</span></li>
+      </ul>
+
+      <div class="divider" id="space">
+        <hr><span>Космос — Space</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">космос</span> <span class="en">space</span></li>
+        <li><span class="uk">планета</span> <span class="en">planet</span></li>
+        <li><span class="uk">комета</span> <span class="en">comet</span></li>
+        <li><span class="uk">галактика</span> <span class="en">galaxy</span></li>
+        <li><span class="uk">телескоп</span> <span class="en">telescope</span></li>
+        <li><span class="uk">супутник</span> <span class="en">satellite</span></li>
+        <li><span class="uk">орбіта</span> <span class="en">orbit</span></li>
+        <li><span class="uk">астероїд</span> <span class="en">asteroid</span></li>
+      </ul>
+
+      <div class="divider" id="kitchenware">
+        <hr><span>Кухонне приладдя — Kitchenware</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">тарілка</span> <span class="en">plate</span></li>
+        <li><span class="uk">чашка</span> <span class="en">cup</span></li>
+        <li><span class="uk">ложка</span> <span class="en">spoon</span></li>
+        <li><span class="uk">виделка</span> <span class="en">fork</span></li>
+        <li><span class="uk">ніж</span> <span class="en">knife</span></li>
+        <li><span class="uk">каструля</span> <span class="en">pot</span></li>
+        <li><span class="uk">сковорода</span> <span class="en">pan</span></li>
+        <li><span class="uk">склянка</span> <span class="en">glass</span></li>
+        <li><span class="uk">чайник</span> <span class="en">kettle</span></li>
+        <li><span class="uk">миска</span> <span class="en">bowl</span></li>
+      </ul>
+
+      <div class="divider" id="people">
+        <hr><span>Люди — People</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">друг</span> <span class="en">friend</span></li>
+        <li><span class="uk">дівчинка</span> <span class="en">girl</span></li>
+        <li><span class="uk">хлопчик</span> <span class="en">boy</span></li>
+        <li><span class="uk">жінка</span> <span class="en">woman</span></li>
+        <li><span class="uk">чоловік</span> <span class="en">man</span></li>
+        <li><span class="uk">людина</span> <span class="en">person</span></li>
+        <li><span class="uk">сусід</span> <span class="en">neighbor</span></li>
+        <li><span class="uk">подруга</span> <span class="en">girlfriend</span></li>
+        <li><span class="uk">немовля</span> <span class="en">infant</span></li>
+        <li><span class="uk">хлопець</span> <span class="en">guy</span></li>
+        <li><span class="uk">діти</span> <span class="en">children</span></li>
+        <li><span class="uk">партнер</span> <span class="en">partner</span></li>
+        <li><span class="uk">ім'я</span> <span class="en">name</span></li>
+      </ul>
+
+      <div class="divider" id="materials">
+        <hr><span>Матеріали — Materials</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">дерево</span> <span class="en">wood</span></li>
+        <li><span class="uk">метал</span> <span class="en">metal</span></li>
+        <li><span class="uk">скло</span> <span class="en">glass</span></li>
+        <li><span class="uk">папір</span> <span class="en">paper</span></li>
+        <li><span class="uk">тканина</span> <span class="en">fabric</span></li>
+        <li><span class="uk">пластик</span> <span class="en">plastic</span></li>
+        <li><span class="uk">гума</span> <span class="en">rubber</span></li>
+        <li><span class="uk">глина</span> <span class="en">clay</span></li>
+        <li><span class="uk">вовна</span> <span class="en">wool</span></li>
+        <li><span class="uk">бавовна</span> <span class="en">cotton</span></li>
+      </ul>
+
+      <div class="divider" id="furniture">
+        <hr><span>Меблі — Furniture</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">стіл</span> <span class="en">table</span></li>
+        <li><span class="uk">стілець</span> <span class="en">chair</span></li>
+        <li><span class="uk">ліжко</span> <span class="en">bed</span></li>
+        <li><span class="uk">шафа</span> <span class="en">wardrobe</span></li>
+        <li><span class="uk">диван</span> <span class="en">sofa</span></li>
+        <li><span class="uk">полиця</span> <span class="en">shelf</span></li>
+        <li><span class="uk">дзеркало</span> <span class="en">mirror</span></li>
+        <li><span class="uk">лампа</span> <span class="en">lamp</span></li>
+        <li><span class="uk">килим</span> <span class="en">carpet</span></li>
+        <li><span class="uk">годинник</span> <span class="en">clock</span></li>
+        <li><span class="uk">телевізор</span> <span class="en">TV</span></li>
+        <li><span class="uk">холодильник</span> <span class="en">fridge</span></li>
+        <li><span class="uk">подушка</span> <span class="en">pillow</span></li>
+        <li><span class="uk">ковдра</span> <span class="en">blanket</span></li>
       </ul>
 
       <div class="divider" id="city">
@@ -1100,24 +561,216 @@
         <li><span class="uk">канал</span> <span class="en">channel</span></li>
       </ul>
 
-      <div class="divider" id="world">
-        <hr><span>Світ — World</span>
+      <div class="divider" id="months">
+        <hr><span>Місяці — Months</span>
         <hr>
       </div>
       <ul class="words">
-        <li><span class="uk">країна</span> <span class="en">country</span></li>
-        <li><span class="uk">прапор</span> <span class="en">flag</span></li>
-        <li><span class="uk">карта</span> <span class="en">map</span></li>
-        <li><span class="uk">океан</span> <span class="en">ocean</span></li>
-        <li><span class="uk">континент</span> <span class="en">continent</span></li>
-        <li><span class="uk">пустеля</span> <span class="en">desert</span></li>
-        <li><span class="uk">джунглі</span> <span class="en">jungle</span></li>
-        <li><span class="uk">північ</span> <span class="en">north</span></li>
-        <li><span class="uk">південь</span> <span class="en">south</span></li>
-        <li><span class="uk">схід</span> <span class="en">east</span></li>
-        <li><span class="uk">захід</span> <span class="en">west</span></li>
-        <li><span class="uk">столиця</span> <span class="en">capital</span></li>
-        <li><span class="uk">ферма</span> <span class="en">farm</span></li>
+        <li><span class="uk">січень</span> <span class="en">January</span></li>
+        <li><span class="uk">лютий</span> <span class="en">February</span></li>
+        <li><span class="uk">березень</span> <span class="en">March</span></li>
+        <li><span class="uk">квітень</span> <span class="en">April</span></li>
+        <li><span class="uk">травень</span> <span class="en">May</span></li>
+        <li><span class="uk">червень</span> <span class="en">June</span></li>
+        <li><span class="uk">липень</span> <span class="en">July</span></li>
+        <li><span class="uk">серпень</span> <span class="en">August</span></li>
+        <li><span class="uk">вересень</span> <span class="en">September</span></li>
+        <li><span class="uk">жовтень</span> <span class="en">October</span></li>
+        <li><span class="uk">листопад</span> <span class="en">November</span></li>
+        <li><span class="uk">грудень</span> <span class="en">December</span></li>
+      </ul>
+
+      <div class="divider" id="sea-animals">
+        <hr><span>Морські тварини — Sea Animals</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">риба</span> <span class="en">fish</span></li>
+        <li><span class="uk">кит</span> <span class="en">whale</span></li>
+        <li><span class="uk">дельфін</span> <span class="en">dolphin</span></li>
+        <li><span class="uk">акула</span> <span class="en">shark</span></li>
+        <li><span class="uk">восьминіг</span> <span class="en">octopus</span></li>
+        <li><span class="uk">краб</span> <span class="en">crab</span></li>
+        <li><span class="uk">медуза</span> <span class="en">jellyfish</span></li>
+        <li><span class="uk">морський коник</span> <span class="en">seahorse</span></li>
+        <li><span class="uk">тюлень</span> <span class="en">seal</span></li>
+        <li><span class="uk">креветка</span> <span class="en">shrimp</span></li>
+      </ul>
+
+      <div class="divider" id="music">
+        <hr><span>Музика — Music</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">музика</span> <span class="en">music</span></li>
+        <li><span class="uk">пісня</span> <span class="en">song</span></li>
+        <li><span class="uk">гітара</span> <span class="en">guitar</span></li>
+        <li><span class="uk">піаніно</span> <span class="en">piano</span></li>
+        <li><span class="uk">барабан</span> <span class="en">drum</span></li>
+        <li><span class="uk">скрипка</span> <span class="en">violin</span></li>
+        <li><span class="uk">флейта</span> <span class="en">flute</span></li>
+        <li><span class="uk">оркестр</span> <span class="en">orchestra</span></li>
+        <li><span class="uk">мелодія</span> <span class="en">melody</span></li>
+        <li><span class="uk">хор</span> <span class="en">choir</span></li>
+      </ul>
+
+      <div class="divider" id="drinks">
+        <hr><span>Напої — Drinks</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">вода</span> <span class="en">water</span></li>
+        <li><span class="uk">молоко</span> <span class="en">milk</span></li>
+        <li><span class="uk">сік</span> <span class="en">juice</span></li>
+        <li><span class="uk">чай</span> <span class="en">tea</span></li>
+        <li><span class="uk">какао</span> <span class="en">cocoa</span></li>
+        <li><span class="uk">компот</span> <span class="en">compote</span></li>
+        <li><span class="uk">лимонад</span> <span class="en">lemonade</span></li>
+        <li><span class="uk">кефір</span> <span class="en">kefir</span></li>
+        <li><span class="uk">йогурт</span> <span class="en">yogurt</span></li>
+        <li><span class="uk">смузі</span> <span class="en">smoothie</span></li>
+      </ul>
+
+      <div class="divider" id="face">
+        <hr><span>Обличчя — Face</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">око</span> <span class="en">eye</span></li>
+        <li><span class="uk">ніс</span> <span class="en">nose</span></li>
+        <li><span class="uk">рот</span> <span class="en">mouth</span></li>
+        <li><span class="uk">вухо</span> <span class="en">ear</span></li>
+        <li><span class="uk">зуб</span> <span class="en">tooth</span></li>
+        <li><span class="uk">язик</span> <span class="en">tongue</span></li>
+        <li><span class="uk">губа</span> <span class="en">lip</span></li>
+        <li><span class="uk">брова</span> <span class="en">eyebrow</span></li>
+        <li><span class="uk">щока</span> <span class="en">cheek</span></li>
+        <li><span class="uk">лоб</span> <span class="en">forehead</span></li>
+        <li><span class="uk">підборіддя</span> <span class="en">chin</span></li>
+        <li><span class="uk">вія</span> <span class="en">eyelash</span></li>
+      </ul>
+
+      <div class="divider" id="vegetables">
+        <hr><span>Овочі — Vegetables</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">морква</span> <span class="en">carrot</span></li>
+        <li><span class="uk">картопля</span> <span class="en">potato</span></li>
+        <li><span class="uk">помідор</span> <span class="en">tomato</span></li>
+        <li><span class="uk">огірок</span> <span class="en">cucumber</span></li>
+        <li><span class="uk">капуста</span> <span class="en">cabbage</span></li>
+        <li><span class="uk">цибуля</span> <span class="en">onion</span></li>
+        <li><span class="uk">часник</span> <span class="en">garlic</span></li>
+        <li><span class="uk">перець</span> <span class="en">pepper</span></li>
+        <li><span class="uk">буряк</span> <span class="en">beet</span></li>
+        <li><span class="uk">горох</span> <span class="en">peas</span></li>
+        <li><span class="uk">кукурудза</span> <span class="en">corn</span></li>
+        <li><span class="uk">гарбуз</span> <span class="en">pumpkin</span></li>
+        <li><span class="uk">квасоля</span> <span class="en">beans</span></li>
+        <li><span class="uk">редиска</span> <span class="en">radish</span></li>
+      </ul>
+
+      <div class="divider" id="clothes">
+        <hr><span>Одяг — Clothes</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">шапка</span> <span class="en">hat</span></li>
+        <li><span class="uk">куртка</span> <span class="en">jacket</span></li>
+        <li><span class="uk">штани</span> <span class="en">pants</span></li>
+        <li><span class="uk">сукня</span> <span class="en">dress</span></li>
+        <li><span class="uk">черевики</span> <span class="en">boots</span></li>
+        <li><span class="uk">шкарпетки</span> <span class="en">socks</span></li>
+        <li><span class="uk">рукавиці</span> <span class="en">gloves</span></li>
+        <li><span class="uk">шарф</span> <span class="en">scarf</span></li>
+        <li><span class="uk">футболка</span> <span class="en">t-shirt</span></li>
+        <li><span class="uk">спідниця</span> <span class="en">skirt</span></li>
+        <li><span class="uk">светр</span> <span class="en">sweater</span></li>
+        <li><span class="uk">пальто</span> <span class="en">coat</span></li>
+        <li><span class="uk">краватка</span> <span class="en">tie</span></li>
+        <li><span class="uk">ремінь</span> <span class="en">belt</span></li>
+        <li><span class="uk">кишеня</span> <span class="en">pocket</span></li>
+        <li><span class="uk">взуття</span> <span class="en">shoes</span></li>
+      </ul>
+
+      <div class="divider" id="description">
+        <hr><span>Опис — Description</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">великий</span> <span class="en">big</span></li>
+        <li><span class="uk">малий</span> <span class="en">small</span></li>
+        <li><span class="uk">добрий</span> <span class="en">good</span></li>
+        <li><span class="uk">поганий</span> <span class="en">bad</span></li>
+        <li><span class="uk">гарний</span> <span class="en">beautiful</span></li>
+        <li><span class="uk">новий</span> <span class="en">new</span></li>
+        <li><span class="uk">старий</span> <span class="en">old</span></li>
+        <li><span class="uk">швидкий</span> <span class="en">fast</span></li>
+        <li><span class="uk">повільний</span> <span class="en">slow</span></li>
+        <li><span class="uk">гарячий</span> <span class="en">hot</span></li>
+        <li><span class="uk">холодний</span> <span class="en">cold</span></li>
+        <li><span class="uk">довгий</span> <span class="en">long</span></li>
+        <li><span class="uk">короткий</span> <span class="en">short</span></li>
+        <li><span class="uk">тихий</span> <span class="en">quiet</span></li>
+        <li><span class="uk">гучний</span> <span class="en">loud</span></li>
+        <li><span class="uk">м'який</span> <span class="en">soft</span></li>
+        <li><span class="uk">твердий</span> <span class="en">hard</span></li>
+        <li><span class="uk">мокрий</span> <span class="en">wet</span></li>
+        <li><span class="uk">сухий</span> <span class="en">dry</span></li>
+        <li><span class="uk">чистий</span> <span class="en">clean</span></li>
+        <li><span class="uk">брудний</span> <span class="en">dirty</span></li>
+        <li><span class="uk">легкий</span> <span class="en">light</span></li>
+        <li><span class="uk">важкий</span> <span class="en">heavy</span></li>
+        <li><span class="uk">товстий</span> <span class="en">thick</span></li>
+        <li><span class="uk">тонкий</span> <span class="en">thin</span></li>
+        <li><span class="uk">широкий</span> <span class="en">wide</span></li>
+        <li><span class="uk">вузький</span> <span class="en">narrow</span></li>
+        <li><span class="uk">сильний</span> <span class="en">strong</span></li>
+        <li><span class="uk">слабкий</span> <span class="en">weak</span></li>
+        <li><span class="uk">розумний</span> <span class="en">smart</span></li>
+        <li><span class="uk">дружній</span> <span class="en">friendly</span></li>
+        <li><span class="uk">особливий</span> <span class="en">special</span></li>
+        <li><span class="uk">солодкий</span> <span class="en">sweet</span></li>
+        <li><span class="uk">зроблено</span> <span class="en">done</span></li>
+      </ul>
+
+      <div class="divider" id="questions">
+        <hr><span>Питальні слова — Questions</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">хто</span> <span class="en">who</span></li>
+        <li><span class="uk">що</span> <span class="en">what</span></li>
+        <li><span class="uk">де</span> <span class="en">where</span></li>
+        <li><span class="uk">коли</span> <span class="en">when</span></li>
+        <li><span class="uk">чому</span> <span class="en">why</span></li>
+        <li><span class="uk">як</span> <span class="en">how</span></li>
+        <li><span class="uk">скільки</span> <span class="en">how many</span></li>
+        <li><span class="uk">який</span> <span class="en">which</span></li>
+        <li><span class="uk">чий</span> <span class="en">whose</span></li>
+        <li><span class="uk">що це?</span> <span class="en">what's</span></li>
+      </ul>
+
+      <div class="divider" id="weather">
+        <hr><span>Погода — Weather</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">хмара</span> <span class="en">cloud</span></li>
+        <li><span class="uk">дощ</span> <span class="en">rain</span></li>
+        <li><span class="uk">сніг</span> <span class="en">snow</span></li>
+        <li><span class="uk">вітер</span> <span class="en">wind</span></li>
+        <li><span class="uk">грім</span> <span class="en">thunder</span></li>
+        <li><span class="uk">блискавка</span> <span class="en">lightning</span></li>
+        <li><span class="uk">веселка</span> <span class="en">rainbow</span></li>
+        <li><span class="uk">туман</span> <span class="en">fog</span></li>
+        <li><span class="uk">мороз</span> <span class="en">frost</span></li>
+        <li><span class="uk">спека</span> <span class="en">heat</span></li>
+        <li><span class="uk">град</span> <span class="en">hail</span></li>
+        <li><span class="uk">калюжа</span> <span class="en">puddle</span></li>
+        <li><span class="uk">погода</span> <span class="en">weather</span></li>
+        <li><span class="uk">тіні</span> <span class="en">shadows</span></li>
       </ul>
 
       <div class="divider" id="position">
@@ -1143,91 +796,15 @@
         <li><span class="uk">вниз</span> <span class="en">down</span></li>
       </ul>
 
-      <div class="divider" id="questions">
-        <hr><span>Питальні слова — Questions</span>
+      <div class="divider" id="seasons">
+        <hr><span>Пори року — Seasons</span>
         <hr>
       </div>
       <ul class="words">
-        <li><span class="uk">хто</span> <span class="en">who</span></li>
-        <li><span class="uk">що</span> <span class="en">what</span></li>
-        <li><span class="uk">де</span> <span class="en">where</span></li>
-        <li><span class="uk">коли</span> <span class="en">when</span></li>
-        <li><span class="uk">чому</span> <span class="en">why</span></li>
-        <li><span class="uk">як</span> <span class="en">how</span></li>
-        <li><span class="uk">скільки</span> <span class="en">how many</span></li>
-        <li><span class="uk">який</span> <span class="en">which</span></li>
-        <li><span class="uk">чий</span> <span class="en">whose</span></li>
-        <li><span class="uk">що це?</span> <span class="en">what's</span></li>
-      </ul>
-
-      <div class="divider" id="materials">
-        <hr><span>Матеріали — Materials</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">дерево</span> <span class="en">wood</span></li>
-        <li><span class="uk">метал</span> <span class="en">metal</span></li>
-        <li><span class="uk">скло</span> <span class="en">glass</span></li>
-        <li><span class="uk">папір</span> <span class="en">paper</span></li>
-        <li><span class="uk">тканина</span> <span class="en">fabric</span></li>
-        <li><span class="uk">пластик</span> <span class="en">plastic</span></li>
-        <li><span class="uk">гума</span> <span class="en">rubber</span></li>
-        <li><span class="uk">глина</span> <span class="en">clay</span></li>
-        <li><span class="uk">вовна</span> <span class="en">wool</span></li>
-        <li><span class="uk">бавовна</span> <span class="en">cotton</span></li>
-      </ul>
-
-      <div class="divider" id="tools">
-        <hr><span>Інструменти — Tools</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">молоток</span> <span class="en">hammer</span></li>
-        <li><span class="uk">ножиці</span> <span class="en">scissors</span></li>
-        <li><span class="uk">клей</span> <span class="en">glue</span></li>
-        <li><span class="uk">голка</span> <span class="en">needle</span></li>
-        <li><span class="uk">нитка</span> <span class="en">thread</span></li>
-        <li><span class="uk">пензлик</span> <span class="en">brush</span></li>
-        <li><span class="uk">лопата</span> <span class="en">shovel</span></li>
-        <li><span class="uk">відро</span> <span class="en">bucket</span></li>
-        <li><span class="uk">фарба</span> <span class="en">paint</span></li>
-        <li><span class="uk">цвях</span> <span class="en">nail</span></li>
-      </ul>
-
-      <div class="divider" id="fairy-tales">
-        <hr><span>Казки — Fairy Tales</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">принцеса</span> <span class="en">princess</span></li>
-        <li><span class="uk">принц</span> <span class="en">prince</span></li>
-        <li><span class="uk">король</span> <span class="en">king</span></li>
-        <li><span class="uk">королева</span> <span class="en">queen</span></li>
-        <li><span class="uk">дракон</span> <span class="en">dragon</span></li>
-        <li><span class="uk">лицар</span> <span class="en">knight</span></li>
-        <li><span class="uk">чарівник</span> <span class="en">wizard</span></li>
-        <li><span class="uk">замок</span> <span class="en">castle</span></li>
-        <li><span class="uk">фея</span> <span class="en">fairy</span></li>
-        <li><span class="uk">казка</span> <span class="en">fairy tale</span></li>
-        <li><span class="uk">скарб</span> <span class="en">treasure</span></li>
-        <li><span class="uk">меч</span> <span class="en">sword</span></li>
-        <li><span class="uk">монстр</span> <span class="en">monster</span></li>
-        <li><span class="uk">історія</span> <span class="en">story</span></li>
-      </ul>
-
-      <div class="divider" id="space">
-        <hr><span>Космос — Space</span>
-        <hr>
-      </div>
-      <ul class="words">
-        <li><span class="uk">космос</span> <span class="en">space</span></li>
-        <li><span class="uk">планета</span> <span class="en">planet</span></li>
-        <li><span class="uk">комета</span> <span class="en">comet</span></li>
-        <li><span class="uk">галактика</span> <span class="en">galaxy</span></li>
-        <li><span class="uk">телескоп</span> <span class="en">telescope</span></li>
-        <li><span class="uk">супутник</span> <span class="en">satellite</span></li>
-        <li><span class="uk">орбіта</span> <span class="en">orbit</span></li>
-        <li><span class="uk">астероїд</span> <span class="en">asteroid</span></li>
+        <li><span class="uk">зима</span> <span class="en">winter</span></li>
+        <li><span class="uk">весна</span> <span class="en">spring</span></li>
+        <li><span class="uk">літо</span> <span class="en">summer</span></li>
+        <li><span class="uk">осінь</span> <span class="en">autumn</span></li>
       </ul>
 
       <div class="divider" id="everyday-objects">
@@ -1254,38 +831,97 @@
         <li><span class="uk">знаки</span> <span class="en">signs</span></li>
       </ul>
 
-      <div class="divider" id="holidays">
-        <hr><span>Свята — Holidays</span>
+      <div class="divider" id="greetings">
+        <hr><span>Привітання — Greetings</span>
         <hr>
       </div>
       <ul class="words">
-        <li><span class="uk">день народження</span> <span class="en">birthday</span></li>
-        <li><span class="uk">Новий рік</span> <span class="en">New Year</span></li>
-        <li><span class="uk">Різдво</span> <span class="en">Christmas</span></li>
-        <li><span class="uk">Великдень</span> <span class="en">Easter</span></li>
-        <li><span class="uk">свято</span> <span class="en">holiday</span></li>
-        <li><span class="uk">подарунок</span> <span class="en">gift</span></li>
-        <li><span class="uk">листівка</span> <span class="en">card</span></li>
-        <li><span class="uk">ялинка</span> <span class="en">Christmas tree</span></li>
-        <li><span class="uk">феєрверк</span> <span class="en">fireworks</span></li>
-        <li><span class="uk">гірлянда</span> <span class="en">garland</span></li>
+        <li><span class="uk">так</span> <span class="en">yes</span></li>
+        <li><span class="uk">ні</span> <span class="en">no</span></li>
+        <li><span class="uk">привіт</span> <span class="en">hello</span></li>
+        <li><span class="uk">бувай</span> <span class="en">bye</span></li>
+        <li><span class="uk">дякую</span> <span class="en">thank you</span></li>
+        <li><span class="uk">будь ласка</span> <span class="en">please</span></li>
+        <li><span class="uk">вибачте</span> <span class="en">sorry</span></li>
+        <li><span class="uk">добрий ранок</span> <span class="en">good morning</span></li>
+        <li><span class="uk">добрий вечір</span> <span class="en">good evening</span></li>
+        <li><span class="uk">на добраніч</span> <span class="en">good night</span></li>
+        <li><span class="uk">як справи</span> <span class="en">how are you</span></li>
+        <li><span class="uk">до побачення</span> <span class="en">goodbye</span></li>
       </ul>
 
-      <div class="divider" id="health">
-        <hr><span>Здоров'я — Health</span>
+      <div class="divider" id="nature">
+        <hr><span>Природа — Nature</span>
         <hr>
       </div>
       <ul class="words">
-        <li><span class="uk">здоров'я</span> <span class="en">health</span></li>
-        <li><span class="uk">ліки</span> <span class="en">medicine</span></li>
-        <li><span class="uk">температура</span> <span class="en">temperature</span></li>
-        <li><span class="uk">кашель</span> <span class="en">cough</span></li>
-        <li><span class="uk">нежить</span> <span class="en">runny nose</span></li>
-        <li><span class="uk">біль</span> <span class="en">pain</span></li>
-        <li><span class="uk">пластир</span> <span class="en">bandaid</span></li>
-        <li><span class="uk">вітамін</span> <span class="en">vitamin</span></li>
-        <li><span class="uk">болить</span> <span class="en">hurts</span></li>
-        <li><span class="uk">вправа</span> <span class="en">exercise</span></li>
+        <li><span class="uk">сонце</span> <span class="en">sun</span></li>
+        <li><span class="uk">місяць</span> <span class="en">moon</span></li>
+        <li><span class="uk">зірка</span> <span class="en">star</span></li>
+        <li><span class="uk">небо</span> <span class="en">sky</span></li>
+        <li><span class="uk">дерево</span> <span class="en">tree</span></li>
+        <li><span class="uk">квітка</span> <span class="en">flower</span></li>
+        <li><span class="uk">трава</span> <span class="en">grass</span></li>
+        <li><span class="uk">ліс</span> <span class="en">forest</span></li>
+        <li><span class="uk">гора</span> <span class="en">mountain</span></li>
+        <li><span class="uk">річка</span> <span class="en">river</span></li>
+        <li><span class="uk">море</span> <span class="en">sea</span></li>
+        <li><span class="uk">озеро</span> <span class="en">lake</span></li>
+        <li><span class="uk">поле</span> <span class="en">field</span></li>
+        <li><span class="uk">сад</span> <span class="en">garden</span></li>
+        <li><span class="uk">острів</span> <span class="en">island</span></li>
+        <li><span class="uk">земля</span> <span class="en">earth</span></li>
+        <li><span class="uk">камінь</span> <span class="en">stone</span></li>
+        <li><span class="uk">пісок</span> <span class="en">sand</span></li>
+        <li><span class="uk">болото</span> <span class="en">swamp</span></li>
+        <li><span class="uk">печера</span> <span class="en">cave</span></li>
+        <li><span class="uk">повітря</span> <span class="en">air</span></li>
+        <li><span class="uk">ґрунт</span> <span class="en">soil</span></li>
+      </ul>
+
+      <div class="divider" id="professions">
+        <hr><span>Професії — Professions</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">лікар</span> <span class="en">doctor</span></li>
+        <li><span class="uk">пожежник</span> <span class="en">firefighter</span></li>
+        <li><span class="uk">поліцейський</span> <span class="en">police officer</span></li>
+        <li><span class="uk">кухар</span> <span class="en">cook</span></li>
+        <li><span class="uk">водій</span> <span class="en">driver</span></li>
+        <li><span class="uk">фермер</span> <span class="en">farmer</span></li>
+        <li><span class="uk">пілот</span> <span class="en">pilot</span></li>
+        <li><span class="uk">будівельник</span> <span class="en">builder</span></li>
+        <li><span class="uk">художник</span> <span class="en">artist</span></li>
+        <li><span class="uk">музикант</span> <span class="en">musician</span></li>
+        <li><span class="uk">продавець</span> <span class="en">seller</span></li>
+        <li><span class="uk">перукар</span> <span class="en">hairdresser</span></li>
+        <li><span class="uk">космонавт</span> <span class="en">astronaut</span></li>
+        <li><span class="uk">ветеринар</span> <span class="en">vet</span></li>
+        <li><span class="uk">пекар</span> <span class="en">baker</span></li>
+        <li><span class="uk">медсестра</span> <span class="en">nurse</span></li>
+        <li><span class="uk">танцівник</span> <span class="en">dancer</span></li>
+        <li><span class="uk">актор</span> <span class="en">actor</span></li>
+        <li><span class="uk">робота</span> <span class="en">job</span></li>
+      </ul>
+
+      <div class="divider" id="birds">
+        <hr><span>Птахи — Birds</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">птах</span> <span class="en">bird</span></li>
+        <li><span class="uk">горобець</span> <span class="en">sparrow</span></li>
+        <li><span class="uk">ворона</span> <span class="en">crow</span></li>
+        <li><span class="uk">голуб</span> <span class="en">pigeon</span></li>
+        <li><span class="uk">орел</span> <span class="en">eagle</span></li>
+        <li><span class="uk">сова</span> <span class="en">owl</span></li>
+        <li><span class="uk">лелека</span> <span class="en">stork</span></li>
+        <li><span class="uk">ластівка</span> <span class="en">swallow</span></li>
+        <li><span class="uk">синиця</span> <span class="en">tit</span></li>
+        <li><span class="uk">дятел</span> <span class="en">woodpecker</span></li>
+        <li><span class="uk">пінгвін</span> <span class="en">penguin</span></li>
+        <li><span class="uk">фламінго</span> <span class="en">flamingo</span></li>
       </ul>
 
       <div class="divider" id="plants">
@@ -1306,6 +942,370 @@
         <li><span class="uk">кактус</span> <span class="en">cactus</span></li>
         <li><span class="uk">лілія</span> <span class="en">lily</span></li>
         <li><span class="uk">рослина</span> <span class="en">plant</span></li>
+      </ul>
+
+      <div class="divider" id="world">
+        <hr><span>Світ — World</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">країна</span> <span class="en">country</span></li>
+        <li><span class="uk">прапор</span> <span class="en">flag</span></li>
+        <li><span class="uk">карта</span> <span class="en">map</span></li>
+        <li><span class="uk">океан</span> <span class="en">ocean</span></li>
+        <li><span class="uk">континент</span> <span class="en">continent</span></li>
+        <li><span class="uk">пустеля</span> <span class="en">desert</span></li>
+        <li><span class="uk">джунглі</span> <span class="en">jungle</span></li>
+        <li><span class="uk">північ</span> <span class="en">north</span></li>
+        <li><span class="uk">південь</span> <span class="en">south</span></li>
+        <li><span class="uk">схід</span> <span class="en">east</span></li>
+        <li><span class="uk">захід</span> <span class="en">west</span></li>
+        <li><span class="uk">столиця</span> <span class="en">capital</span></li>
+        <li><span class="uk">ферма</span> <span class="en">farm</span></li>
+      </ul>
+
+      <div class="divider" id="holidays">
+        <hr><span>Свята — Holidays</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">день народження</span> <span class="en">birthday</span></li>
+        <li><span class="uk">Новий рік</span> <span class="en">New Year</span></li>
+        <li><span class="uk">Різдво</span> <span class="en">Christmas</span></li>
+        <li><span class="uk">Великдень</span> <span class="en">Easter</span></li>
+        <li><span class="uk">свято</span> <span class="en">holiday</span></li>
+        <li><span class="uk">подарунок</span> <span class="en">gift</span></li>
+        <li><span class="uk">листівка</span> <span class="en">card</span></li>
+        <li><span class="uk">ялинка</span> <span class="en">Christmas tree</span></li>
+        <li><span class="uk">феєрверк</span> <span class="en">fireworks</span></li>
+        <li><span class="uk">гірлянда</span> <span class="en">garland</span></li>
+      </ul>
+      <div class="divider" id="family">
+        <hr><span>Сім'я — Family</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">мама</span> <span class="en">mom</span></li>
+        <li><span class="uk">тато</span> <span class="en">dad</span></li>
+        <li><span class="uk">брат</span> <span class="en">brother</span></li>
+        <li><span class="uk">сестра</span> <span class="en">sister</span></li>
+        <li><span class="uk">бабуся</span> <span class="en">grandma</span></li>
+        <li><span class="uk">дідусь</span> <span class="en">grandpa</span></li>
+        <li><span class="uk">дитина</span> <span class="en">baby</span></li>
+        <li><span class="uk">син</span> <span class="en">son</span></li>
+        <li><span class="uk">дочка</span> <span class="en">daughter</span></li>
+        <li><span class="uk">родина</span> <span class="en">family</span></li>
+        <li><span class="uk">тітка</span> <span class="en">aunt</span></li>
+        <li><span class="uk">дядько</span> <span class="en">uncle</span></li>
+      </ul>
+
+      <div class="divider" id="function-words">
+        <hr><span>Службові слова — Function Words</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">про</span> <span class="en">about</span></li>
+        <li><span class="uk">після</span> <span class="en">after</span></li>
+        <li><span class="uk">знову</span> <span class="en">again</span></li>
+        <li><span class="uk">і</span> <span class="en">and</span></li>
+        <li><span class="uk">для</span> <span class="en">for</span></li>
+        <li><span class="uk">в</span> <span class="en">in</span></li>
+        <li><span class="uk">не</span> <span class="en">not</span></li>
+        <li><span class="uk">зараз</span> <span class="en">now</span></li>
+        <li><span class="uk">на</span> <span class="en">on</span></li>
+        <li><span class="uk">або</span> <span class="en">or</span></li>
+        <li><span class="uk">потім</span> <span class="en">then</span></li>
+        <li><span class="uk">з</span> <span class="en">with</span></li>
+        <li><span class="uk">багато</span> <span class="en">many</span></li>
+        <li><span class="uk">скрізь</span> <span class="en">everywhere</span></li>
+        <li><span class="uk">разом</span> <span class="en">together</span></li>
+        <li><span class="uk">добре</span> <span class="en">well</span></li>
+        <li><span class="uk">різниця</span> <span class="en">difference</span></li>
+      </ul>
+
+      <div class="divider" id="sweets">
+        <hr><span>Солодощі — Sweets</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">торт</span> <span class="en">cake</span></li>
+        <li><span class="uk">цукерка</span> <span class="en">candy</span></li>
+        <li><span class="uk">печиво</span> <span class="en">cookie</span></li>
+        <li><span class="uk">шоколад</span> <span class="en">chocolate</span></li>
+        <li><span class="uk">морозиво</span> <span class="en">ice cream</span></li>
+        <li><span class="uk">мед</span> <span class="en">honey</span></li>
+        <li><span class="uk">цукор</span> <span class="en">sugar</span></li>
+        <li><span class="uk">варення</span> <span class="en">jam</span></li>
+        <li><span class="uk">пиріг</span> <span class="en">pie</span></li>
+        <li><span class="uk">тістечко</span> <span class="en">pastry</span></li>
+      </ul>
+
+      <div class="divider" id="sports">
+        <hr><span>Спорт — Sports</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">футбол</span> <span class="en">football</span></li>
+        <li><span class="uk">баскетбол</span> <span class="en">basketball</span></li>
+        <li><span class="uk">плавання</span> <span class="en">swimming</span></li>
+        <li><span class="uk">біг</span> <span class="en">running</span></li>
+        <li><span class="uk">гімнастика</span> <span class="en">gymnastics</span></li>
+        <li><span class="uk">теніс</span> <span class="en">tennis</span></li>
+        <li><span class="uk">хокей</span> <span class="en">hockey</span></li>
+        <li><span class="uk">волейбол</span> <span class="en">volleyball</span></li>
+        <li><span class="uk">танці</span> <span class="en">dancing</span></li>
+        <li><span class="uk">карате</span> <span class="en">karate</span></li>
+        <li><span class="uk">ковзани</span> <span class="en">skating</span></li>
+        <li><span class="uk">лижі</span> <span class="en">skiing</span></li>
+      </ul>
+
+      <div class="divider" id="state">
+        <hr><span>Стан — State</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">хворий</span> <span class="en">sick</span></li>
+        <li><span class="uk">здоровий</span> <span class="en">healthy</span></li>
+        <li><span class="uk">голодний</span> <span class="en">hungry</span></li>
+        <li><span class="uk">ситий</span> <span class="en">full</span></li>
+        <li><span class="uk">втомлений</span> <span class="en">tired</span></li>
+        <li><span class="uk">бадьорий</span> <span class="en">energetic</span></li>
+        <li><span class="uk">веселий</span> <span class="en">cheerful</span></li>
+        <li><span class="uk">сумний</span> <span class="en">sad</span></li>
+        <li><span class="uk">сердитий</span> <span class="en">angry</span></li>
+        <li><span class="uk">щасливий</span> <span class="en">happy</span></li>
+        <li><span class="uk">зайнятий</span> <span class="en">busy</span></li>
+        <li><span class="uk">вільний</span> <span class="en">free</span></li>
+      </ul>
+
+      <div class="divider" id="pets">
+        <hr><span>Домашні тварини — Pets</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">кіт</span> <span class="en">cat</span></li>
+        <li><span class="uk">пес</span> <span class="en">dog</span></li>
+        <li><span class="uk">хом'як</span> <span class="en">hamster</span></li>
+        <li><span class="uk">папуга</span> <span class="en">parrot</span></li>
+        <li><span class="uk">кролик</span> <span class="en">rabbit</span></li>
+        <li><span class="uk">рибка</span> <span class="en">goldfish</span></li>
+        <li><span class="uk">черепаха</span> <span class="en">turtle</span></li>
+        <li><span class="uk">канарка</span> <span class="en">canary</span></li>
+        <li><span class="uk">домашня тварина</span> <span class="en">pet</span></li>
+      </ul>
+
+      <div class="divider" id="wild-animals">
+        <hr><span>Дикі тварини — Wild Animals</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">ведмідь</span> <span class="en">bear</span></li>
+        <li><span class="uk">заєць</span> <span class="en">hare</span></li>
+        <li><span class="uk">лисиця</span> <span class="en">fox</span></li>
+        <li><span class="uk">вовк</span> <span class="en">wolf</span></li>
+        <li><span class="uk">олень</span> <span class="en">deer</span></li>
+        <li><span class="uk">білка</span> <span class="en">squirrel</span></li>
+        <li><span class="uk">їжак</span> <span class="en">hedgehog</span></li>
+        <li><span class="uk">лев</span> <span class="en">lion</span></li>
+        <li><span class="uk">тигр</span> <span class="en">tiger</span></li>
+        <li><span class="uk">слон</span> <span class="en">elephant</span></li>
+        <li><span class="uk">жирафа</span> <span class="en">giraffe</span></li>
+        <li><span class="uk">мавпа</span> <span class="en">monkey</span></li>
+        <li><span class="uk">зебра</span> <span class="en">zebra</span></li>
+        <li><span class="uk">крокодил</span> <span class="en">crocodile</span></li>
+        <li><span class="uk">бегемот</span> <span class="en">hippo</span></li>
+        <li><span class="uk">носоріг</span> <span class="en">rhino</span></li>
+        <li><span class="uk">панда</span> <span class="en">panda</span></li>
+        <li><span class="uk">кенгуру</span> <span class="en">kangaroo</span></li>
+        <li><span class="uk">тварина</span> <span class="en">animal</span></li>
+        <li><span class="uk">ігуана</span> <span class="en">iguana</span></li>
+      </ul>
+
+      <div class="divider" id="body">
+        <hr><span>Тіло — Body</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">рука</span> <span class="en">hand</span></li>
+        <li><span class="uk">нога</span> <span class="en">leg</span></li>
+        <li><span class="uk">голова</span> <span class="en">head</span></li>
+        <li><span class="uk">серце</span> <span class="en">heart</span></li>
+        <li><span class="uk">палець</span> <span class="en">finger</span></li>
+        <li><span class="uk">коліно</span> <span class="en">knee</span></li>
+        <li><span class="uk">спина</span> <span class="en">back</span></li>
+        <li><span class="uk">живіт</span> <span class="en">belly</span></li>
+        <li><span class="uk">шия</span> <span class="en">neck</span></li>
+        <li><span class="uk">плече</span> <span class="en">shoulder</span></li>
+        <li><span class="uk">лікоть</span> <span class="en">elbow</span></li>
+        <li><span class="uk">стопа</span> <span class="en">foot</span></li>
+        <li><span class="uk">волосся</span> <span class="en">hair</span></li>
+        <li><span class="uk">шкіра</span> <span class="en">skin</span></li>
+        <li><span class="uk">кістка</span> <span class="en">bone</span></li>
+        <li><span class="uk">кров</span> <span class="en">blood</span></li>
+        <li><span class="uk">хвіст</span> <span class="en">tail</span></li>
+      </ul>
+
+      <div class="divider" id="transport">
+        <hr><span>Транспорт — Transport</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">машина</span> <span class="en">car</span></li>
+        <li><span class="uk">автобус</span> <span class="en">bus</span></li>
+        <li><span class="uk">літак</span> <span class="en">plane</span></li>
+        <li><span class="uk">потяг</span> <span class="en">train</span></li>
+        <li><span class="uk">велосипед</span> <span class="en">bike</span></li>
+        <li><span class="uk">корабель</span> <span class="en">ship</span></li>
+        <li><span class="uk">метро</span> <span class="en">metro</span></li>
+        <li><span class="uk">таксі</span> <span class="en">taxi</span></li>
+        <li><span class="uk">мотоцикл</span> <span class="en">motorcycle</span></li>
+        <li><span class="uk">вертоліт</span> <span class="en">helicopter</span></li>
+        <li><span class="uk">трамвай</span> <span class="en">tram</span></li>
+        <li><span class="uk">човен</span> <span class="en">boat</span></li>
+        <li><span class="uk">ракета</span> <span class="en">rocket</span></li>
+        <li><span class="uk">вантажівка</span> <span class="en">truck</span></li>
+        <li><span class="uk">самокат</span> <span class="en">scooter</span></li>
+        <li><span class="uk">карета</span> <span class="en">carriage</span></li>
+      </ul>
+
+      <div class="divider" id="farm-animals">
+        <hr><span>Тварини ферми — Farm Animals</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">корова</span> <span class="en">cow</span></li>
+        <li><span class="uk">кінь</span> <span class="en">horse</span></li>
+        <li><span class="uk">курка</span> <span class="en">chicken</span></li>
+        <li><span class="uk">свиня</span> <span class="en">pig</span></li>
+        <li><span class="uk">вівця</span> <span class="en">sheep</span></li>
+        <li><span class="uk">коза</span> <span class="en">goat</span></li>
+        <li><span class="uk">качка</span> <span class="en">duck</span></li>
+        <li><span class="uk">гуска</span> <span class="en">goose</span></li>
+        <li><span class="uk">індик</span> <span class="en">turkey</span></li>
+        <li><span class="uk">осел</span> <span class="en">donkey</span></li>
+        <li><span class="uk">півень</span> <span class="en">rooster</span></li>
+        <li><span class="uk">кролик</span> <span class="en">rabbit</span></li>
+      </ul>
+
+      <div class="divider" id="shapes">
+        <hr><span>Форми — Shapes</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">коло</span> <span class="en">circle</span></li>
+        <li><span class="uk">квадрат</span> <span class="en">square</span></li>
+        <li><span class="uk">трикутник</span> <span class="en">triangle</span></li>
+        <li><span class="uk">прямокутник</span> <span class="en">rectangle</span></li>
+        <li><span class="uk">овал</span> <span class="en">oval</span></li>
+        <li><span class="uk">ромб</span> <span class="en">diamond</span></li>
+        <li><span class="uk">куб</span> <span class="en">cube</span></li>
+        <li><span class="uk">куля</span> <span class="en">sphere</span></li>
+      </ul>
+
+      <div class="divider" id="fruits">
+        <hr><span>Фрукти — Fruits</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">яблуко</span> <span class="en">apple</span></li>
+        <li><span class="uk">банан</span> <span class="en">banana</span></li>
+        <li><span class="uk">апельсин</span> <span class="en">orange</span></li>
+        <li><span class="uk">полуниця</span> <span class="en">strawberry</span></li>
+        <li><span class="uk">виноград</span> <span class="en">grape</span></li>
+        <li><span class="uk">кавун</span> <span class="en">watermelon</span></li>
+        <li><span class="uk">лимон</span> <span class="en">lemon</span></li>
+        <li><span class="uk">груша</span> <span class="en">pear</span></li>
+        <li><span class="uk">вишня</span> <span class="en">cherry</span></li>
+        <li><span class="uk">персик</span> <span class="en">peach</span></li>
+        <li><span class="uk">ківі</span> <span class="en">kiwi</span></li>
+        <li><span class="uk">ананас</span> <span class="en">pineapple</span></li>
+        <li><span class="uk">слива</span> <span class="en">plum</span></li>
+        <li><span class="uk">малина</span> <span class="en">raspberry</span></li>
+      </ul>
+
+      <div class="divider" id="time">
+        <hr><span>Час — Time</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">час</span> <span class="en">time</span></li>
+        <li><span class="uk">година</span> <span class="en">hour</span></li>
+        <li><span class="uk">хвилина</span> <span class="en">minute</span></li>
+        <li><span class="uk">секунда</span> <span class="en">second</span></li>
+        <li><span class="uk">тиждень</span> <span class="en">week</span></li>
+        <li><span class="uk">місяць</span> <span class="en">month</span></li>
+        <li><span class="uk">рік</span> <span class="en">year</span></li>
+        <li><span class="uk">сьогодні</span> <span class="en">today</span></li>
+        <li><span class="uk">вчора</span> <span class="en">yesterday</span></li>
+        <li><span class="uk">завтра</span> <span class="en">tomorrow</span></li>
+        <li><span class="uk">день</span> <span class="en">day</span></li>
+      </ul>
+
+      <div class="divider" id="time-of-day">
+        <hr><span>Час доби — Time of Day</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">ранок</span> <span class="en">morning</span></li>
+        <li><span class="uk">день</span> <span class="en">afternoon</span></li>
+        <li><span class="uk">вечір</span> <span class="en">evening</span></li>
+        <li><span class="uk">ніч</span> <span class="en">night</span></li>
+        <li><span class="uk">світанок</span> <span class="en">dawn</span></li>
+        <li><span class="uk">захід</span> <span class="en">sunset</span></li>
+      </ul>
+
+      <div class="divider" id="numbers">
+        <hr><span>Числа — Numbers</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">нуль</span> <span class="en">zero</span></li>
+        <li><span class="uk">один</span> <span class="en">one</span></li>
+        <li><span class="uk">два</span> <span class="en">two</span></li>
+        <li><span class="uk">три</span> <span class="en">three</span></li>
+        <li><span class="uk">чотири</span> <span class="en">four</span></li>
+        <li><span class="uk">п'ять</span> <span class="en">five</span></li>
+        <li><span class="uk">шість</span> <span class="en">six</span></li>
+        <li><span class="uk">сім</span> <span class="en">seven</span></li>
+        <li><span class="uk">вісім</span> <span class="en">eight</span></li>
+        <li><span class="uk">дев'ять</span> <span class="en">nine</span></li>
+        <li><span class="uk">десять</span> <span class="en">ten</span></li>
+        <li><span class="uk">одинадцять</span> <span class="en">eleven</span></li>
+        <li><span class="uk">дванадцять</span> <span class="en">twelve</span></li>
+        <li><span class="uk">двадцять</span> <span class="en">twenty</span></li>
+        <li><span class="uk">тридцять</span> <span class="en">thirty</span></li>
+        <li><span class="uk">сорок</span> <span class="en">forty</span></li>
+        <li><span class="uk">п'ятдесят</span> <span class="en">fifty</span></li>
+        <li><span class="uk">сто</span> <span class="en">hundred</span></li>
+        <li><span class="uk">тисяча</span> <span class="en">thousand</span></li>
+        <li><span class="uk">мільйон</span> <span class="en">million</span></li>
+        <li><span class="uk">число; номер</span> <span class="en">number</span></li>
+      </ul>
+
+      <div class="divider" id="school">
+        <hr><span>Школа — School</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">школа</span> <span class="en">school</span></li>
+        <li><span class="uk">книга</span> <span class="en">book</span></li>
+        <li><span class="uk">ручка</span> <span class="en">pen</span></li>
+        <li><span class="uk">олівець</span> <span class="en">pencil</span></li>
+        <li><span class="uk">зошит</span> <span class="en">notebook</span></li>
+        <li><span class="uk">рюкзак</span> <span class="en">backpack</span></li>
+        <li><span class="uk">клас</span> <span class="en">classroom</span></li>
+        <li><span class="uk">дошка</span> <span class="en">board</span></li>
+        <li><span class="uk">крейда</span> <span class="en">chalk</span></li>
+        <li><span class="uk">лінійка</span> <span class="en">ruler</span></li>
+        <li><span class="uk">гумка</span> <span class="en">eraser</span></li>
+        <li><span class="uk">підручник</span> <span class="en">textbook</span></li>
+        <li><span class="uk">урок</span> <span class="en">lesson</span></li>
+        <li><span class="uk">вчитель</span> <span class="en">teacher</span></li>
+        <li><span class="uk">учень</span> <span class="en">student</span></li>
+        <li><span class="uk">перерва</span> <span class="en">break</span></li>
+        <li><span class="uk">літера</span> <span class="en">letter</span></li>
+        <li><span class="uk">слово</span> <span class="en">word</span></li>
+        <li><span class="uk">картинка</span> <span class="en">picture</span></li>
       </ul>
     </section>
   </main>

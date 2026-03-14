@@ -30,6 +30,7 @@ window.search.addEventListener('input', function () {
     li.classList.toggle('hidden', !match);
   });
 
+  var anyVisible = false;
   wordLists.forEach(function (ul) {
     const hasVisible = ul.querySelector('li:not(.hidden)');
     const divider = ul.previousElementSibling;
@@ -37,7 +38,10 @@ window.search.addEventListener('input', function () {
     if (divider && divider.classList.contains('divider')) {
       divider.classList.toggle('hidden-section', !hasVisible);
     }
+    if (hasVisible) anyVisible = true;
   });
+
+  window['words-no-results'].style.display = (lowerQuery && !anyVisible) ? '' : 'none';
 });
 
 var bestVoice = null;
@@ -91,16 +95,6 @@ window['voice-select'].addEventListener('change', function () {
 populateVoices();
 speechSynthesis.addEventListener('voiceschanged', populateVoices);
 
-items.forEach(function (li) {
-  if (li.scrollWidth > li.clientWidth) {
-    var en = li.querySelector('.en');
-    var currentSize = parseFloat(getComputedStyle(en).fontSize);
-    while (li.scrollWidth > li.clientWidth && currentSize > 8) {
-      currentSize -= 1;
-      en.style.fontSize = currentSize + 'px';
-    }
-  }
-});
 
 main.scrollTo({ left: words.offsetLeft, behavior: 'smooth' });
 
@@ -117,6 +111,30 @@ window['back-btn'].addEventListener('click', function () {
   } else {
     main.scrollTo({ left: 0, behavior: 'smooth' });
     window['back-btn'].dataset.expanded = 'true';
+  }
+});
+
+var categoryLinks = categories.querySelectorAll('a[href^="#"]');
+
+window['category-search'].addEventListener('input', function () {
+  var query = this.value.trim().toLowerCase();
+  var hasVisibleResults = false;
+
+  categoryLinks.forEach(function (a) {
+    var match = !query || a.textContent.toLowerCase().includes(query);
+    a.style.display = match ? '' : 'none';
+    if (match) hasVisibleResults = true;
+  });
+
+  window['no-results'].style.display = (query && !hasVisibleResults) ? '' : 'none';
+
+  var exact = Array.from(categoryLinks).find(function (a) {
+    return a.textContent.toLowerCase() === query;
+  });
+  if (exact) {
+    exact.click();
+    window['category-search'].value = '';
+    window['category-search'].dispatchEvent(new Event('input'));
   }
 });
 
