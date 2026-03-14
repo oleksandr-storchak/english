@@ -1,6 +1,7 @@
 {
   "theme_color": "#000000",
   "background_color": "#000000",
+  "description": "Вивчайте англійську мову з інтерактивними категоріями. 56+ тем словниковий запас, граматика та вимова.",
   "icons": [
     {
       "purpose": "maskable",
@@ -18,7 +19,9 @@
   "orientation": "any",
   "display": "standalone",
   "dir": "auto",
-  "lang": "en-US",
-  "name": "Англійська Мова",
-  "short_name": "Аглійська"
+  "lang": "uk",
+  "start_url": "/",
+  "scope": "/",
+  "name": "Англійська мова - Вивчайте англійську з легкістю",
+  "short_name": "Англійська"
 }

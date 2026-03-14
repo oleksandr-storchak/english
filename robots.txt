@@ -1,0 +1,20 @@
+# English Language Learning - Robots.txt
+# Allow search engines to crawl the site
+
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /*.js
+Allow: /*.css
+Allow: /icon512_*.png
+Allow: /logo.png
+
+Disallow: /.git/
+Disallow: /.claude/
+Disallow: *.sw.js
+
+# Crawl delay (optional, adjust as needed)
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://example.com/sitemap.xml
