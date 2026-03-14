@@ -163,4 +163,15 @@ main.addEventListener('click', function (e) {
   if (bestVoice) utterance.voice = bestVoice;
   speechSynthesis.cancel();
   speechSynthesis.speak(utterance);
+
+  // Only scroll to the section if categories nav is open
+  if (window['back-btn'].dataset.expanded === 'true') {
+    var section = li.closest('.words').previousElementSibling;
+    if (section && section.classList.contains('divider')) {
+      window['back-btn'].dataset.expanded = 'false';
+      main.scrollTo({ left: words.offsetLeft, behavior: 'smooth' });
+      words.focus({ preventScroll: true });
+      section.scrollIntoView({ block: 'start', behavior: 'smooth' });
+    }
+  }
 });
