@@ -8,8 +8,12 @@
   user-select: none;
 }
 
+.hidden {
+  display: none !important;
+}
+
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 body {
@@ -69,7 +73,7 @@ main {
   flex-direction: row;
   overflow-x: auto;
   scrollbar-width: none;
-  overflow-y: hidden;
+  overflow-y: clip;
   scroll-snap-type: x mandatory;
   max-height: 90dvh;
 }

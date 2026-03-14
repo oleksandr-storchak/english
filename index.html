@@ -3,19 +3,14 @@
 
 <head>
   <meta charset="UTF-8">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TVMGDJGD4P"></script>
-  <script defer>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-TVMGDJGD4P');
-  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#000000">
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="icon512_rounded.png" type="image/png">
   <link rel="apple-touch-icon" href="icon512_rounded.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
   <title>Англійська мова</title>
   <link rel="stylesheet" href="styles.css">
   <script src="main.js" defer></script>
@@ -54,7 +49,7 @@
   <main id="main">
     <section id="categories" class="category-nav">
       <input id="category-search" type="text" placeholder="Пошук категорії…" autocomplete="off">
-      <div id="no-results" class="no-results" style="display: none;">Не знайдено</div>
+      <div id="no-results" class="no-results hidden">Не знайдено</div>
       <a href="#bathroom">Ванна</a>
       <a href="#actions">Дії</a>
       <a href="#home">Дім</a>
@@ -119,7 +114,7 @@
       </svg>
     </button>
     <section id="words" tabindex="-1">
-      <div id="words-no-results" class="no-results" style="display: none;">Не знайдено</div>
+      <div id="words-no-results" class="no-results hidden">Не знайдено</div>
 
       <div class="divider" id="bathroom">
         <hr><span>Ванна кімната — Bathroom</span>
@@ -1306,6 +1301,14 @@
       </ul>
     </section>
   </main>
+  <!-- Google tag (gtag.js) moved to end of body -->
+  <script defer>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-TVMGDJGD4P');
+  </script>
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=G-TVMGDJGD4P"></script>
 </body>
 
 </html>
