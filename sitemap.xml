@@ -7,7 +7,7 @@
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <!-- Main page -->
   <url>
-    <loc>https://example.com/</loc>
+    <loc>https://oleksandr-storchak.github.io/english/</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -15,337 +15,337 @@
 
   <!-- Categories -->
   <url>
-    <loc>https://example.com/#bathroom</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#bathroom</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#actions</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#actions</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#home</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#home</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#days</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#days</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#helping-verbs</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#helping-verbs</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#emotions</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#emotions</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#pronouns</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#pronouns</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#health</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#health</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#toys</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#toys</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#tools</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#tools</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#food</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#food</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#fairy-tales</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#fairy-tales</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#colors</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#colors</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#insects</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#insects</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#space</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#space</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#kitchenware</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#kitchenware</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#people</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#people</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#materials</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#materials</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#furniture</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#furniture</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#city</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#city</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#months</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#months</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#sea-animals</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#sea-animals</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#music</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#music</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#drinks</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#drinks</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#face</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#face</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#vegetables</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#vegetables</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#clothes</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#clothes</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#description</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#description</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#questions</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#questions</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#weather</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#weather</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#position</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#position</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#seasons</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#seasons</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#everyday-objects</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#everyday-objects</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#greetings</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#greetings</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#nature</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#nature</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#professions</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#professions</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#birds</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#birds</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#plants</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#plants</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#world</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#world</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#holidays</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#holidays</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#family</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#family</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#function-words</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#function-words</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#sweets</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#sweets</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#sports</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#sports</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#state</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#state</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#pets</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#pets</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#wild-animals</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#wild-animals</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#body</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#body</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#transport</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#transport</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#farm-animals</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#farm-animals</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#shapes</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#shapes</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#fruits</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#fruits</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#time</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#time</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#time-of-day</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#time-of-day</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#numbers</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#numbers</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/#school</loc>
+    <loc>https://oleksandr-storchak.github.io/english/#school</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
