@@ -88,7 +88,8 @@ main {
   scroll-target-group: auto;
 }
 
-#category-search {
+#category-search,
+#phrase-search {
   width: 100%;
   padding: 0.5rem 0.75rem;
   margin-bottom: 0.5rem;
@@ -101,7 +102,8 @@ main {
   font-family: inherit;
 }
 
-#category-search:focus {
+#category-search:focus,
+#phrase-search:focus {
   border-color: #9a8c40;
 }
 
@@ -115,11 +117,11 @@ main {
 .category-nav a {
   width: 100%;
   text-align: center;
-  margin: 0.5rem 0;
-  display: inline-block;
+  margin: 0.25rem 0;
+  display: block;
   text-decoration: none;
   font-size: clamp(1rem, 2.5vw, 1.25rem);
-  padding: 0.375rem 0.75rem;
+  padding: 0.625rem 0.75rem;
   color: #b0b0b0;
   background: #1e1e1e;
   border: 1px solid #2a2a2a;
@@ -128,6 +130,7 @@ main {
   word-wrap: break-word;
   overflow-wrap: break-word;
   white-space: normal;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .category-nav a:hover {
@@ -136,10 +139,98 @@ main {
   border-color: #444;
 }
 
-.category-nav a:target-current {
-  color: #fff;
+.category-nav a:active {
+  background: #333;
+  border-color: #9a8c40;
+  color: #ffd700;
+}
+
+.category-nav a:focus {
+  outline: none;
+}
+
+body:has(#bathroom:target) a[href="#bathroom"],
+body:has(#actions:target) a[href="#actions"],
+body:has(#home:target) a[href="#home"],
+body:has(#days:target) a[href="#days"],
+body:has(#helping-verbs:target) a[href="#helping-verbs"],
+body:has(#friends:target) a[href="#friends"],
+body:has(#emotions:target) a[href="#emotions"],
+body:has(#pronouns:target) a[href="#pronouns"],
+body:has(#health:target) a[href="#health"],
+body:has(#toys:target) a[href="#toys"],
+body:has(#tools:target) a[href="#tools"],
+body:has(#food:target) a[href="#food"],
+body:has(#coffee:target) a[href="#coffee"],
+body:has(#fairy-tales:target) a[href="#fairy-tales"],
+body:has(#colors:target) a[href="#colors"],
+body:has(#insects:target) a[href="#insects"],
+body:has(#space:target) a[href="#space"],
+body:has(#kitchenware:target) a[href="#kitchenware"],
+body:has(#summer:target) a[href="#summer"],
+body:has(#people:target) a[href="#people"],
+body:has(#materials:target) a[href="#materials"],
+body:has(#furniture:target) a[href="#furniture"],
+body:has(#city:target) a[href="#city"],
+body:has(#months:target) a[href="#months"],
+body:has(#sea-animals:target) a[href="#sea-animals"],
+body:has(#music:target) a[href="#music"],
+body:has(#drinks:target) a[href="#drinks"],
+body:has(#face:target) a[href="#face"],
+body:has(#vegetables:target) a[href="#vegetables"],
+body:has(#clothes:target) a[href="#clothes"],
+body:has(#description:target) a[href="#description"],
+body:has(#questions:target) a[href="#questions"],
+body:has(#travel:target) a[href="#travel"],
+body:has(#weather:target) a[href="#weather"],
+body:has(#position:target) a[href="#position"],
+body:has(#seasons:target) a[href="#seasons"],
+body:has(#everyday-objects:target) a[href="#everyday-objects"],
+body:has(#greetings:target) a[href="#greetings"],
+body:has(#prepositions:target) a[href="#prepositions"],
+body:has(#nature:target) a[href="#nature"],
+body:has(#adverbs:target) a[href="#adverbs"],
+body:has(#frequency-adverbs:target) a[href="#frequency-adverbs"],
+body:has(#professions:target) a[href="#professions"],
+body:has(#birds:target) a[href="#birds"],
+body:has(#plants:target) a[href="#plants"],
+body:has(#world:target) a[href="#world"],
+body:has(#holidays:target) a[href="#holidays"],
+body:has(#family:target) a[href="#family"],
+body:has(#function-words:target) a[href="#function-words"],
+body:has(#sweets:target) a[href="#sweets"],
+body:has(#conjunctions:target) a[href="#conjunctions"],
+body:has(#sports:target) a[href="#sports"],
+body:has(#idioms:target) a[href="#idioms"],
+body:has(#state:target) a[href="#state"],
+body:has(#pets:target) a[href="#pets"],
+body:has(#wild-animals:target) a[href="#wild-animals"],
+body:has(#body:target) a[href="#body"],
+body:has(#transport:target) a[href="#transport"],
+body:has(#farm-animals:target) a[href="#farm-animals"],
+body:has(#shapes:target) a[href="#shapes"],
+body:has(#fruits:target) a[href="#fruits"],
+body:has(#time:target) a[href="#time"],
+body:has(#time-of-day:target) a[href="#time-of-day"],
+body:has(#numbers:target) a[href="#numbers"],
+body:has(#school:target) a[href="#school"],
+body:has(#phrase-day:target) a[href="#phrase-day"],
+body:has(#phrase-family:target) a[href="#phrase-family"],
+body:has(#phrase-food:target) a[href="#phrase-food"],
+body:has(#phrase-animals:target) a[href="#phrase-animals"],
+body:has(#phrase-weather:target) a[href="#phrase-weather"],
+body:has(#phrase-emotions:target) a[href="#phrase-emotions"],
+body:has(#phrase-prepositions:target) a[href="#phrase-prepositions"],
+body:has(#phrase-travel:target) a[href="#phrase-travel"],
+body:has(#phrase-adverbs:target) a[href="#phrase-adverbs"] {
+  color: #ffd700;
   background: #2a2a2a;
   border-color: #9a8c40;
+}
+
+.nav-dimmed {
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 section h2 {
@@ -351,7 +442,7 @@ section#words {
   overflow-y: scroll;
   overflow-x: hidden;
   position: relative;
-  padding: 0 2rem 0 2.5rem;
+  padding: 0 3rem 0 2.5rem;
   outline: none;
 }
 
@@ -456,19 +547,17 @@ section#words {
 
 .words li {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.25rem;
   background: #1e1e1e;
   border: 1px solid #2a2a2a;
   border-radius: 0.5rem;
-  align-items: center;
   padding: clamp(0.5rem, 1.5vw, 1rem) clamp(0.75rem, 2vw, 1.25rem);
   font-size: clamp(1.5rem, 3.5vw, 2rem);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   cursor: pointer;
-  overflow: visible;
-  text-overflow: clip;
   transition: opacity 0.3s, transform 0.3s, background 0.2s, border-color 0.2s;
 }
 
@@ -492,6 +581,124 @@ section#words {
 
 .words .en {
   color: #48779e;
-  flex: 1;
-  text-align: right;
+  text-align: end;
+}
+
+section#phrases {
+  min-width: 100vw;
+  scroll-snap-align: start;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  position: relative;
+  padding: 0 2.5rem 0 2rem;
+  outline: none;
+}
+
+.to-phrases {
+  position: sticky;
+  top: 1rem;
+  right: 0;
+  z-index: 99;
+  width: 24px;
+  height: 30dvh;
+  margin-top: 35dvh;
+  border: none;
+  cursor: pointer;
+  background: #1e1e1e;
+  color: #ffd700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-width: 2rem;
+  border-radius: 50px 0 0 50px;
+  transition: background 0.2s, border-color 0.2s;
+  border-left: 1px solid #2a2a2a;
+}
+
+.to-phrases:hover {
+  background: #2a2a2a;
+  border-color: #444;
+}
+
+.to-phrases:focus-visible {
+  background: #2a2a2a;
+  border-color: #9a8c40;
+  outline: none;
+}
+
+.to-phrases:active {
+  background: #333;
+  border-color: #9a8c40;
+}
+
+.to-phrases span {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 0.625rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.to-phrases:hover span {
+  color: #90caf9;
+}
+
+.to-phrases:active span {
+  color: #fff;
+}
+
+.to-phrases svg {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  fill: #ffd700;
+  transition: transform 0.3s ease;
+}
+
+.to-phrases:hover svg {
+  fill: #90caf9;
+}
+
+.to-phrases:active svg {
+  fill: #fff;
+}
+
+.phrase {
+  list-style: none;
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 28rem), 1fr));
+  gap: clamp(0.75rem, 2.5vw, 1.5rem);
+}
+
+.phrase li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  background: #1e1e1e;
+  border: 1px solid #2a2a2a;
+  border-radius: 0.5rem;
+  padding: clamp(0.75rem, 2vw, 1.25rem);
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.phrase li:hover {
+  background: #2a2a2a;
+  border-color: #444;
+}
+
+.phrase .en {
+  color: #48779e;
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  letter-spacing: 0.03em;
+}
+
+.phrase .uk {
+  color: #9a8c40;
+  font-size: clamp(0.85rem, 2vw, 1rem);
 }

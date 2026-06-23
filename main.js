@@ -96,22 +96,50 @@ populateVoices();
 speechSynthesis.addEventListener('voiceschanged', populateVoices);
 
 
+var phrasesNav = window['phrases-nav'];
+var navBack = window['back-btn'];
+var navFwd = window['phrases-btn'];
+var panels = [categories, words, phrases, phrasesNav];
+var panelNames = ['Категорії', 'Слова', 'Фрази', 'Теми'];
+
 main.scrollTo({ left: words.offsetLeft, behavior: 'smooth' });
 
-main.addEventListener('scroll', function () {
-  var atCategories = main.scrollLeft < main.scrollWidth / 5;
-  window['back-btn'].dataset.expanded = atCategories ? 'true' : 'false';
-});
-
-window['back-btn'].addEventListener('click', function () {
-  if (window['back-btn'].dataset.expanded === 'true') {
-    main.scrollTo({ left: words.offsetLeft, behavior: 'smooth' });
-    words.focus({ preventScroll: true });
-    window['back-btn'].dataset.expanded = 'false';
-  } else {
-    main.scrollTo({ left: 0, behavior: 'smooth' });
-    window['back-btn'].dataset.expanded = 'true';
+function currentPanel() {
+  if (main.scrollLeft >= main.scrollWidth - main.clientWidth - 5) {
+    return panels.length - 1;
   }
+  var x = main.scrollLeft + 10;
+  var idx = 0;
+  for (var i = 0; i < panels.length; i++) {
+    if (panels[i].offsetLeft <= x) idx = i;
+  }
+  return idx;
+}
+
+function updateNav() {
+  var idx = currentPanel();
+  navBack.classList.toggle('nav-dimmed', idx <= 0);
+  navFwd.classList.toggle('nav-dimmed', idx >= panels.length - 1);
+  if (idx > 0) navBack.querySelector('span').textContent = panelNames[idx - 1];
+  if (idx < panels.length - 1) navFwd.querySelector('span').textContent = panelNames[idx + 1];
+}
+
+function goToPanel(idx) {
+  idx = Math.max(0, Math.min(panels.length - 1, idx));
+  main.scrollTo({ left: panels[idx].offsetLeft, behavior: 'smooth' });
+  panels[idx].focus({ preventScroll: true });
+}
+
+main.addEventListener('scroll', updateNav);
+updateNav();
+
+navBack.addEventListener('click', function () { goToPanel(currentPanel() - 1); });
+navFwd.addEventListener('click', function () { goToPanel(currentPanel() + 1); });
+
+categories.addEventListener('click', function (e) {
+  var link = e.target.closest('a[href^="#"]');
+  if (!link) return;
+  goToPanel(1);
 });
 
 var categoryLinks = categories.querySelectorAll('a[href^="#"]');
@@ -132,24 +160,39 @@ window['category-search'].addEventListener('input', function () {
     return a.textContent.toLowerCase() === query;
   });
   if (exact) {
+    goToPanel(1);
     exact.click();
     window['category-search'].value = '';
     window['category-search'].dispatchEvent(new Event('input'));
   }
 });
 
-categories.addEventListener('click', function (e) {
-  var link = e.target.closest('a[href^="#"]');
-  if (!link) return;
-  e.preventDefault();
-  link.blur();
-  var target = document.getElementById(link.getAttribute('href').slice(1));
-  if (!target) return;
-  window['back-btn'].dataset.expanded = 'false';
-  main.scrollTo({ left: words.offsetLeft, behavior: 'smooth' });
-  words.focus({ preventScroll: true });
-  target.scrollIntoView({ block: 'start', behavior: 'smooth' });
+
+var phraseLinks = phrasesNav.querySelectorAll('a[href^="#"]');
+
+window['phrase-search'].addEventListener('input', function () {
+  var query = this.value.trim().toLowerCase();
+  var hasVisibleResults = false;
+
+  phraseLinks.forEach(function (a) {
+    var match = !query || a.textContent.toLowerCase().includes(query);
+    a.style.display = match ? '' : 'none';
+    if (match) hasVisibleResults = true;
+  });
+
+  window['no-results-phrases'].style.display = (query && !hasVisibleResults) ? '' : 'none';
+
+  var exact = Array.from(phraseLinks).find(function (a) {
+    return a.textContent.toLowerCase() === query;
+  });
+  if (exact) {
+    goToPanel(2);
+    exact.click();
+    window['phrase-search'].value = '';
+    window['phrase-search'].dispatchEvent(new Event('input'));
+  }
 });
+
 
 
 main.addEventListener('click', function (e) {
@@ -164,11 +207,11 @@ main.addEventListener('click', function (e) {
   speechSynthesis.cancel();
   speechSynthesis.speak(utterance);
 
-  // Only scroll to the section if categories nav is open
-  if (window['back-btn'].dataset.expanded === 'true') {
-    var section = li.closest('.words').previousElementSibling;
+  // Only scroll to the section if the categories panel is showing
+  if (currentPanel() === 0) {
+    var wordList = li.closest('.words');
+    var section = wordList && wordList.previousElementSibling;
     if (section && section.classList.contains('divider')) {
-      window['back-btn'].dataset.expanded = 'false';
       main.scrollTo({ left: words.offsetLeft, behavior: 'smooth' });
       words.focus({ preventScroll: true });
       section.scrollIntoView({ block: 'start', behavior: 'smooth' });

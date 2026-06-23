@@ -74,7 +74,7 @@
     </dialog>
   </header>
   <main id="main">
-    <section id="categories" class="category-nav">
+    <section id="categories" class="category-nav" tabindex="-1">
       <input id="category-search" type="text" placeholder="Пошук категорії…" autocomplete="off">
       <div id="no-results" class="no-results hidden">Не знайдено</div>
       <a href="#bathroom">Ванна</a>
@@ -82,17 +82,20 @@
       <a href="#home">Дім</a>
       <a href="#days">Дні тижня</a>
       <a href="#helping-verbs">Допоміжні</a>
+      <a href="#friends">Друзі</a>
       <a href="#emotions">Емоції</a>
       <a href="#pronouns">Займенники</a>
       <a href="#health">Здоров'я</a>
       <a href="#toys">Іграшки</a>
       <a href="#tools">Інструменти</a>
       <a href="#food">Їжа</a>
+      <a href="#coffee">Кава</a>
       <a href="#fairy-tales">Казки</a>
       <a href="#colors">Кольори</a>
       <a href="#insects">Комахи</a>
       <a href="#space">Космос</a>
       <a href="#kitchenware">Кухня</a>
+      <a href="#summer">Літо</a>
       <a href="#people">Люди</a>
       <a href="#materials">Матеріали</a>
       <a href="#furniture">Меблі</a>
@@ -106,12 +109,16 @@
       <a href="#clothes">Одяг</a>
       <a href="#description">Опис</a>
       <a href="#questions">Питання</a>
+      <a href="#travel">Подорож</a>
       <a href="#weather">Погода</a>
       <a href="#position">Позиція</a>
       <a href="#seasons">Пори року</a>
       <a href="#everyday-objects">Предмети</a>
       <a href="#greetings">Привітання</a>
+      <a href="#prepositions">Прийменники</a>
       <a href="#nature">Природа</a>
+      <a href="#adverbs">Прислівники</a>
+      <a href="#frequency-adverbs">Прислівники частоти</a>
       <a href="#professions">Професії</a>
       <a href="#birds">Птахи</a>
       <a href="#plants">Рослини</a>
@@ -120,7 +127,9 @@
       <a href="#family">Сім'я</a>
       <a href="#function-words">Службові</a>
       <a href="#sweets">Солодощі</a>
+      <a href="#conjunctions">Сполучники</a>
       <a href="#sports">Спорт</a>
+      <a href="#idioms">Сталі вирази</a>
       <a href="#state">Стан</a>
       <a href="#pets">Тварини</a>
       <a href="#wild-animals">Тварини (дикі)</a>
@@ -273,12 +282,28 @@
         <hr>
       </div>
       <ul class="words">
-        <li><span class="uk">можу/може</span> <span class="en">can</span></li>
+        <li><span class="uk">можу</span> <span class="en">can</span></li>
         <li><span class="uk">має</span> <span class="en">has</span></li>
         <li><span class="uk">мати</span> <span class="en">have</span></li>
         <li><span class="uk">не є</span> <span class="en">isn't</span></li>
         <li><span class="uk">це є</span> <span class="en">it's</span></li>
         <li><span class="uk">давай/давайте</span> <span class="en">let's</span></li>
+      </ul>
+
+      <div class="divider" id="friends">
+        <hr><span>Друзі — Friends</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">знайомий</span> <span class="en">acquaintance</span></li>
+        <li><span class="uk">однодумці</span> <span class="en">like-minded people</span></li>
+        <li><span class="uk">надійний</span> <span class="en">reliable</span></li>
+        <li><span class="uk">сперечатися</span> <span class="en">argue</span></li>
+        <li><span class="uk">проводити час разом</span> <span class="en">hang out</span></li>
+        <li><span class="uk">підтримувати зв'язок</span> <span class="en">keep in touch</span></li>
+        <li><span class="uk">віддалятися</span> <span class="en">drift apart</span></li>
+        <li><span class="uk">бути поруч, підтримувати</span> <span class="en">be there for</span></li>
+        <li><span class="uk">обмінятися новинами</span> <span class="en">catch up</span></li>
       </ul>
 
       <div class="divider" id="emotions">
@@ -300,6 +325,26 @@
         <li><span class="uk">щастя</span> <span class="en">happiness</span></li>
         <li><span class="uk">сором</span> <span class="en">shame</span></li>
         <li><span class="uk">ніжність</span> <span class="en">tenderness</span></li>
+        <li><span class="uk">приголомшений</span> <span class="en">overwhelmed</span></li>
+        <li><span class="uk">розчарований, засмучений</span> <span class="en">frustrated</span></li>
+        <li><span class="uk">полегшений</span> <span class="en">relieved</span></li>
+        <li><span class="uk">тривожний</span> <span class="en">anxious</span></li>
+        <li><span class="uk">винний</span> <span class="en">guilty</span></li>
+        <li><span class="uk">присоромлений</span> <span class="en">ashamed</span></li>
+        <li><span class="uk">вдячний</span> <span class="en">grateful</span></li>
+        <li><span class="uk">розчарований</span> <span class="en">disappointed</span></li>
+        <li><span class="uk">збентежений</span> <span class="en">embarrassed</span></li>
+        <li><span class="uk">ревнивий</span> <span class="en">jealous</span></li>
+        <li><span class="uk">заздрісний</span> <span class="en">envious</span></li>
+        <li><span class="uk">роздратований</span> <span class="en">irritated</span></li>
+        <li><span class="uk">впевнений у собі</span> <span class="en">confident</span></li>
+        <li><span class="uk">сповнений ентузіазму</span> <span class="en">enthusiastic</span></li>
+        <li><span class="uk">стурбований</span> <span class="en">concerned</span></li>
+        <li><span class="uk">шокований</span> <span class="en">shocked</span></li>
+        <li><span class="uk">дуже задоволений</span> <span class="en">delighted</span></li>
+        <li><span class="uk">наляканий до жаху</span> <span class="en">terrified</span></li>
+        <li><span class="uk">задоволений, умиротворений</span> <span class="en">content</span></li>
+        <li><span class="uk">ображений</span> <span class="en">resentful</span></li>
       </ul>
 
       <div class="divider" id="pronouns">
@@ -403,6 +448,33 @@
         <li><span class="uk">ковбаса</span> <span class="en">sausage</span></li>
       </ul>
 
+      <div class="divider" id="coffee">
+        <hr><span>Кава — Coffee</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">кава</span> <span class="en">coffee</span></li>
+        <li><span class="uk">кав'ярня</span> <span class="en">coffee shop</span></li>
+        <li><span class="uk">бариста</span> <span class="en">barista</span></li>
+        <li><span class="uk">чашка</span> <span class="en">cup</span></li>
+        <li><span class="uk">горнятко</span> <span class="en">mug</span></li>
+        <li><span class="uk">обсмажування</span> <span class="en">roast</span></li>
+        <li><span class="uk">заварювати</span> <span class="en">brew</span></li>
+        <li><span class="uk">кофеїн</span> <span class="en">caffeine</span></li>
+        <li><span class="uk">із собою</span> <span class="en">takeaway</span></li>
+        <li><span class="uk">молоко</span> <span class="en">milk</span></li>
+        <li><span class="uk">цукор</span> <span class="en">sugar</span></li>
+        <li><span class="uk">пінка</span> <span class="en">foam</span></li>
+        <li><span class="uk">міцний</span> <span class="en">strong</span></li>
+        <li><span class="uk">замовляти</span> <span class="en">order</span></li>
+        <li><span class="uk">помішувати</span> <span class="en">stir</span></li>
+        <li><span class="uk">смак, аромат</span> <span class="en">flavor</span></li>
+        <li><span class="uk">гіркий</span> <span class="en">bitter</span></li>
+        <li><span class="uk">солодкий</span> <span class="en">sweet</span></li>
+        <li><span class="uk">щойно заварений</span> <span class="en">freshly brewed</span></li>
+        <li><span class="uk">перерва на каву</span> <span class="en">coffee break</span></li>
+      </ul>
+
       <div class="divider" id="fairy-tales">
         <hr><span>Казки — Fairy Tales</span>
         <hr>
@@ -493,6 +565,29 @@
         <li><span class="uk">склянка</span> <span class="en">glass</span></li>
         <li><span class="uk">чайник</span> <span class="en">kettle</span></li>
         <li><span class="uk">миска</span> <span class="en">bowl</span></li>
+      </ul>
+
+      <div class="divider" id="summer">
+        <hr><span>Літо — Summer</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">відпустка, канікули</span> <span class="en">vacation</span></li>
+        <li><span class="uk">фестиваль</span> <span class="en">festival</span></li>
+        <li><span class="uk">на відкритому повітрі</span> <span class="en">outdoors</span></li>
+        <li><span class="uk">хвиля спеки</span> <span class="en">heatwave</span></li>
+        <li><span class="uk">вологість</span> <span class="en">humidity</span></li>
+        <li><span class="uk">легкий вітерець</span> <span class="en">breeze</span></li>
+        <li><span class="uk">сонячний опік</span> <span class="en">sunburn</span></li>
+        <li><span class="uk">сонцезахисний крем</span> <span class="en">sunscreen</span></li>
+        <li><span class="uk">кемпінг</span> <span class="en">camping</span></li>
+        <li><span class="uk">піший похід</span> <span class="en">hiking</span></li>
+        <li><span class="uk">морське узбережжя</span> <span class="en">seaside</span></li>
+        <li><span class="uk">розслаблюючий</span> <span class="en">relaxing</span></li>
+        <li><span class="uk">освіжаючий</span> <span class="en">refreshing</span></li>
+        <li><span class="uk">переповнений людьми</span> <span class="en">crowded</span></li>
+        <li><span class="uk">незабутній</span> <span class="en">memorable</span></li>
+        <li><span class="uk">досліджувати</span> <span class="en">explore</span></li>
       </ul>
 
       <div class="divider" id="people">
@@ -753,6 +848,17 @@
         <li><span class="uk">особливий</span> <span class="en">special</span></li>
         <li><span class="uk">солодкий</span> <span class="en">sweet</span></li>
         <li><span class="uk">зроблено</span> <span class="en">done</span></li>
+        <li><span class="uk">спокійний</span> <span class="en">peaceful</span></li>
+        <li><span class="uk">приємний</span> <span class="en">enjoyable</span></li>
+        <li><span class="uk">комфортний</span> <span class="en">comfortable</span></li>
+        <li><span class="uk">захопливий</span> <span class="en">exciting</span></li>
+        <li><span class="uk">сонячний</span> <span class="en">sunny</span></li>
+        <li><span class="uk">цікавий</span> <span class="en">interesting</span></li>
+        <li><span class="uk">дивовижний</span> <span class="en">amazing</span></li>
+        <li><span class="uk">чудовий</span> <span class="en">wonderful</span></li>
+        <li><span class="uk">теплий</span> <span class="en">warm</span></li>
+        <li><span class="uk">безпечний</span> <span class="en">safe</span></li>
+        <li><span class="uk">веселий</span> <span class="en">fun</span></li>
       </ul>
 
       <div class="divider" id="questions">
@@ -770,6 +876,30 @@
         <li><span class="uk">який</span> <span class="en">which</span></li>
         <li><span class="uk">чий</span> <span class="en">whose</span></li>
         <li><span class="uk">що це?</span> <span class="en">what's</span></li>
+      </ul>
+
+      <div class="divider" id="travel">
+        <hr><span>Подорож — Travel</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">подорож</span> <span class="en">journey</span></li>
+        <li><span class="uk">пункт призначення</span> <span class="en">destination</span></li>
+        <li><span class="uk">відправлення</span> <span class="en">departure</span></li>
+        <li><span class="uk">прибуття</span> <span class="en">arrival</span></li>
+        <li><span class="uk">бронювання</span> <span class="en">reservation</span></li>
+        <li><span class="uk">пригода</span> <span class="en">adventure</span></li>
+        <li><span class="uk">маршрут</span> <span class="en">route</span></li>
+        <li><span class="uk">житло</span> <span class="en">accommodation</span></li>
+        <li><span class="uk">екскурсія</span> <span class="en">excursion</span></li>
+        <li><span class="uk">визначне місце</span> <span class="en">landmark</span></li>
+        <li><span class="uk">туристична пам'ятка</span> <span class="en">attraction</span></li>
+        <li><span class="uk">затримка</span> <span class="en">delay</span></li>
+        <li><span class="uk">вихід на посадку</span> <span class="en">departure gate</span></li>
+        <li><span class="uk">митниця</span> <span class="en">customs</span></li>
+        <li><span class="uk">зона видачі багажу</span> <span class="en">baggage claim</span></li>
+        <li><span class="uk">мандрівник із рюкзаком</span> <span class="en">backpacker</span></li>
+        <li><span class="uk">туристичне страхування</span> <span class="en">travel insurance</span></li>
       </ul>
 
       <div class="divider" id="weather">
@@ -870,6 +1000,32 @@
         <li><span class="uk">до побачення</span> <span class="en">goodbye</span></li>
       </ul>
 
+      <div class="divider" id="prepositions">
+        <hr><span>Прийменники — Prepositions</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">незважаючи на</span> <span class="en">despite</span></li>
+        <li><span class="uk">у напрямку до</span> <span class="en">towards</span></li>
+        <li><span class="uk">за межами</span> <span class="en">beyond</span></li>
+        <li><span class="uk">під (нижче)</span> <span class="en">beneath</span></li>
+        <li><span class="uk">серед</span> <span class="en">among</span></li>
+        <li><span class="uk">в межах</span> <span class="en">within</span></li>
+        <li><span class="uk">поза, за межами</span> <span class="en">outside</span></li>
+        <li><span class="uk">всередині</span> <span class="en">inside</span></li>
+        <li><span class="uk">навпроти</span> <span class="en">opposite</span></li>
+        <li><span class="uk">щодо</span> <span class="en">regarding</span></li>
+        <li><span class="uk">стосовно</span> <span class="en">concerning</span></li>
+        <li><span class="uk">поруч із</span> <span class="en">alongside</span></li>
+        <li><span class="uk">проти</span> <span class="en">against</span></li>
+        <li><span class="uk">повз</span> <span class="en">past</span></li>
+        <li><span class="uk">через, за допомогою</span> <span class="en">via</span></li>
+        <li><span class="uk">крім</span> <span class="en">except</span></li>
+        <li><span class="uk">на відміну від</span> <span class="en">unlike</span></li>
+        <li><span class="uk">включаючи</span> <span class="en">including</span></li>
+        <li><span class="uk">виключаючи</span> <span class="en">excluding</span></li>
+      </ul>
+
       <div class="divider" id="nature">
         <hr><span>Природа — Nature</span>
         <hr>
@@ -897,6 +1053,61 @@
         <li><span class="uk">печера</span> <span class="en">cave</span></li>
         <li><span class="uk">повітря</span> <span class="en">air</span></li>
         <li><span class="uk">ґрунт</span> <span class="en">soil</span></li>
+      </ul>
+
+      <div class="divider" id="adverbs">
+        <hr><span>Прислівники — Adverbs</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">значно, суттєво</span> <span class="en">significantly</span></li>
+        <li><span class="uk">по суті, фактично</span> <span class="en">essentially</span></li>
+        <li><span class="uk">відносно, порівняно</span> <span class="en">relatively</span></li>
+        <li><span class="uk">широко, ґрунтовно</span> <span class="en">extensively</span></li>
+        <li><span class="uk">отже, унаслідок цього</span> <span class="en">consequently</span></li>
+        <li><span class="uk">зрештою, у кінцевому підсумку</span> <span class="en">ultimately</span></li>
+        <li><span class="uk">імовірно, мабуть</span> <span class="en">presumably</span></li>
+        <li><span class="uk">широко</span> <span class="en">widely</span></li>
+        <li><span class="uk">дуже, надзвичайно</span> <span class="en">highly</span></li>
+        <li><span class="uk">практично, фактично</span> <span class="en">virtually</span></li>
+        <li><span class="uk">конкретно, зокрема</span> <span class="en">specifically</span></li>
+        <li><span class="uk">відповідно</span> <span class="en">accordingly</span></li>
+        <li><span class="uk">дедалі більше</span> <span class="en">increasingly</span></li>
+        <li><span class="uk">неминуче</span> <span class="en">inevitably</span></li>
+        <li><span class="uk">напрочуд, надзвичайно</span> <span class="en">remarkably</span></li>
+        <li><span class="uk">істотно, значною мірою</span> <span class="en">substantially</span></li>
+        <li><span class="uk">теоретично</span> <span class="en">theoretically</span></li>
+        <li><span class="uk">очевидно, мабуть</span> <span class="en">apparently</span></li>
+        <li><span class="uk">особливо, помітно</span> <span class="en">notably</span></li>
+        <li><span class="uk">тим не менш</span> <span class="en">nevertheless</span></li>
+        <li><span class="uk">згодом</span> <span class="en">subsequently</span></li>
+        <li><span class="uk">ледве</span> <span class="en">barely</span></li>
+        <li><span class="uk">загалом</span> <span class="en">broadly</span></li>
+        <li><span class="uk">нібито</span> <span class="en">allegedly</span></li>
+        <li><span class="uk">точно</span> <span class="en">precisely</span></li>
+        <li><span class="uk">ретельно</span> <span class="en">thoroughly</span></li>
+        <li><span class="uk">одночасно</span> <span class="en">simultaneously</span></li>
+        <li><span class="uk">поступово</span> <span class="en">gradually</span></li>
+        <li><span class="uk">приблизно</span> <span class="en">roughly</span></li>
+        <li><span class="uk">безсумнівно</span> <span class="en">undoubtedly</span></li>
+        <li><span class="uk">неохоче</span> <span class="en">reluctantly</span></li>
+        <li><span class="uk">послідовно</span> <span class="en">consistently</span></li>
+      </ul>
+
+      <div class="divider" id="frequency-adverbs">
+        <hr><span>Прислівники частоти — Frequency Adverbs</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">завжди</span> <span class="en">always</span></li>
+        <li><span class="uk">зазвичай</span> <span class="en">usually</span></li>
+        <li><span class="uk">часто</span> <span class="en">frequently</span></li>
+        <li><span class="uk">часто</span> <span class="en">often</span></li>
+        <li><span class="uk">іноді</span> <span class="en">sometimes</span></li>
+        <li><span class="uk">час від часу</span> <span class="en">occasionally</span></li>
+        <li><span class="uk">рідко</span> <span class="en">rarely</span></li>
+        <li><span class="uk">зрідка</span> <span class="en">seldom</span></li>
+        <li><span class="uk">ніколи</span> <span class="en">never</span></li>
       </ul>
 
       <div class="divider" id="professions">
@@ -1060,6 +1271,33 @@
         <li><span class="uk">тістечко</span> <span class="en">pastry</span></li>
       </ul>
 
+      <div class="divider" id="conjunctions">
+        <hr><span>Сполучники — Conjunctions</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">тому що</span> <span class="en">because</span></li>
+        <li><span class="uk">тому, отже</span> <span class="en">so</span></li>
+        <li><span class="uk">якщо</span> <span class="en">if</span></li>
+        <li><span class="uk">коли</span> <span class="en">when</span></li>
+        <li><span class="uk">поки, тоді як</span> <span class="en">while</span></li>
+        <li><span class="uk">перед тим як</span> <span class="en">before</span></li>
+        <li><span class="uk">після того як</span> <span class="en">after</span></li>
+        <li><span class="uk">хоча</span> <span class="en">although</span></li>
+        <li><span class="uk">оскільки</span> <span class="en">since</span></li>
+        <li><span class="uk">якщо не</span> <span class="en">unless</span></li>
+        <li><span class="uk">доки не</span> <span class="en">until</span></li>
+        <li><span class="uk">оскільки, коли</span> <span class="en">as</span></li>
+        <li><span class="uk">ніж</span> <span class="en">than</span></li>
+        <li><span class="uk">де</span> <span class="en">where</span></li>
+        <li><span class="uk">чи</span> <span class="en">whether</span></li>
+        <li><span class="uk">щойно, як тільки</span> <span class="en">once</span></li>
+        <li><span class="uk">хоча, незважаючи на те що</span> <span class="en">even though</span></li>
+        <li><span class="uk">як тільки</span> <span class="en">as soon as</span></li>
+        <li><span class="uk">на випадок якщо</span> <span class="en">in case</span></li>
+        <li><span class="uk">для того щоб</span> <span class="en">so that</span></li>
+      </ul>
+
       <div class="divider" id="sports">
         <hr><span>Спорт — Sports</span>
         <hr>
@@ -1077,6 +1315,19 @@
         <li><span class="uk">карате</span> <span class="en">karate</span></li>
         <li><span class="uk">ковзани</span> <span class="en">skating</span></li>
         <li><span class="uk">лижі</span> <span class="en">skiing</span></li>
+      </ul>
+
+      <div class="divider" id="idioms">
+        <hr><span>Сталі вирази — Set Expressions</span>
+        <hr>
+      </div>
+      <ul class="words">
+        <li><span class="uk">прийняти рішення</span> <span class="en">to make up one's mind</span></li>
+        <li><span class="uk">відповідати за щось / бути керівником</span> <span class="en">to be in charge of</span></li>
+        <li><span class="uk">брати до уваги</span> <span class="en">to take into account</span></li>
+        <li><span class="uk">випадково натрапити</span> <span class="en">to come across</span></li>
+        <li><span class="uk">закінчитися (про щось)</span> <span class="en">to run out of</span></li>
+        <li><span class="uk">добре ладнати з кимось</span> <span class="en">to get along with</span></li>
       </ul>
 
       <div class="divider" id="state">
@@ -1327,6 +1578,156 @@
         <li><span class="uk">слово</span> <span class="en">word</span></li>
         <li><span class="uk">картинка</span> <span class="en">picture</span></li>
       </ul>
+    </section>
+    <section id="phrases" tabindex="-1">
+      <div class="divider" id="phrase-day">
+        <hr><span>Мій день — My Day</span>
+        <hr>
+      </div>
+      <ul class="phrase">
+        <li><span class="en">I get up and wash my face.</span> <span class="uk">Я встаю і мию обличчя.</span></li>
+        <li><span class="en">I eat breakfast and drink milk.</span> <span class="uk">Я їм сніданок і п'ю молоко.</span></li>
+        <li><span class="en">I go to school with my friend.</span> <span class="uk">Я йду до школи з другом.</span></li>
+        <li><span class="en">I read and write at school.</span> <span class="uk">Я читаю і пишу у школі.</span></li>
+        <li><span class="en">I play and run in the park.</span> <span class="uk">Я граю і бігаю в парку.</span></li>
+        <li><span class="en">In the evening I cook dinner.</span> <span class="uk">Увечері я готую вечерю.</span></li>
+        <li><span class="en">At night I sleep in my bed.</span> <span class="uk">Уночі я сплю у своєму ліжку.</span></li>
+      </ul>
+
+      <div class="divider" id="phrase-family">
+        <hr><span>Моя сім'я — My Family</span>
+        <hr>
+      </div>
+      <ul class="phrase">
+        <li><span class="en">I love my mother and father.</span> <span class="uk">Я люблю маму і тата.</span></li>
+        <li><span class="en">My sister is happy today.</span> <span class="uk">Моя сестра сьогодні щаслива.</span></li>
+        <li><span class="en">My brother plays with the dog.</span> <span class="uk">Мій брат грає з собакою.</span></li>
+        <li><span class="en">Grandmother cooks tasty food.</span> <span class="uk">Бабуся готує смачну їжу.</span></li>
+        <li><span class="en">Grandfather reads a book.</span> <span class="uk">Дідусь читає книгу.</span></li>
+        <li><span class="en">We are a big family.</span> <span class="uk">Ми велика сім'я.</span></li>
+        <li><span class="en">I hug my baby brother.</span> <span class="uk">Я обіймаю свого братика.</span></li>
+      </ul>
+
+      <div class="divider" id="phrase-food">
+        <hr><span>Їжа та напої — Food and Drinks</span>
+        <hr>
+      </div>
+      <ul class="phrase">
+        <li><span class="en">I am hungry and want to eat.</span> <span class="uk">Я голодний і хочу їсти.</span></li>
+        <li><span class="en">I like apples and bananas.</span> <span class="uk">Мені подобаються яблука і банани.</span></li>
+        <li><span class="en">Mother makes soup in the kitchen.</span> <span class="uk">Мама готує суп на кухні.</span></li>
+        <li><span class="en">I drink water and juice.</span> <span class="uk">Я п'ю воду і сік.</span></li>
+        <li><span class="en">The bread is fresh and warm.</span> <span class="uk">Хліб свіжий і теплий.</span></li>
+        <li><span class="en">We eat fish and rice for dinner.</span> <span class="uk">Ми їмо рибу і рис на вечерю.</span></li>
+        <li><span class="en">I love sweet cake and tea.</span> <span class="uk">Я люблю солодкий торт і чай.</span></li>
+      </ul>
+
+      <div class="divider" id="phrase-animals">
+        <hr><span>Тварини — Animals</span>
+        <hr>
+      </div>
+      <ul class="phrase">
+        <li><span class="en">The cat sleeps on the chair.</span> <span class="uk">Кіт спить на стільці.</span></li>
+        <li><span class="en">The dog runs in the garden.</span> <span class="uk">Собака бігає в саду.</span></li>
+        <li><span class="en">A bird sings in the tree.</span> <span class="uk">Пташка співає на дереві.</span></li>
+        <li><span class="en">The cow and horse live on a farm.</span> <span class="uk">Корова і кінь живуть на фермі.</span></li>
+        <li><span class="en">Fish swim in the river.</span> <span class="uk">Риби плавають у річці.</span></li>
+        <li><span class="en">The lion is big and strong.</span> <span class="uk">Лев великий і сильний.</span></li>
+        <li><span class="en">I see a small rabbit.</span> <span class="uk">Я бачу маленького кролика.</span></li>
+      </ul>
+
+      <div class="divider" id="phrase-weather">
+        <hr><span>Погода та пори року — Weather and Seasons</span>
+        <hr>
+      </div>
+      <ul class="phrase">
+        <li><span class="en">Today the sun is warm.</span> <span class="uk">Сьогодні сонце тепле.</span></li>
+        <li><span class="en">In winter we play with snow.</span> <span class="uk">Взимку ми граємо зі снігом.</span></li>
+        <li><span class="en">In spring the flowers grow.</span> <span class="uk">Навесні ростуть квіти.</span></li>
+        <li><span class="en">In summer we swim in the sea.</span> <span class="uk">Влітку ми плаваємо в морі.</span></li>
+        <li><span class="en">In autumn the wind is cold.</span> <span class="uk">Восени вітер холодний.</span></li>
+        <li><span class="en">It is raining, take an umbrella.</span> <span class="uk">Йде дощ, візьми парасольку.</span></li>
+        <li><span class="en">I like a sunny day.</span> <span class="uk">Мені подобається сонячний день.</span></li>
+      </ul>
+
+      <div class="divider" id="phrase-emotions">
+        <hr><span>Емоції — Emotions</span>
+        <hr>
+      </div>
+      <ul class="phrase">
+        <li><span class="en">I feel overwhelmed when I have too much work.</span> <span class="uk">Я почуваюся приголомшеним, коли маю забагато роботи.</span></li>
+        <li><span class="en">She was relieved when the exam was over.</span> <span class="uk">Вона відчула полегшення, коли іспит закінчився.</span></li>
+        <li><span class="en">He felt guilty for forgetting her birthday.</span> <span class="uk">Він почувався винним за те, що забув про її день народження.</span></li>
+        <li><span class="en">I am grateful for your help.</span> <span class="uk">Я вдячний за вашу допомогу.</span></li>
+        <li><span class="en">She was embarrassed when she fell in public.</span> <span class="uk">Вона збентежилася, коли впала на людях.</span></li>
+        <li><span class="en">He is confident about his skills.</span> <span class="uk">Він впевнений у своїх навичках.</span></li>
+        <li><span class="en">We are all enthusiastic about the new project.</span> <span class="uk">Ми всі сповнені ентузіазму щодо нового проєкту.</span></li>
+        <li><span class="en">She feels content with her life.</span> <span class="uk">Вона задоволена своїм життям.</span></li>
+      </ul>
+
+      <div class="divider" id="phrase-prepositions">
+        <hr><span>Прийменники — Prepositions</span>
+        <hr>
+      </div>
+      <ul class="phrase">
+        <li><span class="en">Despite the rain, we went for a walk.</span> <span class="uk">Незважаючи на дощ, ми пішли на прогулянку.</span></li>
+        <li><span class="en">Throughout the year she studied hard.</span> <span class="uk">Протягом року вона наполегливо навчалася.</span></li>
+        <li><span class="en">He walked towards the door.</span> <span class="uk">Він пішов у напрямку до дверей.</span></li>
+        <li><span class="en">This is beyond my understanding.</span> <span class="uk">Це за межами мого розуміння.</span></li>
+        <li><span class="en">The cat hid beneath the table.</span> <span class="uk">Кіт сховався під столом.</span></li>
+        <li><span class="en">She stood among her friends.</span> <span class="uk">Вона стояла серед своїх друзів.</span></li>
+        <li><span class="en">Please stay within the marked area.</span> <span class="uk">Будь ласка, залишайтеся в межах позначеної зони.</span></li>
+        <li><span class="en">Unlike her sister, she loves sports.</span> <span class="uk">На відміну від сестри, вона любить спорт.</span></li>
+      </ul>
+
+      <div class="divider" id="phrase-travel">
+        <hr><span>Подорож та відпочинок — Travel and Vacation</span>
+        <hr>
+      </div>
+      <ul class="phrase">
+        <li><span class="en">The beach was peaceful and warm.</span> <span class="uk">Пляж був спокійним і теплим.</span></li>
+        <li><span class="en">The trip was exciting and memorable.</span> <span class="uk">Поїздка була захопливою і незабутньою.</span></li>
+        <li><span class="en">The hotel room was comfortable and clean.</span> <span class="uk">Номер у готелі був комфортним і чистим.</span></li>
+        <li><span class="en">The city is amazing — there is so much to see.</span> <span class="uk">Місто дивовижне — тут так багато всього побачити.</span></li>
+        <li><span class="en">We had an enjoyable evening at the restaurant.</span> <span class="uk">Ми провели приємний вечір у ресторані.</span></li>
+        <li><span class="en">The mountain air was refreshing and cool.</span> <span class="uk">Гірське повітря було освіжаючим і прохолодним.</span></li>
+        <li><span class="en">It is safe to travel alone here.</span> <span class="uk">Тут безпечно подорожувати наодинці.</span></li>
+        <li><span class="en">We had so much fun on the trip.</span> <span class="uk">Ми так гарно провели час у подорожі.</span></li>
+      </ul>
+
+      <div class="divider" id="phrase-adverbs">
+        <hr><span>Прислівники — Adverbs</span>
+        <hr>
+      </div>
+      <ul class="phrase">
+        <li><span class="en">I was tired. Nevertheless, I finished the work.</span> <span class="uk">Я втомився. Тим не менш, я закінчив роботу.</span></li>
+        <li><span class="en">She gradually learned to speak English well.</span> <span class="uk">Вона поступово навчилася добре говорити англійською.</span></li>
+        <li><span class="en">He barely had time to catch the train.</span> <span class="uk">Він ледве встиг на потяг.</span></li>
+        <li><span class="en">The two things happened simultaneously.</span> <span class="uk">Дві речі сталися одночасно.</span></li>
+        <li><span class="en">He undoubtedly made the right decision.</span> <span class="uk">Він безсумнівно прийняв правильне рішення.</span></li>
+        <li><span class="en">She reluctantly agreed to help.</span> <span class="uk">Вона неохоче погодилася допомогти.</span></li>
+        <li><span class="en">He consistently gets good results at school.</span> <span class="uk">Він послідовно отримує хороші результати у школі.</span></li>
+        <li><span class="en">The report was thoroughly checked before sending.</span> <span class="uk">Звіт був ретельно перевірений перед відправленням.</span></li>
+      </ul>
+    </section>
+    <button id="phrases-btn" class="to-phrases" aria-label="Forward">
+      <span>Уроки</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256">
+        <path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128L90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z">
+      </svg>
+    </button>
+    <section id="phrases-nav" class="category-nav phrases-nav" tabindex="-1">
+      <input id="phrase-search" type="text" placeholder="Пошук теми…" autocomplete="off">
+      <div id="no-results-phrases" class="no-results hidden">Не знайдено</div>
+      <a href="#phrase-day">Мій день</a>
+      <a href="#phrase-family">Моя сім'я</a>
+      <a href="#phrase-food">Їжа та напої</a>
+      <a href="#phrase-animals">Тварини</a>
+      <a href="#phrase-weather">Погода та пори року</a>
+      <a href="#phrase-emotions">Емоції</a>
+      <a href="#phrase-prepositions">Прийменники</a>
+      <a href="#phrase-travel">Подорож та відпочинок</a>
+      <a href="#phrase-adverbs">Прислівники</a>
     </section>
   </main>
   <!-- Google tag (gtag.js) moved to end of body -->
