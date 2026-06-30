@@ -227,28 +227,21 @@ main.addEventListener('click', function (e) {
 
   const word = li.querySelector('.en').textContent;
 
+  // Show feedback immediately on tap — mobile speech engines can take
+  // a while to actually start, and waiting for that would make taps
+  // feel unresponsive.
+  currentPlayingLi = li;
+  setPlaying(li, true);
+
   const utterance = new SpeechSynthesisUtterance(word);
   utterance.lang = 'en-US';
   utterance.rate = 0.85;
   if (bestVoice) utterance.voice = bestVoice;
 
-  // Wait for the engine to actually start speaking before showing
-  // the playing state, so the animation lines up with the sound.
-  utterance.onstart = function () {
-    currentPlayingLi = li;
-    setPlaying(li, true);
-  };
   utterance.onend = stopCurrentPlaying;
   utterance.onerror = stopCurrentPlaying;
-  // Some engines never fire onstart reliably — fall back to showing
-  // playing anyway after a short grace period, and always cap duration.
-  currentPlayingTimeout = setTimeout(function () {
-    if (!currentPlayingLi) {
-      currentPlayingLi = li;
-      setPlaying(li, true);
-    }
-    currentPlayingTimeout = setTimeout(stopCurrentPlaying, 1100);
-  }, 150);
+  // Safety net in case onend/onerror never fire on some engines.
+  currentPlayingTimeout = setTimeout(stopCurrentPlaying, 1100);
 
   speechSynthesis.speak(utterance);
 
