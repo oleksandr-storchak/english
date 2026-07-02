@@ -196,52 +196,29 @@ window['phrase-search'].addEventListener('input', function () {
 
 
 var currentPlayingLi = null;
-var currentPlayingTimeout = null;
-var speechBusy = false;
 
 function setPlaying(li, isPlaying) {
   if (li) li.classList.toggle('playing', isPlaying);
 }
 
-function stopCurrentPlaying() {
-  speechBusy = false;
-  if (currentPlayingTimeout) {
-    clearTimeout(currentPlayingTimeout);
-    currentPlayingTimeout = null;
-  }
-  if (currentPlayingLi) {
-    setPlaying(currentPlayingLi, false);
-    currentPlayingLi = null;
-  }
-}
-
-main.addEventListener('click', function (e) {
-  const li = e.target.closest('li');
-  if (!li) return;
-
-  // Ignore clicks while speech is in flight so rapid/double clicks
-  // can't queue or overlap multiple utterances. Click the same or a
-  // different card again once the current one finishes.
-  if (speechBusy) return;
-  speechBusy = true;
-
+function playWord(li) {
   const word = li.querySelector('.en').textContent;
-
-  // Show feedback immediately on tap — mobile speech engines can take
-  // a while to actually start, and waiting for that would make taps
-  // feel unresponsive.
-  currentPlayingLi = li;
-  setPlaying(li, true);
-
   const utterance = new SpeechSynthesisUtterance(word);
   utterance.lang = 'en-US';
   utterance.rate = 0.85;
   if (bestVoice) utterance.voice = bestVoice;
 
-  utterance.onend = stopCurrentPlaying;
-  utterance.onerror = stopCurrentPlaying;
-  // Safety net in case onend/onerror never fire on some engines.
-  currentPlayingTimeout = setTimeout(stopCurrentPlaying, 1100);
+  speechSynthesis.cancel();
+
+  if (currentPlayingLi) setPlaying(currentPlayingLi, false);
+  currentPlayingLi = li;
+  setPlaying(li, true);
+
+  utterance.onend = function () {
+    setPlaying(li, false);
+    if (currentPlayingLi === li) currentPlayingLi = null;
+  };
+  utterance.onerror = utterance.onend;
 
   speechSynthesis.speak(utterance);
 
@@ -255,4 +232,4 @@ main.addEventListener('click', function (e) {
       section.scrollIntoView({ block: 'start', behavior: 'smooth' });
     }
   }
-});
+}
