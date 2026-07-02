@@ -197,14 +197,12 @@ window['phrase-search'].addEventListener('input', function () {
 
 var currentPlayingLi = null;
 var currentPlayingTimeout = null;
-var speechBusy = false;
 
 function setPlaying(li, isPlaying) {
   if (li) li.classList.toggle('playing', isPlaying);
 }
 
 function stopCurrentPlaying() {
-  speechBusy = false;
   if (currentPlayingTimeout) {
     clearTimeout(currentPlayingTimeout);
     currentPlayingTimeout = null;
@@ -215,17 +213,28 @@ function stopCurrentPlaying() {
   }
 }
 
+// Mobile speech engines (iOS Safari standalone PWA especially) can get
+// stuck "speaking" after the app is backgrounded mid-utterance, which
+// then delays the next tap's audio. Cancel and reset when the app is
+// hidden so we never resume into a wedged state.
+document.addEventListener('visibilitychange', function () {
+  if (document.hidden) {
+    speechSynthesis.cancel();
+    stopCurrentPlaying();
+  }
+});
+
 main.addEventListener('click', function (e) {
   const li = e.target.closest('li');
   if (!li) return;
 
-  // Ignore clicks while speech is in flight so rapid/double clicks
-  // can't queue or overlap multiple utterances. Click the same or a
-  // different card again once the current one finishes.
-  if (speechBusy) return;
-  speechBusy = true;
-
   const word = li.querySelector('.en').textContent;
+
+  // Cancel any in-flight/stuck utterance before starting a new one —
+  // this also lets a tap on a new word interrupt one still playing,
+  // instead of silently no-oping (which looked like a dead tap).
+  speechSynthesis.cancel();
+  stopCurrentPlaying();
 
   // Show feedback immediately on tap — mobile speech engines can take
   // a while to actually start, and waiting for that would make taps
@@ -240,8 +249,10 @@ main.addEventListener('click', function (e) {
 
   utterance.onend = stopCurrentPlaying;
   utterance.onerror = stopCurrentPlaying;
-  // Safety net in case onend/onerror never fire on some engines.
-  currentPlayingTimeout = setTimeout(stopCurrentPlaying, 1100);
+  // Safety net in case onend/onerror never fire on some engines. Kept
+  // long since its only job is to un-stick the UI if the engine never
+  // reports completion at all — not to match expected speech duration.
+  currentPlayingTimeout = setTimeout(stopCurrentPlaying, 5000);
 
   speechSynthesis.speak(utterance);
 
