@@ -95,6 +95,18 @@ window['voice-select'].addEventListener('change', function () {
 populateVoices();
 speechSynthesis.addEventListener('voiceschanged', populateVoices);
 
+// iOS Safari's on-device speech engine needs to "warm up" — the first
+// several speak() calls after launch are slow (multi-second delay,
+// animation lags behind since it's gated on the same click handler
+// running through to speak()). Firing one silent utterance immediately
+// on load pays that warm-up cost once, before the user's first real tap.
+(function warmUpSpeechEngine() {
+  var warmup = new SpeechSynthesisUtterance(' ');
+  warmup.volume = 0;
+  warmup.lang = 'en-US';
+  speechSynthesis.speak(warmup);
+})();
+
 
 var phrasesNav = window['phrases-nav'];
 var navBack = window['back-btn'];
