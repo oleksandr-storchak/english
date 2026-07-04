@@ -581,7 +581,7 @@ section#words {
   background: #1b1b1d;
   border: 1px solid #2c2c2f;
   border-radius: 0.875rem;
-  padding: 14px 16px 14px 22px;
+  padding: 14px 64px 14px 22px;
   cursor: pointer;
   transition: opacity 0.3s, background 0.18s, border-color 0.18s, transform 0.18s;
 }
@@ -728,7 +728,7 @@ section#phrases {
   background: #1b1b1d;
   border: 1px solid #2c2c2f;
   border-radius: 0.875rem;
-  padding: 14px 16px 14px 22px;
+  padding: 14px 64px 14px 22px;
   cursor: pointer;
   transition: background 0.18s, border-color 0.18s, transform 0.18s;
 }
@@ -779,6 +779,15 @@ section#phrases {
   color: #8e8e93;
   flex-shrink: 0;
   transition: border-color 0.18s, color 0.18s;
+}
+
+.words .play-btn,
+.phrase .play-btn {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  margin-left: 0;
 }
 
 .words li:hover .play-btn,
