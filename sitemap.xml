@@ -8,346 +8,504 @@
   <!-- Main page -->
   <url>
     <loc>https://oleksandr-storchak.github.io/english/</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Categories -->
+  <!-- Word categories -->
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#bathroom</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#actions</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oleksandr-storchak.github.io/english/#verbs-b1</loc>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#home</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#days</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#helping-verbs</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oleksandr-storchak.github.io/english/#friends</loc>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#emotions</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#pronouns</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#health</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#toys</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#tools</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#food</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oleksandr-storchak.github.io/english/#coffee</loc>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#fairy-tales</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oleksandr-storchak.github.io/english/#collocations-make-do</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oleksandr-storchak.github.io/english/#collocations-take-get</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oleksandr-storchak.github.io/english/#collocations-say-tell</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oleksandr-storchak.github.io/english/#collocations-hear-listen</loc>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#colors</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#insects</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#space</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#kitchenware</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oleksandr-storchak.github.io/english/#summer</loc>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#people</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#materials</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#furniture</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#city</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#months</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#sea-animals</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#music</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#drinks</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#face</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#vegetables</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#clothes</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#description</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#questions</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oleksandr-storchak.github.io/english/#travel</loc>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#weather</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#position</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#seasons</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#everyday-objects</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#greetings</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oleksandr-storchak.github.io/english/#prepositions</loc>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#nature</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oleksandr-storchak.github.io/english/#adverbs</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oleksandr-storchak.github.io/english/#frequency-adverbs</loc>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#professions</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#birds</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#plants</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oleksandr-storchak.github.io/english/#flowers</loc>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#world</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#holidays</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#family</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#function-words</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#sweets</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oleksandr-storchak.github.io/english/#conjunctions</loc>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#sports</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oleksandr-storchak.github.io/english/#idioms</loc>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#state</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#pets</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#wild-animals</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#body</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#transport</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#farm-animals</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#shapes</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oleksandr-storchak.github.io/english/#phrasal-verbs</loc>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#fruits</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#time</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#time-of-day</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oleksandr-storchak.github.io/english/#time-adverbs</loc>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#numbers</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oleksandr-storchak.github.io/english/#school</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <!-- Phrase categories -->
+  <url>
+    <loc>https://oleksandr-storchak.github.io/english/#phrase-day</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://oleksandr-storchak.github.io/english/#phrase-family</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://oleksandr-storchak.github.io/english/#phrase-food</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://oleksandr-storchak.github.io/english/#phrase-animals</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://oleksandr-storchak.github.io/english/#phrase-weather</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://oleksandr-storchak.github.io/english/#phrase-emotions</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://oleksandr-storchak.github.io/english/#phrase-prepositions</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://oleksandr-storchak.github.io/english/#phrase-travel</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://oleksandr-storchak.github.io/english/#phrase-adverbs</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

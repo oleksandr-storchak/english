@@ -11,10 +11,10 @@ Allow: /logo.png
 
 Disallow: /.git/
 Disallow: /.claude/
-Disallow: *.sw.js
+Disallow: /sw.js
 
 # Crawl delay (optional, adjust as needed)
 Crawl-delay: 1
 
 # Sitemap location
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://oleksandr-storchak.github.io/english/sitemap.xml
