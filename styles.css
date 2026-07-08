@@ -566,7 +566,7 @@ section#words {
 .words {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
   gap: clamp(0.75rem, 2.5vw, 1.5rem);
   content-visibility: auto;
   contain-intrinsic-block-size: auto 600px;

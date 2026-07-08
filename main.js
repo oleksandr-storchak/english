@@ -2,9 +2,89 @@ if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('./sw.js');
 }
 
-var items = document.querySelectorAll('.words li');
-var wordLists = document.querySelectorAll('.words');
 var ukPattern = /[\u0400-\u04FF]/;
+var renderedCategories = new Set();
+
+function renderCategory(id) {
+  if (renderedCategories.has(id)) return;
+  var category = WORD_DATA.categories[id];
+  if (!category) return;
+  var ul = document.getElementById('words-' + id);
+  if (!ul) return;
+  var html = '';
+  for (var i = 0; i < category.words.length; i++) {
+    var uk = category.words[i].uk;
+    var en = category.words[i].en;
+    html += '<li onclick="playWord(this)"><span class="uk">' + uk + '</span><span class="en">' + en + '</span><span class="play-btn"></span></li>';
+  }
+  ul.innerHTML = html;
+  ul.classList.remove('hidden-section');
+  var divider = ul.previousElementSibling;
+  if (divider && divider.classList.contains('divider')) {
+    divider.classList.remove('hidden-section');
+  }
+  renderedCategories.add(id);
+}
+
+var currentCategoryId = null;
+
+function showOnlyCategory(id) {
+  currentCategoryId = id;
+  renderCategory(id);
+  Object.values(WORD_DATA.order).forEach(function (otherId) {
+    var ul = document.getElementById('words-' + otherId);
+    if (!ul) return;
+    var divider = ul.previousElementSibling;
+    var hide = otherId !== id;
+    ul.classList.toggle('hidden-section', hide);
+    if (divider && divider.classList.contains('divider')) {
+      divider.classList.toggle('hidden-section', hide);
+    }
+    if (!hide) {
+      ul.querySelectorAll('li').forEach(function (li) { li.classList.remove('hidden'); });
+    }
+  });
+}
+
+var renderedPhraseCategories = new Set();
+
+function renderPhraseCategory(id) {
+  if (renderedPhraseCategories.has(id)) return;
+  var category = PHRASE_DATA.categories[id];
+  if (!category) return;
+  var ul = document.getElementById('phrases-' + id.replace(/^phrase-/, ''));
+  if (!ul) return;
+  var html = '';
+  for (var i = 0; i < category.phrases.length; i++) {
+    var en = category.phrases[i].en;
+    var uk = category.phrases[i].uk;
+    html += '<li onclick="playWord(this)"><span class="en">' + en + '</span><span class="uk">' + uk + '</span><span class="play-btn"></span></li>';
+  }
+  ul.innerHTML = html;
+  ul.classList.remove('hidden-section');
+  var divider = ul.previousElementSibling;
+  if (divider && divider.classList.contains('divider')) {
+    divider.classList.remove('hidden-section');
+  }
+  renderedPhraseCategories.add(id);
+}
+
+var currentPhraseCategoryId = null;
+
+function showOnlyPhraseCategory(id) {
+  currentPhraseCategoryId = id;
+  renderPhraseCategory(id);
+  Object.values(PHRASE_DATA.order).forEach(function (otherId) {
+    var ul = document.getElementById('phrases-' + otherId.replace(/^phrase-/, ''));
+    if (!ul) return;
+    var divider = ul.previousElementSibling;
+    var hide = otherId !== id;
+    ul.classList.toggle('hidden-section', hide);
+    if (divider && divider.classList.contains('divider')) {
+      divider.classList.toggle('hidden-section', hide);
+    }
+  });
+}
 
 window['search-clear'].addEventListener('click', function () {
   window.search.value = '';
@@ -23,16 +103,35 @@ window.search.addEventListener('input', function () {
     this.style.removeProperty('color');
   }
 
+  if (!lowerQuery) {
+    window['words-no-results'].style.display = 'none';
+    if (currentCategoryId) showOnlyCategory(currentCategoryId);
+    return;
+  }
+
+  Object.values(WORD_DATA.order).forEach(function (id) {
+    var category = WORD_DATA.categories[id];
+    var hasMatch = category.words.some(function (w) {
+      return w.uk.toLowerCase().includes(lowerQuery) || w.en.toLowerCase().includes(lowerQuery);
+    });
+    if (hasMatch) renderCategory(id);
+  });
+
+  var items = document.querySelectorAll('.words li');
+  var wordLists = document.querySelectorAll('.words');
+
   items.forEach(function (li) {
     const uk = li.querySelector('.uk').textContent.toLowerCase();
     const en = li.querySelector('.en').textContent.toLowerCase();
-    const match = !lowerQuery || uk.includes(lowerQuery) || en.includes(lowerQuery);
+    const match = uk.includes(lowerQuery) || en.includes(lowerQuery);
     li.classList.toggle('hidden', !match);
   });
 
   var anyVisible = false;
   wordLists.forEach(function (ul) {
-    const hasVisible = ul.querySelector('li:not(.hidden)');
+    var id = ul.id.replace(/^words-/, '');
+    if (!renderedCategories.has(id)) return;
+    var hasVisible = !!ul.querySelector('li:not(.hidden)');
     const divider = ul.previousElementSibling;
     ul.classList.toggle('hidden-section', !hasVisible);
     if (divider && divider.classList.contains('divider')) {
@@ -41,7 +140,7 @@ window.search.addEventListener('input', function () {
     if (hasVisible) anyVisible = true;
   });
 
-  window['words-no-results'].style.display = (lowerQuery && !anyVisible) ? '' : 'none';
+  window['words-no-results'].style.display = (!anyVisible) ? '' : 'none';
 });
 
 var bestVoice = null;
@@ -139,10 +238,22 @@ navFwd.addEventListener('click', function () { goToPanel(currentPanel() + 1); })
 categories.addEventListener('click', function (e) {
   var link = e.target.closest('a[href^="#"]');
   if (!link) return;
+  showOnlyCategory(link.getAttribute('href').slice(1));
   goToPanel(1);
 });
 
 var categoryLinks = categories.querySelectorAll('a[href^="#"]');
+var wordCategoryIds = Object.values(WORD_DATA.order);
+
+if (location.hash && wordCategoryIds.includes(location.hash.slice(1))) {
+  showOnlyCategory(location.hash.slice(1));
+} else {
+  showOnlyCategory(wordCategoryIds[0]);
+}
+window.addEventListener('hashchange', function () {
+  var id = location.hash.slice(1);
+  if (wordCategoryIds.includes(id)) showOnlyCategory(id);
+});
 
 window['category-search'].addEventListener('input', function () {
   var query = this.value.trim().toLowerCase();
@@ -169,6 +280,24 @@ window['category-search'].addEventListener('input', function () {
 
 
 var phraseLinks = phrasesNav.querySelectorAll('a[href^="#"]');
+
+phrasesNav.addEventListener('click', function (e) {
+  var link = e.target.closest('a[href^="#"]');
+  if (!link) return;
+  showOnlyPhraseCategory(link.getAttribute('href').slice(1));
+  goToPanel(2);
+});
+
+var phraseCategoryIds = Object.values(PHRASE_DATA.order);
+if (location.hash && phraseCategoryIds.includes(location.hash.slice(1))) {
+  showOnlyPhraseCategory(location.hash.slice(1));
+} else {
+  showOnlyPhraseCategory(phraseCategoryIds[0]);
+}
+window.addEventListener('hashchange', function () {
+  var id = location.hash.slice(1);
+  if (phraseCategoryIds.includes(id)) showOnlyPhraseCategory(id);
+});
 
 window['phrase-search'].addEventListener('input', function () {
   var query = this.value.trim().toLowerCase();
