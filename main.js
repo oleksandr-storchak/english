@@ -85,6 +85,7 @@ function showOnlyPhraseCategory(id) {
     }
   });
 }
+//test
 
 window['search-clear'].addEventListener('click', function () {
   window.search.value = '';
