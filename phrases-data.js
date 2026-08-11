@@ -8,7 +8,12 @@ const PHRASE_DATA = {
     "5": "phrase-emotions",
     "6": "phrase-prepositions",
     "7": "phrase-travel",
-    "8": "phrase-adverbs"
+    "8": "phrase-adverbs",
+    "9": "phrase-agreement",
+    "10": "phrase-reactions",
+    "11": "phrase-support",
+    "12": "phrase-everyday",
+    "13": "phrase-appraisal"
   },
   "categories": {
     "phrase-day": {
@@ -121,6 +126,123 @@ const PHRASE_DATA = {
         { "en": "She reluctantly agreed to help.", "uk": "Вона неохоче погодилася допомогти." },
         { "en": "He consistently gets good results at school.", "uk": "Він послідовно отримує хороші результати у школі." },
         { "en": "The report was thoroughly checked before sending.", "uk": "Звіт був ретельно перевірений перед відправленням." }
+      ]
+    },
+    "phrase-agreement": {
+      "title": "Згода та розуміння — Agreement",
+      "phrases": [
+        { "en": "Fair enough.", "uk": "Справедливо." },
+        { "en": "That makes sense.", "uk": "Логічно." },
+        { "en": "I'm with you.", "uk": "Я з тобою згоден." },
+        { "en": "Good point.", "uk": "Гарне зауваження." },
+        { "en": "I hear you.", "uk": "Я тебе розумію." },
+        { "en": "Exactly!", "uk": "Саме так." },
+        { "en": "You got it.", "uk": "Саме так / Домовились." },
+        { "en": "That's fair.", "uk": "Це чесно." },
+        { "en": "Works for me.", "uk": "Мене влаштовує." },
+        { "en": "You bet.", "uk": "Авжеж." },
+        { "en": "Sounds good!", "uk": "Звучить добре! / Домовилися!" },
+        { "en": "That's a good point.", "uk": "Це слушна думка." },
+        { "en": "I don't mind.", "uk": "Я не проти." },
+        { "en": "You've got a point.", "uk": "У ваших словах є сенс." },
+        { "en": "I couldn't agree more.", "uk": "Повністю погоджуюся." },
+        { "en": "It's worth it.", "uk": "Це того варте." },
+        { "en": "Never mind.", "uk": "Неважливо. / Забудьте." },
+        { "en": "That's enough.", "uk": "Цього достатньо." }
+      ]
+    },
+    "phrase-reactions": {
+      "title": "Короткі реакції — Quick Reactions",
+      "phrases": [
+        { "en": "No kidding!", "uk": "Та ну!" },
+        { "en": "No way!", "uk": "Та ну!" },
+        { "en": "You wish.", "uk": "Ага, мрій." },
+        { "en": "Not a chance.", "uk": "Навіть не думай." },
+        { "en": "Here we go.", "uk": "Ну, почалося." },
+        { "en": "There you go.", "uk": "Ось бачиш / Тримай." },
+        { "en": "That figures.", "uk": "Цього й варто було чекати." },
+        { "en": "Tell me about it!", "uk": "Та не кажи!" },
+        { "en": "Don't get me started.", "uk": "Навіть не починай." },
+        { "en": "It rings a bell.", "uk": "Звучить знайомо." },
+        { "en": "What do you mean?", "uk": "Що ви маєте на увазі?" },
+        { "en": "What a pity!", "uk": "Як шкода!" },
+        { "en": "I didn't catch that.", "uk": "Я не розчув / не розчула." },
+        { "en": "Could you repeat that?", "uk": "Можете повторити?" },
+        { "en": "How come?", "uk": "Як так? / Чому?" },
+        { "en": "What's the matter?", "uk": "Що сталося?" },
+        { "en": "Don't get me wrong.", "uk": "Не зрозумійте мене неправильно." },
+        { "en": "That's not fair.", "uk": "Це несправедливо." },
+        { "en": "I'm kidding!", "uk": "Я жартую!" },
+        { "en": "That's a relief!", "uk": "Яке полегшення!" }
+      ]
+    },
+    "phrase-support": {
+      "title": "Підтримка та вибір — Support and Choice",
+      "phrases": [
+        { "en": "I'm in.", "uk": "Я в справі." },
+        { "en": "Count me in.", "uk": "Розраховуй на мене." },
+        { "en": "I'm on it.", "uk": "Уже займаюся." },
+        { "en": "You got this!", "uk": "У тебе вийде." },
+        { "en": "Suit yourself.", "uk": "Як знаєш." },
+        { "en": "Be my guest.", "uk": "Будь ласка, не соромся." },
+        { "en": "It's up to you.", "uk": "Вирішуй сам." },
+        { "en": "You do you.", "uk": "Роби так, як вважаєш за потрібне." },
+        { "en": "Give it a shot.", "uk": "Спробуй." },
+        { "en": "Fingers crossed!", "uk": "Тримаймо кулаки." },
+        { "en": "Let me think.", "uk": "Дайте мені подумати." },
+        { "en": "I'm not sure.", "uk": "Я не впевнений / не впевнена." },
+        { "en": "It depends.", "uk": "Це залежить від обставин." },
+        { "en": "I have no idea.", "uk": "Я не маю уявлення." },
+        { "en": "I'll think about it.", "uk": "Я про це подумаю." },
+        { "en": "Let's figure it out.", "uk": "Давайте розберемося." },
+        { "en": "You never know.", "uk": "Ніколи не знаєш." },
+        { "en": "It's up to me.", "uk": "Це залежить від мене." }
+      ]
+    },
+    "phrase-everyday": {
+      "title": "Побутове спілкування — Everyday Talk",
+      "phrases": [
+        { "en": "No worries.", "uk": "Не проблема." },
+        { "en": "My bad.", "uk": "Моя вина." },
+        { "en": "Hang on.", "uk": "Зачекай." },
+        { "en": "Hold on.", "uk": "Секунду." },
+        { "en": "Take your time.", "uk": "Не поспішай." },
+        { "en": "After you.", "uk": "Після вас." },
+        { "en": "Help yourself.", "uk": "Пригощайся." },
+        { "en": "I'm starving.", "uk": "Я страшенно голодний." },
+        { "en": "I'm beat.", "uk": "Я виснажений." },
+        { "en": "Easy does it.", "uk": "Обережніше." },
+        { "en": "Here you go.", "uk": "Ось, будь ласка." },
+        { "en": "I'm on my way.", "uk": "Я вже в дорозі." },
+        { "en": "Give me a second.", "uk": "Дайте мені хвилинку." },
+        { "en": "I'll be right back.", "uk": "Я зараз повернуся." },
+        { "en": "I'm in a hurry.", "uk": "Я поспішаю." },
+        { "en": "How does it work?", "uk": "Як це працює?" },
+        { "en": "Can I try it on?", "uk": "Можна це приміряти?" },
+        { "en": "Keep the change.", "uk": "Решти не потрібно." },
+        { "en": "I'm just looking.", "uk": "Я просто дивлюся." },
+        { "en": "I'll keep in touch.", "uk": "Я буду на зв'язку." }
+      ]
+    },
+    "phrase-appraisal": {
+      "title": "Оцінка та побажання — Praise and Wishes",
+      "phrases": [
+        { "en": "Lucky you!", "uk": "Пощастило ж тобі." },
+        { "en": "Good for you!", "uk": "Молодець! / Класно!" },
+        { "en": "You nailed it.", "uk": "Ти чудово впорався." },
+        { "en": "That's the spirit!", "uk": "Оце правильний настрій!" },
+        { "en": "Close enough.", "uk": "Майже." },
+        { "en": "What a relief!", "uk": "Яке полегшення." },
+        { "en": "So far, so good.", "uk": "Поки що все добре." },
+        { "en": "No big deal.", "uk": "Дрібниці." },
+        { "en": "I'm good.", "uk": "Ні, дякую / У мене все є." },
+        { "en": "I'm all set.", "uk": "Усе готово / Мені більше нічого не потрібно." },
+        { "en": "It's not a big deal.", "uk": "Нічого страшного." },
+        { "en": "I'm used to it.", "uk": "Я до цього звик / звикла." },
+        { "en": "I can't wait!", "uk": "Не можу дочекатися!" },
+        { "en": "I'm all ears.", "uk": "Я уважно слухаю." },
+        { "en": "Take it easy.", "uk": "Не хвилюйтеся. / Розслабтеся." },
+        { "en": "Let's call it a day.", "uk": "На сьогодні досить." }
       ]
     }
   }

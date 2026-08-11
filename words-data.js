@@ -72,7 +72,8 @@ const WORD_DATA = {
     "69": "time-of-day",
     "70": "time-adverbs",
     "71": "numbers",
-    "72": "school"
+    "72": "school",
+    "73": "personality"
   },
   "categories": {
     "bathroom": {
@@ -557,7 +558,18 @@ const WORD_DATA = {
         { "uk": "освіжаючий", "en": "refreshing" },
         { "uk": "переповнений людьми", "en": "crowded" },
         { "uk": "незабутній", "en": "memorable" },
-        { "uk": "досліджувати", "en": "explore" }
+        { "uk": "досліджувати", "en": "explore" },
+        { "uk": "липка шкіра", "en": "sticky skin" },
+        { "uk": "сверблячка від укусу комара", "en": "mosquito bite itch" },
+        { "uk": "спітнілі долоні", "en": "sweaty palms" },
+        { "uk": "мозолі", "en": "blisters" },
+        { "uk": "сліпуче сонячне світло", "en": "sun glare" },
+        { "uk": "задушлива кімната", "en": "stuffy room" },
+        { "uk": "плями від поту", "en": "sweat stains" },
+        { "uk": "сплутане волосся", "en": "tangled hair" },
+        { "uk": "макіяж, який розтікається", "en": "melting makeup" },
+        { "uk": "укус оси", "en": "wasp sting" },
+        { "uk": "продувний, де дує", "en": "drafty" }
       ]
     },
     "people": {
@@ -860,7 +872,13 @@ const WORD_DATA = {
         { "uk": "град", "en": "hail" },
         { "uk": "калюжа", "en": "puddle" },
         { "uk": "погода", "en": "weather" },
-        { "uk": "тіні", "en": "shadows" }
+        { "uk": "тіні", "en": "shadows" },
+        { "uk": "вологий", "en": "humid" },
+        { "uk": "пекучий, дуже спекотний", "en": "scorching" },
+        { "uk": "дуже холодний, морозний", "en": "freezing" },
+        { "uk": "похмурий", "en": "gloomy" },
+        { "uk": "поривчастий (про вітер)", "en": "blustery" },
+        { "uk": "суцільно хмарний", "en": "overcast" }
       ]
     },
     "position": {
@@ -1305,7 +1323,15 @@ const WORD_DATA = {
         { "uk": "справляти незабутнє враження", "en": "make a lasting impression" },
         { "uk": "іти на великі зусилля", "en": "go to great lengths" },
         { "uk": "служити певній меті", "en": "serve a purpose" },
-        { "uk": "знаходити баланс", "en": "strike a balance" }
+        { "uk": "знаходити баланс", "en": "strike a balance" },
+        { "uk": "делікатне, спірне питання", "en": "hot potato" },
+        { "uk": "вскочити в халепу", "en": "get into hot water" },
+        { "uk": "дуже розлючений чи збентежений", "en": "hot under the collar" },
+        { "uk": "порожні балачки, пусті слова", "en": "hot air" },
+        { "uk": "іти по п'ятах", "en": "hot on the heels of" },
+        { "uk": "бути на смузі удачі", "en": "have a hot hand" },
+        { "uk": "пристрасний / бурхливий", "en": "hot and heavy" },
+        { "uk": "куй залізо, поки гаряче", "en": "strike while the iron is hot" }
       ]
     },
     "state": {
@@ -1458,7 +1484,24 @@ const WORD_DATA = {
         { "uk": "приміряти", "en": "try on" },
         { "uk": "доглядати", "en": "look after" },
         { "uk": "передзвонювати", "en": "call back" },
-        { "uk": "поспішати", "en": "hurry up" }
+        { "uk": "поспішати", "en": "hurry up" },
+        { "uk": "продовжувати", "en": "carry on" },
+        { "uk": "зрозуміти, розібратися", "en": "figure out" },
+        { "uk": "здатися, кинути", "en": "give up" },
+        { "uk": "випадково зустріти", "en": "run into" },
+        { "uk": "випадково натрапити", "en": "come across" },
+        { "uk": "відмовити, відхилити", "en": "turn down" },
+        { "uk": "вийти (про результат), знайти рішення", "en": "work out" },
+        { "uk": "порушити тему", "en": "bring up" },
+        { "uk": "налаштувати, заснувати", "en": "set up" },
+        { "uk": "перебрати контроль", "en": "take over" },
+        { "uk": "оговтатися, подолати", "en": "get over" },
+        { "uk": "пережити, пройти через", "en": "go through" },
+        { "uk": "відкладати", "en": "put off" },
+        { "uk": "скорочувати (споживання)", "en": "cut down on" },
+        { "uk": "вказати, звернути увагу", "en": "point out" },
+        { "uk": "з нетерпінням чекати", "en": "look forward to" },
+        { "uk": "мати справу з, вирішувати", "en": "deal with" }
       ]
     },
     "fruits": {
@@ -1519,7 +1562,19 @@ const WORD_DATA = {
         { "uk": "зрештою", "en": "eventually" },
         { "uk": "тим часом", "en": "meanwhile" },
         { "uk": "потім, згодом", "en": "afterwards" },
-        { "uk": "нині, у наш час", "en": "nowadays" }
+        { "uk": "нині, у наш час", "en": "nowadays" },
+        { "uk": "дуже давно", "en": "a long time ago" },
+        { "uk": "багато років тому", "en": "many years ago" },
+        { "uk": "у старі часи", "en": "in the old days" },
+        { "uk": "рано чи пізно", "en": "sooner or later" },
+        { "uk": "трохи пізніше", "en": "a little later" },
+        { "uk": "невдовзі після", "en": "shortly after" },
+        { "uk": "через деякий час", "en": "after a while" },
+        { "uk": "трохи раніше", "en": "a little earlier" },
+        { "uk": "незадовго до", "en": "shortly before" },
+        { "uk": "заздалегідь", "en": "beforehand" },
+        { "uk": "деякий час тому", "en": "a while ago" },
+        { "uk": "через деякий час", "en": "after some time" }
       ]
     },
     "numbers": {
@@ -1570,6 +1625,44 @@ const WORD_DATA = {
         { "uk": "літера", "en": "letter" },
         { "uk": "слово", "en": "word" },
         { "uk": "картинка", "en": "picture" }
+      ]
+    },
+    "personality": {
+      "title": "Характер — Personality",
+      "words": [
+        { "uk": "чесний", "en": "honest" },
+        { "uk": "щедрий", "en": "generous" },
+        { "uk": "терплячий", "en": "patient" },
+        { "uk": "ввічливий", "en": "polite" },
+        { "uk": "відповідальний", "en": "responsible" },
+        { "uk": "амбітний", "en": "ambitious" },
+        { "uk": "творчий", "en": "creative" },
+        { "uk": "незалежний", "en": "independent" },
+        { "uk": "допитливий", "en": "curious" },
+        { "uk": "товариський", "en": "sociable" },
+        { "uk": "готовий підтримати", "en": "supportive" },
+        { "uk": "оптимістичний", "en": "optimistic" },
+        { "uk": "рішучий", "en": "determined" },
+        { "uk": "уважний, турботливий", "en": "thoughtful" },
+        { "uk": "чутливий", "en": "sensitive" },
+        { "uk": "працьовитий", "en": "hard-working" },
+        { "uk": "невимушений, легкий у спілкуванні", "en": "easy-going" },
+        { "uk": "добросердечний", "en": "kind-hearted" },
+        { "uk": "з відкритим мисленням", "en": "open-minded" },
+        { "uk": "сердечний", "en": "warm-hearted" },
+        { "uk": "обмежений у поглядах", "en": "narrow-minded" },
+        { "uk": "упевнений у собі", "en": "self-confident" },
+        { "uk": "симпатичний, гарненький", "en": "pretty-looking" },
+        { "uk": "привабливий", "en": "good-looking" },
+        { "uk": "розсудливий", "en": "level-headed" },
+        { "uk": "вольовий", "en": "strong-willed" },
+        { "uk": "безсердечний", "en": "cold-hearted" },
+        { "uk": "розсіяний", "en": "absent-minded" },
+        { "uk": "кмітливий", "en": "quick-witted" },
+        { "uk": "запальний", "en": "short-tempered" },
+        { "uk": "невихований", "en": "bad-mannered" },
+        { "uk": "зарозумілий", "en": "big-headed" },
+        { "uk": "доброзичливий", "en": "good-tempered" }
       ]
     }
   }

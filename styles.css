@@ -215,6 +215,7 @@ body:has(#time:target) a[href="#time"],
 body:has(#time-of-day:target) a[href="#time-of-day"],
 body:has(#numbers:target) a[href="#numbers"],
 body:has(#school:target) a[href="#school"],
+body:has(#personality:target) a[href="#personality"],
 body:has(#phrase-day:target) a[href="#phrase-day"],
 body:has(#phrase-family:target) a[href="#phrase-family"],
 body:has(#phrase-food:target) a[href="#phrase-food"],
@@ -223,6 +224,11 @@ body:has(#phrase-weather:target) a[href="#phrase-weather"],
 body:has(#phrase-emotions:target) a[href="#phrase-emotions"],
 body:has(#phrase-prepositions:target) a[href="#phrase-prepositions"],
 body:has(#phrase-travel:target) a[href="#phrase-travel"],
+body:has(#phrase-agreement:target) a[href="#phrase-agreement"],
+body:has(#phrase-reactions:target) a[href="#phrase-reactions"],
+body:has(#phrase-support:target) a[href="#phrase-support"],
+body:has(#phrase-everyday:target) a[href="#phrase-everyday"],
+body:has(#phrase-appraisal:target) a[href="#phrase-appraisal"],
 body:has(#phrase-adverbs:target) a[href="#phrase-adverbs"] {
   color: #ffd86b;
   background: #232327;
@@ -449,7 +455,8 @@ section#phrases {
 }
 
 .divider.hidden-section,
-.words.hidden-section {
+.words.hidden-section,
+.phrase.hidden-section {
   display: none;
 }
 
