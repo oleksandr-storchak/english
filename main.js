@@ -106,9 +106,15 @@ window.search.addEventListener('input', function () {
 
   if (!lowerQuery) {
     window['words-no-results'].style.display = 'none';
+    // Clearing the search returns to the tile grid unless a category was picked.
+    if (!categoryChosen) document.body.classList.remove('start-done');
     if (currentCategoryId) showOnlyCategory(currentCategoryId);
     return;
   }
+
+  // Search shows matches across categories, so the grid steps aside — but this
+  // is not a category choice, so clearing the query brings it back.
+  document.body.classList.add('start-done');
 
   Object.values(WORD_DATA.order).forEach(function (id) {
     var category = WORD_DATA.categories[id];
@@ -240,20 +246,34 @@ categories.addEventListener('click', function (e) {
   var link = e.target.closest('a[href^="#"]');
   if (!link) return;
   showOnlyCategory(link.getAttribute('href').slice(1));
+  dismissStartScreen();
   goToPanel(1);
 });
 
 var categoryLinks = categories.querySelectorAll('a[href^="#"]');
 var wordCategoryIds = Object.values(WORD_DATA.order);
 
+// The tile grid owns the words panel until a category is chosen. Any route into
+// a specific category (tile, nav link, search, deep link) dismisses it.
+var categoryChosen = false;
+
+function dismissStartScreen() {
+  categoryChosen = true;
+  document.body.classList.add('start-done');
+}
+
 if (location.hash && wordCategoryIds.includes(location.hash.slice(1))) {
   showOnlyCategory(location.hash.slice(1));
+  dismissStartScreen();
 } else {
   showOnlyCategory(wordCategoryIds[0]);
 }
 window.addEventListener('hashchange', function () {
   var id = location.hash.slice(1);
-  if (wordCategoryIds.includes(id)) showOnlyCategory(id);
+  if (wordCategoryIds.includes(id)) {
+    showOnlyCategory(id);
+    dismissStartScreen();
+  }
 });
 
 window['category-search'].addEventListener('input', function () {
@@ -286,18 +306,27 @@ phrasesNav.addEventListener('click', function (e) {
   var link = e.target.closest('a[href^="#"]');
   if (!link) return;
   showOnlyPhraseCategory(link.getAttribute('href').slice(1));
+  dismissPhraseStartScreen();
   goToPanel(2);
 });
+
+function dismissPhraseStartScreen() {
+  document.body.classList.add('start-done-phrases');
+}
 
 var phraseCategoryIds = Object.values(PHRASE_DATA.order);
 if (location.hash && phraseCategoryIds.includes(location.hash.slice(1))) {
   showOnlyPhraseCategory(location.hash.slice(1));
+  dismissPhraseStartScreen();
 } else {
   showOnlyPhraseCategory(phraseCategoryIds[0]);
 }
 window.addEventListener('hashchange', function () {
   var id = location.hash.slice(1);
-  if (phraseCategoryIds.includes(id)) showOnlyPhraseCategory(id);
+  if (phraseCategoryIds.includes(id)) {
+    showOnlyPhraseCategory(id);
+    dismissPhraseStartScreen();
+  }
 });
 
 window['phrase-search'].addEventListener('input', function () {
@@ -324,6 +353,25 @@ window['phrase-search'].addEventListener('input', function () {
 });
 
 
+
+// On load the words panel shows a grid of category tiles instead of the first
+// category's words, so the full range of categories is visible. Picking a tile
+// (or searching, or using the category nav) swaps in the normal word list.
+window['start-screen'].addEventListener('click', function (e) {
+  var tile = e.target.closest('a.start-tile');
+  if (!tile) return;
+  e.preventDefault();
+  showOnlyCategory(tile.getAttribute('href').slice(1));
+  dismissStartScreen();
+});
+
+window['start-screen-phrases'].addEventListener('click', function (e) {
+  var tile = e.target.closest('a.start-tile');
+  if (!tile) return;
+  e.preventDefault();
+  showOnlyPhraseCategory(tile.getAttribute('href').slice(1));
+  dismissPhraseStartScreen();
+});
 
 var currentPlayingLi = null;
 
