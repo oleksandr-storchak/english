@@ -474,7 +474,7 @@ section#words {
   overflow-y: scroll;
   overflow-x: hidden;
   position: relative;
-  padding: 0 3rem 0 2.5rem;
+  padding: 0 3rem;
   outline: none;
 }
 
@@ -642,7 +642,7 @@ section#phrases {
   overflow-x: hidden;
   scrollbar-width: none;
   position: relative;
-  padding: 0 2.5rem 0 2rem;
+  padding: 0 3rem;
   outline: none;
 }
 
