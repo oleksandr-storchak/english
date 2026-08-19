@@ -31,6 +31,7 @@ var currentCategoryId = null;
 function showOnlyCategory(id) {
   currentCategoryId = id;
   renderCategory(id);
+  words.scrollTop = 0;
   Object.values(WORD_DATA.order).forEach(function (otherId) {
     var ul = document.getElementById('words-' + otherId);
     if (!ul) return;
@@ -83,6 +84,7 @@ var currentPhraseCategoryId = null;
 function showOnlyPhraseCategory(id) {
   currentPhraseCategoryId = id;
   renderPhraseCategory(id);
+  phrases.scrollTop = 0;
   Object.values(PHRASE_DATA.order).forEach(function (otherId) {
     var ul = document.getElementById('phrases-' + otherId.replace(/^phrase-/, ''));
     if (!ul) return;
