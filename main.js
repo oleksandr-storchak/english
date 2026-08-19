@@ -54,6 +54,15 @@ function renderPhraseCategory(id) {
   if (!category) return;
   var ul = document.getElementById('phrases-' + id.replace(/^phrase-/, ''));
   if (!ul) return;
+  if (ul.hasAttribute('data-static')) {
+    ul.classList.remove('hidden-section');
+    var staticDivider = ul.previousElementSibling;
+    if (staticDivider && staticDivider.classList.contains('divider')) {
+      staticDivider.classList.remove('hidden-section');
+    }
+    renderedPhraseCategories.add(id);
+    return;
+  }
   var html = '';
   for (var i = 0; i < category.phrases.length; i++) {
     var en = category.phrases[i].en;

@@ -13,7 +13,8 @@ const PHRASE_DATA = {
     "10": "phrase-reactions",
     "11": "phrase-support",
     "12": "phrase-everyday",
-    "13": "phrase-appraisal"
+    "13": "phrase-appraisal",
+    "14": "phrase-tenses"
   },
   "categories": {
     "phrase-day": {
@@ -243,6 +244,23 @@ const PHRASE_DATA = {
         { "en": "I'm all ears.", "uk": "Я уважно слухаю." },
         { "en": "Take it easy.", "uk": "Не хвилюйтеся. / Розслабтеся." },
         { "en": "Let's call it a day.", "uk": "На сьогодні досить." }
+      ]
+    },
+    "phrase-tenses": {
+      "title": "Таблиця часів — Tenses Table",
+      "phrases": [
+        { "en": "I ate an apple.", "uk": "Я з'їв яблуко." },
+        { "en": "I eat an apple.", "uk": "Я їм яблуко (регулярно)." },
+        { "en": "I will eat an apple.", "uk": "Я з'їм яблуко." },
+        { "en": "I was eating an apple.", "uk": "Я їв яблуко (у той момент)." },
+        { "en": "I am eating an apple.", "uk": "Я їм яблуко (зараз)." },
+        { "en": "I will be eating an apple.", "uk": "Я їстиму яблуко (у той момент)." },
+        { "en": "I had eaten an apple.", "uk": "Я з'їв яблуко (до іншої дії в минулому)." },
+        { "en": "I have eaten an apple.", "uk": "Я вже з'їв яблуко." },
+        { "en": "I will have eaten an apple.", "uk": "Я вже з'їм яблуко (до моменту в майбутньому)." },
+        { "en": "I had been eating an apple.", "uk": "Я їв яблуко певний час (до моменту в минулому)." },
+        { "en": "I have been eating an apple.", "uk": "Я їм яблуко вже певний час." },
+        { "en": "I will have been eating an apple.", "uk": "Я їстиму яблуко вже певний час." }
       ]
     }
   }

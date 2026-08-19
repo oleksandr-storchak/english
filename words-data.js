@@ -73,7 +73,10 @@ const WORD_DATA = {
     "70": "time-adverbs",
     "71": "numbers",
     "72": "school",
-    "73": "personality"
+    "73": "personality",
+    "74": "markers-past",
+    "75": "markers-present",
+    "76": "markers-future"
   },
   "categories": {
     "bathroom": {
@@ -1663,6 +1666,60 @@ const WORD_DATA = {
         { "uk": "невихований", "en": "bad-mannered" },
         { "uk": "зарозумілий", "en": "big-headed" },
         { "uk": "доброзичливий", "en": "good-tempered" }
+      ]
+    },
+    "markers-past": {
+      "title": "Маркери минулого — Past Markers",
+      "words": [
+        { "uk": "мить тому", "en": "a moment ago" },
+        { "uk": "раніше", "en": "earlier" },
+        { "uk": "попередньо", "en": "previously" },
+        { "uk": "учора", "en": "yesterday" },
+        { "uk": "минулої ночі", "en": "last night" },
+        { "uk": "минулого тижня", "en": "last week" },
+        { "uk": "минулого місяця", "en": "last month" },
+        { "uk": "минулого року", "en": "last year" },
+        { "uk": "деякий час тому", "en": "a while ago" },
+        { "uk": "у минулому", "en": "in the past" },
+        { "uk": "давно", "en": "long ago" },
+        { "uk": "колись, раніше", "en": "formerly" },
+        { "uk": "дуже давно", "en": "ages ago" }
+      ]
+    },
+    "markers-present": {
+      "title": "Маркери теперішнього — Present Markers",
+      "words": [
+        { "uk": "зараз", "en": "now" },
+        { "uk": "прямо зараз", "en": "right now" },
+        { "uk": "у цей момент", "en": "at the moment" },
+        { "uk": "сьогодні", "en": "today" },
+        { "uk": "сьогодні вранці", "en": "this morning" },
+        { "uk": "цього тижня", "en": "this week" },
+        { "uk": "цього місяця", "en": "this month" },
+        { "uk": "цього року", "en": "this year" },
+        { "uk": "наразі", "en": "currently" },
+        { "uk": "у цей час", "en": "at this time" },
+        { "uk": "на цей момент", "en": "as of now" },
+        { "uk": "на теперішній час", "en": "at present" },
+        { "uk": "нині, у наш час", "en": "nowadays" }
+      ]
+    },
+    "markers-future": {
+      "title": "Маркери майбутнього — Future Markers",
+      "words": [
+        { "uk": "за мить", "en": "in a moment" },
+        { "uk": "скоро", "en": "soon" },
+        { "uk": "пізніше", "en": "later" },
+        { "uk": "незабаром", "en": "before long" },
+        { "uk": "свого часу", "en": "in due time" },
+        { "uk": "завтра", "en": "tomorrow" },
+        { "uk": "завтра вранці", "en": "next morning" },
+        { "uk": "наступного тижня", "en": "next week" },
+        { "uk": "наступного місяця", "en": "next month" },
+        { "uk": "наступного року", "en": "next year" },
+        { "uk": "колись", "en": "someday" },
+        { "uk": "одного дня", "en": "one day" },
+        { "uk": "у майбутньому", "en": "in the future" }
       ]
     }
   }

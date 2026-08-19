@@ -128,6 +128,9 @@
       <a href="#kitchenware">Кухня</a>
       <a href="#summer">Літо</a>
       <a href="#people">Люди</a>
+      <a href="#markers-past">Маркери минулого</a>
+      <a href="#markers-present">Маркери теперішнього</a>
+      <a href="#markers-future">Маркери майбутнього</a>
       <a href="#materials">Матеріали</a>
       <a href="#furniture">Меблі</a>
       <a href="#city">Місто</a>
@@ -213,6 +216,9 @@
         <a class="start-tile" href="#kitchenware"><span class="start-tile-icon" aria-hidden="true">🍳</span><span class="start-tile-name">Кухня</span><span class="start-tile-count" data-unit="слів">10</span></a>
         <a class="start-tile" href="#summer"><span class="start-tile-icon" aria-hidden="true">🏖️</span><span class="start-tile-name">Літо</span><span class="start-tile-count" data-unit="слів">27</span></a>
         <a class="start-tile" href="#people"><span class="start-tile-icon" aria-hidden="true">👥</span><span class="start-tile-name">Люди</span><span class="start-tile-count" data-unit="слів">13</span></a>
+        <a class="start-tile" href="#markers-past"><span class="start-tile-icon" aria-hidden="true">⏮️</span><span class="start-tile-name">Маркери минулого</span><span class="start-tile-count" data-unit="слів">13</span></a>
+        <a class="start-tile" href="#markers-present"><span class="start-tile-icon" aria-hidden="true">⏺️</span><span class="start-tile-name">Маркери теперішнього</span><span class="start-tile-count" data-unit="слів">13</span></a>
+        <a class="start-tile" href="#markers-future"><span class="start-tile-icon" aria-hidden="true">⏭️</span><span class="start-tile-name">Маркери майбутнього</span><span class="start-tile-count" data-unit="слів">13</span></a>
         <a class="start-tile" href="#materials"><span class="start-tile-icon" aria-hidden="true">🧱</span><span class="start-tile-name">Матеріали</span><span class="start-tile-count" data-unit="слів">10</span></a>
         <a class="start-tile" href="#furniture"><span class="start-tile-icon" aria-hidden="true">🛋️</span><span class="start-tile-name">Меблі</span><span class="start-tile-count" data-unit="слів">14</span></a>
         <a class="start-tile" href="#city"><span class="start-tile-icon" aria-hidden="true">🏙️</span><span class="start-tile-name">Місто</span><span class="start-tile-count" data-unit="слів">21</span></a>
@@ -690,6 +696,24 @@
       </div>
       <ul class="words hidden-section" id="words-time-adverbs"></ul>
 
+      <div class="divider hidden-section" id="markers-past">
+        <hr><span>Маркери минулого — Past Markers</span>
+        <hr>
+      </div>
+      <ul class="words hidden-section" id="words-markers-past"></ul>
+
+      <div class="divider hidden-section" id="markers-present">
+        <hr><span>Маркери теперішнього — Present Markers</span>
+        <hr>
+      </div>
+      <ul class="words hidden-section" id="words-markers-present"></ul>
+
+      <div class="divider hidden-section" id="markers-future">
+        <hr><span>Маркери майбутнього — Future Markers</span>
+        <hr>
+      </div>
+      <ul class="words hidden-section" id="words-markers-future"></ul>
+
       <div class="divider hidden-section" id="numbers">
         <hr><span>Числа — Numbers</span>
         <hr>
@@ -725,6 +749,7 @@
         <a class="start-tile" href="#phrase-support"><span class="start-tile-icon" aria-hidden="true">💪</span><span class="start-tile-name">Підтримка та вибір</span><span class="start-tile-count" data-unit="фраз">18</span></a>
         <a class="start-tile" href="#phrase-everyday"><span class="start-tile-icon" aria-hidden="true">☕</span><span class="start-tile-name">Побутове спілкування</span><span class="start-tile-count" data-unit="фраз">20</span></a>
         <a class="start-tile" href="#phrase-appraisal"><span class="start-tile-icon" aria-hidden="true">👏</span><span class="start-tile-name">Оцінка та побажання</span><span class="start-tile-count" data-unit="фраз">16</span></a>
+        <a class="start-tile" href="#phrase-tenses"><span class="start-tile-icon" aria-hidden="true">🕰️</span><span class="start-tile-name">Таблиця часів</span><span class="start-tile-count" data-unit="фраз">12</span></a>
         </div>
       </div>
 
@@ -811,6 +836,28 @@
         <hr>
       </div>
       <ul class="phrase hidden-section" id="phrases-appraisal"></ul>
+
+      <div class="divider hidden-section" id="phrase-tenses">
+        <hr><span>Таблиця часів — Tenses Table</span>
+        <hr>
+      </div>
+      <ul class="phrase tense-grid hidden-section" id="phrases-tenses" data-static>
+        <li class="tense-head" aria-hidden="true">Past<span class="tense-head-uk">Минулий</span></li>
+        <li class="tense-head" aria-hidden="true">Present<span class="tense-head-uk">Теперішній</span></li>
+        <li class="tense-head" aria-hidden="true">Future<span class="tense-head-uk">Майбутній</span></li>
+        <li onclick="playWord(this)" class="tense-past"><span class="aspect" data-tense="Past">Simple<span class="aspect-uk">проста дія</span></span><span class="en">I <mark class="key">ate</mark> an apple.</span><span class="uk">Я з'їв яблуко.</span><span class="play-btn"></span></li>
+        <li onclick="playWord(this)" class="tense-present"><span class="aspect" data-tense="Present">Simple<span class="aspect-uk">проста дія</span></span><span class="en">I <mark class="key">eat</mark> an apple.</span><span class="uk">Я їм яблуко (регулярно).</span><span class="play-btn"></span></li>
+        <li onclick="playWord(this)" class="tense-future"><span class="aspect" data-tense="Future">Simple<span class="aspect-uk">проста дія</span></span><span class="en">I <mark class="key">will eat</mark> an apple.</span><span class="uk">Я з'їм яблуко.</span><span class="play-btn"></span></li>
+        <li onclick="playWord(this)" class="tense-past"><span class="aspect" data-tense="Past">Continuous<span class="aspect-uk">триває</span></span><span class="en">I <mark class="key">was eating</mark> an apple.</span><span class="uk">Я їв яблуко (у той момент).</span><span class="play-btn"></span></li>
+        <li onclick="playWord(this)" class="tense-present"><span class="aspect" data-tense="Present">Continuous<span class="aspect-uk">триває</span></span><span class="en">I <mark class="key">am eating</mark> an apple.</span><span class="uk">Я їм яблуко (зараз).</span><span class="play-btn"></span></li>
+        <li onclick="playWord(this)" class="tense-future"><span class="aspect" data-tense="Future">Continuous<span class="aspect-uk">триває</span></span><span class="en">I <mark class="key">will be eating</mark> an apple.</span><span class="uk">Я їстиму яблуко (у той момент).</span><span class="play-btn"></span></li>
+        <li onclick="playWord(this)" class="tense-past"><span class="aspect" data-tense="Past">Perfect<span class="aspect-uk">завершена</span></span><span class="en">I <mark class="key">had eaten</mark> an apple.</span><span class="uk">Я з'їв яблуко (до іншої дії в минулому).</span><span class="play-btn"></span></li>
+        <li onclick="playWord(this)" class="tense-present"><span class="aspect" data-tense="Present">Perfect<span class="aspect-uk">завершена</span></span><span class="en">I <mark class="key">have eaten</mark> an apple.</span><span class="uk">Я вже з'їв яблуко.</span><span class="play-btn"></span></li>
+        <li onclick="playWord(this)" class="tense-future"><span class="aspect" data-tense="Future">Perfect<span class="aspect-uk">завершена</span></span><span class="en">I <mark class="key">will have eaten</mark> an apple.</span><span class="uk">Я вже з'їм яблуко (до моменту в майбутньому).</span><span class="play-btn"></span></li>
+        <li onclick="playWord(this)" class="tense-past"><span class="aspect" data-tense="Past">Perfect Continuous<span class="aspect-uk">триває й досі</span></span><span class="en">I <mark class="key">had been eating</mark> an apple.</span><span class="uk">Я їв яблуко певний час (до моменту в минулому).</span><span class="play-btn"></span></li>
+        <li onclick="playWord(this)" class="tense-present"><span class="aspect" data-tense="Present">Perfect Continuous<span class="aspect-uk">триває й досі</span></span><span class="en">I <mark class="key">have been eating</mark> an apple.</span><span class="uk">Я їм яблуко вже певний час.</span><span class="play-btn"></span></li>
+        <li onclick="playWord(this)" class="tense-future"><span class="aspect" data-tense="Future">Perfect Continuous<span class="aspect-uk">триває й досі</span></span><span class="en">I <mark class="key">will have been eating</mark> an apple.</span><span class="uk">Я їстиму яблуко вже певний час.</span><span class="play-btn"></span></li>
+      </ul>
     </section>
     <button id="phrases-btn" class="to-phrases" aria-label="Forward">
       <span>Уроки</span>
@@ -835,6 +882,7 @@
       <a href="#phrase-support">Підтримка та вибір</a>
       <a href="#phrase-everyday">Побутове спілкування</a>
       <a href="#phrase-appraisal">Оцінка та побажання</a>
+      <a href="#phrase-tenses">Таблиця часів</a>
     </section>
   </main>
 

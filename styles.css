@@ -964,3 +964,139 @@ body:not(.start-done-phrases) #phrases {
     }
   }
 }
+
+/* ---- Tense grid (Таблиця часів) ---- */
+.phrase.tense-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: clamp(0.5rem, 1.4vw, 1rem);
+
+  & .tense-head {
+    display: block;
+    background: none;
+    border: none;
+    border-radius: 0;
+    padding: 0 0 2px;
+    cursor: default;
+    text-align: center;
+    color: #e0e0e0;
+    font-size: clamp(0.8rem, 1.8vw, 1rem);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transform: none;
+
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
+
+  & .tense-head-uk {
+    display: block;
+    margin-top: 2px;
+    color: #8e8e93;
+    font-size: clamp(0.62rem, 1.3vw, 0.72rem);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: none;
+  }
+
+  & li:not(.tense-head) {
+    display: block;
+    padding: 14px 16px 58px;
+
+    & > span:not(.play-btn) {
+      display: block;
+      flex-basis: auto;
+      overflow-wrap: anywhere;
+    }
+
+    &.tense-past::before {
+      background: #6ea8d6;
+    }
+
+    &.tense-present::before {
+      background: #cdaf57;
+    }
+
+    &.tense-future::before {
+      background: #7ec8a0;
+    }
+  }
+
+  & .aspect {
+    color: #8e8e93;
+    margin-bottom: 4px;
+    font-size: clamp(0.65rem, 1.4vw, 0.75rem);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  & .aspect-uk {
+    color: #6d6d72;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-transform: none;
+
+    &::before {
+      content: ' · ';
+    }
+  }
+
+  & .en {
+    font-size: clamp(0.85rem, 1.8vw, 1.05rem);
+    line-height: 1.35;
+    margin-bottom: 4px;
+
+    & .key {
+      background: none;
+      color: inherit;
+      font-weight: 700;
+      text-decoration: underline;
+      text-decoration-color: currentColor;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 3px;
+    }
+  }
+
+  & .uk {
+    font-size: clamp(0.72rem, 1.5vw, 0.85rem);
+    line-height: 1.4;
+  }
+
+  & .play-btn {
+    top: auto;
+    bottom: 10px;
+    right: 12px;
+    transform: none;
+  }
+
+  @media (max-width: 40rem) {
+    grid-template-columns: minmax(0, 1fr);
+
+    & .tense-head {
+      display: none;
+    }
+
+    & li:not(.tense-head) {
+      padding: 12px 56px 12px 18px;
+    }
+
+    & .en {
+      margin-bottom: 2px;
+    }
+
+    & .aspect::before {
+      content: attr(data-tense) ' · ';
+    }
+
+    & .play-btn {
+      top: 50%;
+      bottom: auto;
+      right: 14px;
+      transform: translateY(-50%);
+    }
+  }
+}
